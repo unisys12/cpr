@@ -1,0 +1,25 @@
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	color: #000000;
+	fill: currentColor;
+}
+.icon-gift {
+	width: 32px;
+	height: 32px;
+}
+.icon-signup {
+	width: 32px;
+	height: 32px;
+}
+.icon-facebook {
+	width: 32px;
+	height: 32px;
+}
+.icon-twitter {
+	width: 32px;
+	height: 32px;
+}
+.icon-dribbble {
+	width: 32px;
+	height: 32px;
+}
