@@ -17,6 +17,14 @@
 			</div>
 		</section>
 		@include('partials.conditions')
+    <nav class="row">
+      <div class="large-12">
+        <a href="#">Facilities</a>
+        <a href="#">Sports</a>
+        <a href="#">Staff</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
   	</header>
   	<main class="row">
   		<aside class="large-3 columns">
