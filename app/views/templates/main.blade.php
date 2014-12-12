@@ -39,30 +39,24 @@
   		</article>
   	</main>
   	<nav class="row">
-  			<a href="#">
-  				<div class="large-4 columns">
-	  				<header class="blue-button">
-		  				<h5>News &amp; Events</h5>
-		  			</header>
-		  			<p>Get the latest news, game cancellations and event info ... Click here</p>
-	  			</div>
-  			</a>
-  			<a href="#">
-  				<aside class="large-4 columns">
-	  				<header class="green-button">
-		  				<h5>Parks &amp; Facilites</h5>
-		  			</header>
-		  			<p>To see more information on each of our facilities... Click Here</p>
-	  			</aside>
-  			</a>
-  			<a href="#">
-  				<aside class="large-4 columns">
-	  				<header class="brown-button">
-		  				<h5>Registration Forms</h5>
-		  			</header>
-		  			<p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
-	  			</aside>
-  			</a>
+  			<div class="large-4 columns">
+          <header class="blue-button">
+            <a href="#"><h5>News &amp; Events</h5></a>
+          </header>
+          <p>Get the latest news, game cancellations and event info ... Click here</p>
+        </div>
+        <div class="large-4 columns">
+          <header class="green-button">
+            <a href="#"><h5>Parks &amp; Facilites</h5></a>
+          </header>
+          <p>To see more information on each of our facilities... Click Here</p>
+        </div>
+  			<div class="large-4 columns">
+          <header class="brown-button">
+            <a href="#"><h5>Registration Forms</h5></a>
+          </header>
+          <p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
+        </div>
 
 			<!-- <a href="#" class="brown-button">
 				<h5>Registration Forms</h5>
