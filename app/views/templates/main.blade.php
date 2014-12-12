@@ -11,17 +11,26 @@
   </head>
 <body class="background">
   	<header class="row">
-		<section class="large-2 small-centered columns">
-			<!-- <div class="clearfix"> -->
-				<!-- <span class="left heading"> --><img src="imgs/park-logo.jpg" alt="logo">
-    </section>
-				<!-- <span class="right heading"> -->
-    <section class="large-6 columns">
-      <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
-    </section>
-		    @include('partials.conditions')
-      <!-- </div> -->
-    </section>
+  		<section class="large-2 small-centered columns">
+  			<!-- <div class="clearfix"> -->
+  				<!-- <span class="left heading"> --><img src="imgs/park-logo.jpg" alt="logo">
+      </section>
+  				<!-- <span class="right heading"> -->
+      <section class="large-6 columns">
+        <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
+      </section>
+  		    @include('partials.conditions')
+        <!-- </div> -->
+      </section>
+		@include('partials.conditions')
+      <nav class="row">
+        <div class="large-12">
+          <a href="#">Facilities</a>
+          <a href="#">Sports</a>
+          <a href="#">Staff</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </nav>
   	</header>
   	<main class="row">
   		<aside class="large-3 columns">
@@ -44,41 +53,25 @@
   		</article>
   	</main>
   	<nav class="row">
-  			
-  			<aside class="large-4 columns">
-          <a href="#">
-	  				<header class="blue-button">
-		  				<h3>News &amp; Events</h3>
-		  			</header>
-          </a>
-		  		<p>Get the latest news, game cancellations and event info ... Click here</p>
-	  		</aside>
-  			
-  			
-  			<aside class="large-4 columns">
-          <a href="#">
-	  				<header class="green-button">
-		  				<h3>Parks &amp; Facilites</h3>
-		  			</header>
-          </a>
-	  			<p>To see more information on each of our facilities... Click Here</p>
-  			</aside>
-  			
-  			<aside class="large-4 columns">
-          <a href="#">
-	  				<header class="brown-button">
-		  				<h3>Registration Forms</h3>
-		  			</header>
-          </a>
-	  			<p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
-  			</aside>
-
-			<!-- <a href="#" class="brown-button">
-				<h5>Registration Forms</h5>
-				<p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
-			</a> -->
-
-  		</nav>
+  			<div class="large-4 columns">
+          <header class="blue-button">
+            <a href="#"><h5>News &amp; Events</h5></a>
+          </header>
+          <p>Get the latest news, game cancellations and event info ... Click here</p>
+        </div>
+        <div class="large-4 columns">
+          <header class="green-button">
+            <a href="#"><h5>Parks &amp; Facilites</h5></a>
+          </header>
+          <p>To see more information on each of our facilities... Click Here</p>
+        </div>
+  			<div class="large-4 columns">
+          <header class="brown-button">
+            <a href="#"><h5>Registration Forms</h5></a>
+          </header>
+          <p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
+        </div>
+  	</nav>
   	<footer class="row">
   		<section class="large-8 columns">
   			<h3>Contact Us</h3>
