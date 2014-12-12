@@ -57,13 +57,7 @@
           </header>
           <p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
         </div>
-
-			<!-- <a href="#" class="brown-button">
-				<h5>Registration Forms</h5>
-				<p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
-			</a> -->
-
-  		</nav>
+  	</nav>
   	<footer class="row">
   		<section class="large-8 columns">
   			<h3>Contact Us</h3>
