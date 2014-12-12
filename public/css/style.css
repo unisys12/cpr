@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans|Roboto|Oswald);
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans|Roboto|Oswald|Raleway);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -369,8 +368,73 @@ th {
   margin-top: 1em;
   padding-bottom: 1em; }
 
+.right {
+  padding-right: 6em; }
+
 article {
   padding-bottom: 1em; }
+
+footer {
+  background: #333;
+  background-image: -webkit-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
+  background-image: -o-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
+  background-image: linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
+  color: #999;
+  border-top-left-radius: 1.25em;
+  border-top-right-radius: 1.25em;
+  border: 2px solid rgba(0, 0, 0, 0.3); }
+  footer h3 {
+    color: #FFF; }
+  footer li {
+    list-style: none; }
+
+.blue-button {
+  margin: .5 auto;
+  padding: .5em 0em .25em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: .5em;
+  background-image: linear-gradient(to top, #1C74BB, #00549F, #052A6B);
+  background-image: -webkit-linear-gradient(bottom, #1C74BB, #00549F, #052A6B);
+  background-image: -ms-linear-gradient(bottom, #1C74BB, #00549F, #052A6B); }
+  .blue-button h3 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif; }
+  .blue-button:hover {
+    background-image: linear-gradient(to top, #1C74BB, #052A6B);
+    background-image: -webkit-linear-gradient(bottom, #1C74BB, #052A6B);
+    background-image: -ms-linear-gradient(bottom, #1C74BB, #052A6B); }
+
+.green-button {
+  margin: .5 auto;
+  padding: .5em 0em .25em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: .5em;
+  background-image: linear-gradient(bottom, #59A761, #62995A, #367C2B);
+  background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
+  background-image: -ms-linear-gradient(bottom, #59A761, #62995A, #367C2B); }
+  .green-button h3 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif; }
+  .green-button:hover {
+    background-image: linear-gradient(bottom, #59A761, #367C2B);
+    background-image: -webkit-linear-gradient(bottom, #59A761, #367C2B);
+    background-image: -ms-linear-gradient(bottom, #59A761, #367C2B); }
+
+.brown-button {
+  margin: .5 auto;
+  padding: .5em 0em .25em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: .5em;
+  background-image: linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
+  background-image: -webkit-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
+  background-image: -ms-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00); }
+  .brown-button h3 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif; }
+  .brown-button:hover {
+    background-image: linear-gradient(bottom, #CD4E38, #971C00);
+    background-image: -webkit-linear-gradient(bottom, #CD4E38, #971C00);
+    background-image: -ms-linear-gradient(bottom, #CD4E38, #971C00); }
 
 .good {
   background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
@@ -398,7 +462,6 @@ article {
 .field-conditions {
   padding: .25em;
   margin: 1.25em auto;
-  max-width: 75%;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: .5em;
   font-size: 1em;
@@ -406,68 +469,10 @@ article {
   color: #fff; }
   .field-conditions hr {
     margin: 0; }
-
-footer {
-  background: #333;
-  background-image: -webkit-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
-  background-image: -o-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
-  background-image: linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
-  color: #999;
-  border-top-left-radius: 1.25em;
-  border-top-right-radius: 1.25em;
-  border: 2px solid rgba(0, 0, 0, 0.3); }
-  footer h3 {
-    color: #FFF; }
-  footer li {
-    list-style: none; }
-
-.blue-button {
-  margin: .5 auto;
-  padding: .5em 0em .25em 1em;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: .5em;
-  background-image: linear-gradient(to top, #1C74BB, #00549F, #052A6B);
-  background-image: -webkit-linear-gradient(bottom, #1C74BB, #00549F, #052A6B);
-  background-image: -ms-linear-gradient(bottom, #1C74BB, #00549F, #052A6B); }
-  .blue-button h5 {
-    color: #fff;
-    font-family: 'Roboto', sans-serif; }
-  .blue-button:hover {
-    background-image: linear-gradient(to top, #1C74BB, #052A6B);
-    background-image: -webkit-linear-gradient(bottom, #1C74BB, #052A6B);
-    background-image: -ms-linear-gradient(bottom, #1C74BB, #052A6B); }
-
-.green-button {
-  margin: .5 auto;
-  padding: .5em 0em .25em 1em;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: .5em;
-  background-image: linear-gradient(bottom, #59A761, #62995A, #367C2B);
-  background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
-  background-image: -ms-linear-gradient(bottom, #59A761, #62995A, #367C2B); }
-  .green-button h5 {
-    color: #fff;
-    font-family: 'Roboto', sans-serif; }
-  .green-button:hover {
-    background-image: linear-gradient(bottom, #59A761, #367C2B);
-    background-image: -webkit-linear-gradient(bottom, #59A761, #367C2B);
-    background-image: -ms-linear-gradient(bottom, #59A761, #367C2B); }
-
-.brown-button {
-  margin: .5 auto;
-  padding: .5em 0em .25em 1em;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: .5em;
-  background-image: linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
-  background-image: -webkit-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
-  background-image: -ms-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00); }
-  .brown-button h5 {
-    color: #fff;
-    font-family: 'Roboto', sans-serif; }
-  .brown-button:hover {
-    background-image: linear-gradient(bottom, #CD4E38, #971C00);
-    background-image: -webkit-linear-gradient(bottom, #CD4E38, #971C00);
-    background-image: -ms-linear-gradient(bottom, #CD4E38, #971C00); }
+  @media screen and (min-width: 1026px) {
+    .field-conditions {
+      margin: auto;
+      padding-right: 5em; } }
 
 meta.foundation-version {
   font-family: "/5.4.7/"; }

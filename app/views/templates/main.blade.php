@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title', 'Corinth Alcorn Parks and Recreation')</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css.map" />
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css">
     <script src=""></script>
   </head>
 <body class="background">
   	<header class="row">
-		<section class="large-8 columns">
-			<div class="clearfix">
-				<span class="left heading"><img src="imgs/park-logo.jpg" alt="logo"></span>
-				<span class="right heading"><h4>Corinth/Alcorn Parks &amp; Recreation Department</h4></span>
-			</div>
-		</section>
-		@include('partials.conditions')
+		<section class="large-2 small-centered columns">
+			<!-- <div class="clearfix"> -->
+				<!-- <span class="left heading"> --><img src="imgs/park-logo.jpg" alt="logo">
+    </section>
+				<!-- <span class="right heading"> -->
+    <section class="large-6 columns">
+      <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
+    </section>
+		    @include('partials.conditions')
+      <!-- </div> -->
+    </section>
   	</header>
   	<main class="row">
   		<aside class="large-3 columns">
@@ -39,30 +44,34 @@
   		</article>
   	</main>
   	<nav class="row">
-  			<a href="#">
-  				<div class="large-4 columns">
+  			
+  			<aside class="large-4 columns">
+          <a href="#">
 	  				<header class="blue-button">
-		  				<h5>News &amp; Events</h5>
+		  				<h3>News &amp; Events</h3>
 		  			</header>
-		  			<p>Get the latest news, game cancellations and event info ... Click here</p>
-	  			</div>
-  			</a>
-  			<a href="#">
-  				<aside class="large-4 columns">
+          </a>
+		  		<p>Get the latest news, game cancellations and event info ... Click here</p>
+	  		</aside>
+  			
+  			
+  			<aside class="large-4 columns">
+          <a href="#">
 	  				<header class="green-button">
-		  				<h5>Parks &amp; Facilites</h5>
+		  				<h3>Parks &amp; Facilites</h3>
 		  			</header>
-		  			<p>To see more information on each of our facilities... Click Here</p>
-	  			</aside>
-  			</a>
-  			<a href="#">
-  				<aside class="large-4 columns">
+          </a>
+	  			<p>To see more information on each of our facilities... Click Here</p>
+  			</aside>
+  			
+  			<aside class="large-4 columns">
+          <a href="#">
 	  				<header class="brown-button">
-		  				<h5>Registration Forms</h5>
+		  				<h3>Registration Forms</h3>
 		  			</header>
-		  			<p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
-	  			</aside>
-  			</a>
+          </a>
+	  			<p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
+  			</aside>
 
 			<!-- <a href="#" class="brown-button">
 				<h5>Registration Forms</h5>
