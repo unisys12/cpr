@@ -20,7 +20,7 @@
   		  @include('partials.conditions')
   	</header>
     <nav class="row top-menu">
-        <ul class="large-12">
+        <ul class="large-12 large-offset-3">
             <li><a href="#">Facilities</a></li>
             <li><a href="#">Sports</a></li>
             <li><a href="#">Staff</a></li>

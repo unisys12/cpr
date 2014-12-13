@@ -482,6 +482,14 @@ footer {
     padding: 2em;
     list-style: none;
     display: inline; }
+    @media screen and (max-width: 470px) {
+      .top-menu li {
+        padding: 1em; } }
+    @media screen and (max-width: 375px) {
+      .top-menu li {
+        padding: .5em;
+        display: block;
+        margin: 0 auto; } }
     .top-menu li:first-child {
       padding-left: 0; }
     .top-menu li:last-child {
