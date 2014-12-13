@@ -18,15 +18,15 @@
         <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
       </section>
   		  @include('partials.conditions')
-      <nav class="row">
-        <div class="large-12">
-          <a href="#">Facilities</a>
-          <a href="#">Sports</a>
-          <a href="#">Staff</a>
-          <a href="#">Contact Us</a>
-        </div>
-      </nav>
   	</header>
+    <nav class="row top-menu">
+        <ul class="large-12">
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
   	<main class="row">
   		<aside class="large-3 columns">
   			<nav>

@@ -474,6 +474,22 @@ footer {
       margin: auto;
       padding-right: 5em; } }
 
+.top-menu {
+  max-width: 100%;
+  width: 98%; }
+  .top-menu li {
+    float: left;
+    padding: 2em;
+    list-style: none;
+    display: inline; }
+    .top-menu li:first-child {
+      padding-left: 0; }
+    .top-menu li:last-child {
+      padding-right: 0; }
+    .top-menu li a {
+      color: #fff;
+      text-decoration: none; }
+
 meta.foundation-version {
   font-family: "/5.4.7/"; }
 
