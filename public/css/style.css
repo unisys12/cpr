@@ -358,11 +358,11 @@ th {
   padding: 0; }
 
 .background {
-  background: #fff no-repeat center center fixed;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 145, 0.3), rgba(0, 0, 225, 0.2));
-  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 145, 0.3), rgba(0, 0, 225, 0.2));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 145, 0.3), rgba(0, 0, 225, 0.2));
-  background-image: linear-gradient(to top, rgba(0, 0, 145, 0.3), rgba(0, 0, 225, 0.2)); }
+  /* background: #fff no-repeat center center fixed;
+  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
+  background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
+  background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
+  background-image: linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,100,0.1)); */ }
 
 .heading {
   margin-top: 1em;
@@ -495,7 +495,7 @@ footer {
     .top-menu li:last-child {
       padding-right: 0; }
     .top-menu li a {
-      color: #fff;
+      color: #333;
       text-decoration: none; }
 
 meta.foundation-version {
