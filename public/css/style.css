@@ -372,7 +372,8 @@ th {
   padding-right: 6em; }
 
 article {
-  padding-bottom: 3em; }
+  padding-bottom: 3em;
+  line-height: 1.75; }
 
 footer {
   background: #333;
