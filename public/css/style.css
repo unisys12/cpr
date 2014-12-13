@@ -502,6 +502,24 @@ footer {
       .top-menu li a:hover {
         color: #111; }
 
+.side-menu ul {
+  margin: 0;
+  padding: .5em;
+  list-style-type: none; }
+.side-menu li {
+  padding: 1em 0; }
+  .side-menu li:first-child {
+    padding-top: .25em; }
+  .side-menu li:last-child {
+    padding-bottom: .25em; }
+  .side-menu li a {
+    color: #333;
+    font-family: PT Sans, san-serif;
+    font-size: 125%;
+    text-decoration: none; }
+  .side-menu li:hover {
+    color: #111; }
+
 meta.foundation-version {
   font-family: "/5.4.7/"; }
 
