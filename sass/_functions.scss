@@ -1,0 +1,13 @@
+@function color-name(){
+	@each $name in $color-groups{
+		@return $name;
+	}
+}
+
+@function get-color($key){
+	@return map-get($colors, $key);
+}
+
+@function color-keys($map){
+	@return map-keys($colors);
+}

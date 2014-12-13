@@ -1,0 +1,47 @@
+.good {
+  background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
+  background-image: -ms-linear-gradient(bottom, #59A761, #62995A, #367C2B);
+  background-image: -o-linear-gradient(bottom, #59A761, #62995A, #367C2B);
+  background-image: linear-gradient(to top, #59A761, #62995A, #367C2B);
+  background-size: 100%;
+	  &:hover{
+	  background-image: -webkit-linear-gradient(bottom, #62995A, #367C2B);
+	  background-image: -ms-linear-gradient(bottom, #62995A, #367C2B);
+	  background-image: -o-linear-gradient(bottom, #62995A, #367C2B);
+	  background-image: linear-gradient(to top, #62995A, #367C2B);
+	  }
+}
+
+.bad {
+  background-image: -webkit-linear-gradient(bottom, rgba(255,0,0,0.6), rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+  background-image: -ms-linear-gradient(bottom, rgba(255,0,0,0.6), rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+  background-image: -o-linear-gradient(bottom, rgba(255,0,0,0.6), rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+  background-image: linear-gradient(to top, rgba(255,0,0,0.6), rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+
+	  &:hover{
+	  background-image: -webkit-linear-gradient(bottom, rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+	  background-image: -ms-linear-gradient(bottom, rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+	  background-image: -o-linear-gradient(bottom, rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+	  background-image: linear-gradient(to top, rgba(245,0,0,0.7), rgba(235,0,0,0.9));
+	  }
+}
+
+.field-conditions{
+	padding: .25em;
+	margin: 1.25em auto;
+	//max-width: 75%;
+	border: 2px solid rgba(0,0,0,0.3);
+	border-radius: .5em;
+	font-size: 1em;
+	font-family: Raleway, sans-serif;
+	color: #fff;
+
+	hr {
+		margin: 0;
+	}
+
+	@media screen and (min-width: 1026px){
+		margin: auto;
+		padding-right: 5em;
+	}
+}
