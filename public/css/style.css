@@ -500,13 +500,17 @@ footer {
   background-image: linear-gradient(bottom, #59A761, #62995A, #367C2B);
   background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
   background-image: -ms-linear-gradient(bottom, #59A761, #62995A, #367C2B); }
-  .green-button h3 {
-    color: #fff;
-    font-family: 'Roboto', sans-serif; }
   .green-button:hover {
     background-image: linear-gradient(bottom, #59A761, #367C2B);
     background-image: -webkit-linear-gradient(bottom, #59A761, #367C2B);
     background-image: -ms-linear-gradient(bottom, #59A761, #367C2B); }
+  .green-button a {
+    color: #FFF;
+    font-family: PT Sans, san-serif;
+    font-size: 125%;
+    text-decoration: none; }
+  .green-button a:hover {
+    color: #cccccc; }
 
 .brown-button {
   margin: .5 auto;
@@ -516,13 +520,17 @@ footer {
   background-image: linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
   background-image: -webkit-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
   background-image: -ms-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00); }
-  .brown-button h3 {
-    color: #fff;
-    font-family: 'Roboto', sans-serif; }
   .brown-button:hover {
     background-image: linear-gradient(bottom, #CD4E38, #971C00);
     background-image: -webkit-linear-gradient(bottom, #CD4E38, #971C00);
     background-image: -ms-linear-gradient(bottom, #CD4E38, #971C00); }
+  .brown-button a {
+    color: #FFF;
+    font-family: PT Sans, san-serif;
+    font-size: 125%;
+    text-decoration: none; }
+  .brown-button a:hover {
+    color: #cccccc; }
 
 meta.foundation-version {
   font-family: "/5.4.7/"; }

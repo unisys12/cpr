@@ -24,15 +24,14 @@
     background-image: linear-gradient(bottom, $light-green, $medium-green, $dark-green);
     background-image: -webkit-linear-gradient(bottom, $light-green, $medium-green, $dark-green);
     background-image: -ms-linear-gradient(bottom, $light-green, $medium-green, $dark-green);
-    h3 {
-		color: #fff;
-		font-family: 'Roboto', sans-serif;
-	}
+    
 	&:hover {
 		background-image: linear-gradient(bottom, $light-green, $dark-green);
 		background-image: -webkit-linear-gradient(bottom, $light-green, $dark-green);
 		background-image: -ms-linear-gradient(bottom, $light-green, $dark-green);
 	}
+
+	@include links(#FFF);
 }
 
 .brown-button{
@@ -43,13 +42,12 @@
     background-image: linear-gradient(bottom, $light-brown, $medium-brown, $dark-brown);
     background-image: -webkit-linear-gradient(bottom, $light-brown, $medium-brown, $dark-brown);
     background-image: -ms-linear-gradient(bottom, $light-brown, $medium-brown, $dark-brown);
-    h3 {
-		color: #fff;
-		font-family: 'Roboto', sans-serif;
-	}
+    
 	&:hover {
 		background-image: linear-gradient(bottom, $light-brown, $dark-brown);
 		background-image: -webkit-linear-gradient(bottom, $light-brown, $dark-brown);
 		background-image: -ms-linear-gradient(bottom, $light-brown, $dark-brown);
 	}
+
+	@include links(#FFF);
 }
