@@ -396,13 +396,17 @@ footer {
   background-image: linear-gradient(to top, #1C74BB, #00549F, #052A6B);
   background-image: -webkit-linear-gradient(bottom, #1C74BB, #00549F, #052A6B);
   background-image: -ms-linear-gradient(bottom, #1C74BB, #00549F, #052A6B); }
-  .blue-button h3 {
-    color: #fff;
-    font-family: 'Roboto', sans-serif; }
   .blue-button:hover {
     background-image: linear-gradient(to top, #1C74BB, #052A6B);
     background-image: -webkit-linear-gradient(bottom, #1C74BB, #052A6B);
     background-image: -ms-linear-gradient(bottom, #1C74BB, #052A6B); }
+  .blue-button a {
+    color: #FFF;
+    font-family: PT Sans, san-serif;
+    font-size: 125%;
+    text-decoration: none; }
+  .blue-button a:hover {
+    color: #cccccc; }
 
 .green-button {
   margin: .5 auto;
@@ -499,7 +503,7 @@ footer {
       font-family: PT Sans, san-serif;
       font-size: 125%;
       text-decoration: none; }
-    .top-menu li:hover {
+    .top-menu li a:hover {
       color: black; }
 
 .side-menu ul {
@@ -517,7 +521,7 @@ footer {
     font-family: PT Sans, san-serif;
     font-size: 125%;
     text-decoration: none; }
-  .side-menu li:hover {
+  .side-menu li a:hover {
     color: black; }
 
 meta.foundation-version {

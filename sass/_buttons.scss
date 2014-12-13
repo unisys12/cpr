@@ -6,15 +6,14 @@
     background-image: linear-gradient(to top, $light-blue, $medium-blue, $dark-blue);
     background-image: -webkit-linear-gradient(bottom, $light-blue, $medium-blue, $dark-blue);
     background-image: -ms-linear-gradient(bottom, $light-blue, $medium-blue, $dark-blue);
-    h3 {
-		color: #fff;
-		font-family: 'Roboto', sans-serif;
-	}
+
 	&:hover {
 		background-image: linear-gradient(to top, $light-blue, $dark-blue);
 		background-image: -webkit-linear-gradient(bottom, $light-blue, $dark-blue);
 		background-image: -ms-linear-gradient(bottom, $light-blue, $dark-blue);
 	}
+
+	@include links(#FFF);
 }
 
 .green-button{
