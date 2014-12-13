@@ -482,10 +482,10 @@ footer {
     padding: 2em;
     list-style: none;
     display: inline; }
-    @media screen and (max-width: 470px) {
+    @media screen and (max-width: 515px) {
       .top-menu li {
         padding: 1em; } }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 418px) {
       .top-menu li {
         padding: .5em;
         display: block;
@@ -496,7 +496,11 @@ footer {
       padding-right: 0; }
     .top-menu li a {
       color: #333;
+      font-family: PT Sans, san-serif;
+      font-size: 125%;
       text-decoration: none; }
+      .top-menu li a:hover {
+        color: #111; }
 
 meta.foundation-version {
   font-family: "/5.4.7/"; }
