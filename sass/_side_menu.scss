@@ -1,6 +1,10 @@
 aside {
 	margin-left: -.89em;
 	.side-menu {
+		box-shadow: 5px 5px rgba(0,0,100, .2);
+		&:hover {
+			box-shadow: 5px 5px rgba(0,0,100, .3);
+		}
 		ul {
 			margin: 0;
 			padding: .5em;

@@ -421,7 +421,10 @@ footer {
       padding-right: 5em; } }
 
 .top-menu {
-  background-color: #59A761; }
+  background-color: #59A761;
+  box-shadow: 5px 5px rgba(0, 100, 0, 0.2); }
+  .top-menu:hover {
+    box-shadow: 5px 5px rgba(0, 100, 0, 0.3); }
   .top-menu li {
     float: left;
     padding: 2em;
@@ -455,24 +458,28 @@ footer {
 
 aside {
   margin-left: -.89em; }
-  aside .side-menu ul {
-    margin: 0;
-    padding: .5em;
-    list-style-type: none;
-    background-color: #1C74BB; }
-  aside .side-menu li {
-    padding: 1em 0; }
-    aside .side-menu li:first-child {
-      padding-top: .25em; }
-    aside .side-menu li:last-child {
-      padding-bottom: .25em; }
-    aside .side-menu li a {
-      color: #111;
-      font-family: PT Sans, san-serif;
-      font-size: 125%;
-      text-decoration: none; }
-    aside .side-menu li a:hover {
-      color: black; }
+  aside .side-menu {
+    box-shadow: 5px 5px rgba(0, 0, 100, 0.2); }
+    aside .side-menu:hover {
+      box-shadow: 5px 5px rgba(0, 0, 100, 0.3); }
+    aside .side-menu ul {
+      margin: 0;
+      padding: .5em;
+      list-style-type: none;
+      background-color: #1C74BB; }
+    aside .side-menu li {
+      padding: 1em 0; }
+      aside .side-menu li:first-child {
+        padding-top: .25em; }
+      aside .side-menu li:last-child {
+        padding-bottom: .25em; }
+      aside .side-menu li a {
+        color: #111;
+        font-family: PT Sans, san-serif;
+        font-size: 125%;
+        text-decoration: none; }
+      aside .side-menu li a:hover {
+        color: black; }
   @media screen and (max-width: 1025px) {
     aside {
       margin-left: 0;

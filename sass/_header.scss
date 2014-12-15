@@ -1,5 +1,9 @@
 .top-menu {
 	background-color: $light-green;
+	box-shadow: 5px 5px rgba(0,100,0, .2);
+	&:hover {
+		box-shadow: 5px 5px rgba(0,100,0, .3);
+	}
 	li {
 		float: left;
 		padding: 2em;
