@@ -25,3 +25,7 @@
 
 	@include links(#FFF)
 }
+
+@mixin box-shadow($color){
+  box-shadow: 5px 5px $color;
+}

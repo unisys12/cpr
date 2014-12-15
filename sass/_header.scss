@@ -1,8 +1,8 @@
 .top-menu {
 	background-color: $light-green;
-	box-shadow: 5px 5px rgba(0,100,0, .2);
+	@include box-shadow(#9da5e6);
 	&:hover {
-		box-shadow: 5px 5px rgba(0,100,0, .3);
+		@include box-shadow(rgba(0,100,0, .3));
 	}
 	li {
 		float: left;

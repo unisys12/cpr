@@ -429,7 +429,7 @@ footer {
 
 .top-menu {
   background-color: #59A761;
-  box-shadow: 5px 5px rgba(0, 100, 0, 0.2); }
+  box-shadow: 5px 5px #9da5e6; }
   .top-menu:hover {
     box-shadow: 5px 5px rgba(0, 100, 0, 0.3); }
   .top-menu li {
@@ -466,7 +466,7 @@ footer {
 aside {
   margin-left: -.89em; }
   aside .side-menu {
-    box-shadow: 5px 5px rgba(0, 0, 100, 0.2); }
+    box-shadow: 5px 5px #9da5e6; }
     aside .side-menu:hover {
       box-shadow: 5px 5px rgba(0, 0, 100, 0.3); }
     aside .side-menu ul {
