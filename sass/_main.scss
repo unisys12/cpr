@@ -28,4 +28,6 @@ footer {
 	li {
 		list-style: none;
 	}
+
+		@include links(#EEE);
 }
