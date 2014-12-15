@@ -364,13 +364,6 @@ th {
   background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
   background-image: linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,100,0.1)); */ }
 
-.heading {
-  margin-top: 1em;
-  padding-bottom: 1em; }
-
-.right {
-  padding-right: 6em; }
-
 article {
   padding-bottom: 3em;
   line-height: 1.75; }
