@@ -1,0 +1,95 @@
+/** Animation Specfic stuff related to carousel
+  * All of the following mixins were built by me
+  * so... blame me if they don't work
+  **/
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation-name($name){
+  $name: unquote($name);
+  @include experimental(animation-name, $name, -moz, -webkit, -o, not -ms, not -khtml, official);
+}
+
+@mixin animation-duration($duration){
+  $duration: unquote($duration);
+  @include experimental(animation-duration, $duration, -moz, -webkit, -o, not -ms, not -khtml, official);
+}
+
+@mixin animation-delay($delay){
+  $delay: unquote($delay);
+  @include experimental(animation-delay, $delay, -moz, -webkit, -o, not -ms, not -khtml, official);
+}
+
+@mixin animation-timing-function($function){
+  $function: unquote($function);
+  @include experimental(animation-timing-function, $function, -moz, -webkit, -o, not -ms, not -khtml, official);
+}
+
+@mixin animation-iteration-count($count){
+  $count: unquote($count);
+  @include experimental(animation-iteration-count, $count, -moz, -webkit, -o, not -ms, not -khtml, official);
+}
+
+// Declare the animation within a mixin, since I have to apply it to multiple classes.
+@mixin carousel {
+	@include animation-name(cycle-images);
+	@include animation-duration(15s);
+	@include animation-timing-function(ease-in-out);
+	@include animation-iteration-count(infinite);
+}
+
+@include keyframes(cycle-images)
+{
+	//Starting at 10% allows for pause for last image and to first displayed image
+	10%, 35% {
+		@include transform2d(translateY(-0)); // start on first image
+	}
+
+	// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
+	40%, 65% {
+		@include transform2d(translateY(-330px)); // move second image into place
+	}
+
+	// Stopping the animation at 100% allows for clean transition to first image at end
+	70%, 100% {
+		@include transform2d(translateY(-630px)); // move third image up into place
+	}
+}
+
+.carousel {
+	// border: 1px solid rgba(0,0,0,0.5); //used to display image box
+	height: 15em;
+	overflow: hidden;
+}
+
+.image >img {
+	@include carousel;
+	padding-bottom: .5em;
+}
+
+.img-one > figcaption {
+	padding-bottom: 7.75em;
+	@include carousel;
+}
+
+.img-two > figcaption {
+	padding-bottom: 7.75em;
+	@include carousel;
+}
+
+.img-three > figcaption {
+	padding-bottom: 7.75em;
+	@include carousel;
+}
