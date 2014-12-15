@@ -20,13 +20,14 @@
   		  @include('partials.conditions')
   	</header>
     <nav class="row top-menu">
-        <ul class="large-12 large-offset-3">
-            <li><a href="#">Facilities</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Staff</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
+      <ul class="large-12 large-offset-3 small-centered">
+          <li><a href="#">Facilities</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Staff</a></li>
+          <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <br>
   	<main class="row">
   		<aside class="large-3 columns">
   			<nav class="side-menu">

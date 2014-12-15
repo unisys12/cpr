@@ -428,50 +428,62 @@ footer {
       padding-right: 5em; } }
 
 .top-menu {
-  max-width: 100%;
-  width: 98%; }
+  background-color: #59A761; }
   .top-menu li {
     float: left;
     padding: 2em;
     list-style: none;
     display: inline; }
-    @media screen and (max-width: 515px) {
-      .top-menu li {
-        padding: 1em; } }
-    @media screen and (max-width: 418px) {
-      .top-menu li {
-        padding: .5em;
-        display: block;
-        margin: 0 auto; } }
     .top-menu li:first-child {
       padding-left: 0; }
     .top-menu li:last-child {
       padding-right: 0; }
+    @media screen and (max-width: 515px) {
+      .top-menu li {
+        padding: .75em; }
+        .top-menu li:first-child {
+          padding-left: 0; }
+        .top-menu li:last-child {
+          padding-right: 0; } }
+    @media screen and (max-width: 418px) {
+      .top-menu li {
+        padding: .5em; }
+        .top-menu li:first-child {
+          padding-left: 0; }
+        .top-menu li:last-child {
+          padding-right: 0; } }
     .top-menu li a {
-      color: #333;
+      color: #111;
       font-family: PT Sans, san-serif;
       font-size: 125%;
       text-decoration: none; }
     .top-menu li a:hover {
       color: black; }
 
-.side-menu ul {
-  margin: 0;
-  padding: .5em;
-  list-style-type: none; }
-.side-menu li {
-  padding: 1em 0; }
-  .side-menu li:first-child {
-    padding-top: .25em; }
-  .side-menu li:last-child {
-    padding-bottom: .25em; }
-  .side-menu li a {
-    color: #333;
-    font-family: PT Sans, san-serif;
-    font-size: 125%;
-    text-decoration: none; }
-  .side-menu li a:hover {
-    color: black; }
+aside {
+  margin-left: -.89em; }
+  aside .side-menu ul {
+    margin: 0;
+    padding: .5em;
+    list-style-type: none;
+    background-color: #1C74BB; }
+  aside .side-menu li {
+    padding: 1em 0; }
+    aside .side-menu li:first-child {
+      padding-top: .25em; }
+    aside .side-menu li:last-child {
+      padding-bottom: .25em; }
+    aside .side-menu li a {
+      color: #111;
+      font-family: PT Sans, san-serif;
+      font-size: 125%;
+      text-decoration: none; }
+    aside .side-menu li a:hover {
+      color: black; }
+  @media screen and (max-width: 1025px) {
+    aside {
+      margin-left: 0;
+      margin-bottom: 1em; } }
 
 .blue-button {
   margin: .5 auto;

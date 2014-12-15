@@ -1,28 +1,38 @@
 .top-menu {
-	max-width: 100%;
-	width: 98%;
-
+	background-color: $light-green;
 	li {
 		float: left;
 		padding: 2em;
 		list-style: none;
 		display: inline;
-		@media screen and (max-width: 515px){
-			padding: 1em;
-		}
-		@media screen and (max-width: 418px){
-			padding: .5em;
-			display: block;
-			margin: 0 auto;
-		}
-	    &:first-child {
+
+		&:first-child {
 	      padding-left: 0;
 	    }
 	    &:last-child {
 	      padding-right: 0;
 	    }
+
+		@media screen and (max-width: 515px){
+			padding: .75em;
+			&:first-child {
+		      padding-left: 0;
+		    }
+		    &:last-child {
+		      padding-right: 0;
+		    }
+		}
+		@media screen and (max-width: 418px){
+			padding: .5em;
+			&:first-child {
+		      padding-left: 0;
+		    }
+		    &:last-child {
+		      padding-right: 0;
+		    }
+		}
 	    
-	    @include links(#333);
+	    @include links(#111);
     }
   
   

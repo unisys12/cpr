@@ -1,22 +1,29 @@
-.side-menu {
-	ul {
-		margin: 0;
-		padding: .5em;
-		list-style-type: none;
+aside {
+	margin-left: -.89em;
+	.side-menu {
+		ul {
+			margin: 0;
+			padding: .5em;
+			list-style-type: none;
+			background-color: $light-blue;
+		}
+
+		li { 
+			padding: 1em 0;
+		    &:first-child {
+		      padding-top: .25em;
+		    }
+		    &:last-child {
+		      padding-bottom: .25em;
+		    }
+		    
+		    @include links(#111);
+		    
+		}
 	}
 
-	li { 
-		padding: 1em 0;
-	    &:first-child {
-	      padding-top: .25em;
-	    }
-	    &:last-child {
-	      padding-bottom: .25em;
-	    }
-	    
-	    @include links(#333);
-	    
+	@media screen and (max-width: 1025px){
+		margin-left: 0;
+		margin-bottom: 1em;
 	}
-  
-
 }
