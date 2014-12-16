@@ -5,16 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>@yield('title')</title>
 		<link rel="stylesheet" href="/css/style.css" />
-		<script src="/packages/tiny_mce/tiny_mce.js"></script>
+		<script src="/packages/tinymce/tinymce.min.js"></script>
 		<script>
-			//tinymce.baseURL = "../public/packages";
-			//tinymce.suffix = '.min';
-			tinyMCE.init(
+			tinymce.init(
 				{
-					theme: "advanced",
 					relative_urls: false,
-					plugins: "advimage",
-					toolbar: "advimage",
+					plugins: "jbimages",
+					toolbar: "jbimages",
 					selector:'textarea'
 				}
 			);
