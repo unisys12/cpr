@@ -1,7 +1,12 @@
 @extends('templates.site')
 
-@section('title')
-CAPR Test Site
+@section('content')
+<section class="carosale large-9 columns">
+	<img src="imgs/slider05.jpg" alt="Park Header Image">
+</section>
+<article class="large-9 columns">
+	<p>Crossroads Regional Park, southeast of downtown Corinth, Mississippi, offers 38 acres of opportunities for outdoor recreation. Facilities include a 1-mile paved walking or jogging trail, a soccer field, 10 tennis courts, 6 fields for baseball or softball, a 9 hole disc golf course and 3 picnic pavilions. A major attraction is the Crossroads Fun Station mega playground.</p>
+</article>
 @stop
 
 @section('side-nav')

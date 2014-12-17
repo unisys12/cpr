@@ -38,7 +38,7 @@ class SiteController extends \BaseController {
 	public function singlePage($slug)
 	{
 		$page = $this->getSinglePage($slug);
-		return View::make('site.index')->with('data', $page);
+		return View::make('site.page')->with('data', $page);
 	}
 
 }
