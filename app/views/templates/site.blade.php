@@ -31,15 +31,16 @@
   	<main class="row">
   		<aside class="large-3 columns">
   			<nav class="side-menu">
-  				<ul>
-  					<li><a href="#">Home</a></li>
-  					<li><a href="#">Park Announcements</a></li>
-  					<li><a href="#">Athletic Schedules</a></li>
-  					<li><a href="#">Youth Sports</a></li>
-  					<li><a href="#">Adult Sports</a></li>
-  					<li><a href="#">Facilities &amp; Locations</a></li>
-  				</ul>
-  			</nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Park Announcements</a></li>
+            <li><a href="#">Athletic Schedules</a></li>
+            <li><a href="#">Youth Sports</a></li>
+            <li><a href="#">Adult Sports</a></li>
+            <li><a href="#">Facilities &amp; Locations</a></li>
+            @yield('side-nav')
+          </ul>
+        </nav>
   		</aside>
   		<section class="carosale large-9 columns">
   			<img src="imgs/slider05.jpg" alt="Park Header Image">
