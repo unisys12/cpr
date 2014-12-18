@@ -464,7 +464,8 @@ footer {
       color: black; }
 
 aside {
-  margin-left: -.89em; }
+  margin-left: -.89em;
+  margin-bottom: 1.5em; }
   aside .side-menu {
     box-shadow: 5px 5px #9da5e6; }
     aside .side-menu:hover {
