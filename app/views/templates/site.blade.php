@@ -11,9 +11,7 @@
   </head>
 <body class="background">
   	<header class="row">
-  		<section class="large-2 small-centered large-uncentered columns">
-  		  <img src="imgs/park-logo-svg.svg" alt="logo">
-      </section>
+  		@include('partials.carousel')
       <section class="large-6 columns">
         <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
       </section>
