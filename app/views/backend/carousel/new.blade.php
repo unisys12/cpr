@@ -37,7 +37,6 @@ Create a New Carousel
 		
 		{{ Form::label('image_1', 'Choose the First Image to Display') }}
 		{{ Form::file('image_1') }}
-
 		{{ Form::text('image_1_description', null, ['placeholder' => 'Give your image a description']) }}
 
 		{{ Form::label('image_2', 'Choose the Second Image to Display') }}
@@ -46,7 +45,7 @@ Create a New Carousel
 
 		{{ Form::label('image_3', 'Choose the Third Image to Display') }}
 		{{ Form::file('image_3') }}
-		{{ Form::text('image_2_description', null, ['placeholder' => 'Give your image a description']) }}
+		{{ Form::text('image_3_description', null, ['placeholder' => 'Give your image a description']) }}
 
 		{{ Form::submit('Create New Page') }}
 
