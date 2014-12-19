@@ -25,6 +25,8 @@ Route::get('backend/pages/{page}', ['as' => 'page.preview', 'uses' => 'PagesCont
 Route::get('backend/pages/{page}/edit', ['as' => 'page.edit', 'uses' => 'PagesController@edit']);
 Route::put('backend/pages/update', ['as' => 'page.update', 'uses' => 'PagesController@update', 'before' => 'csrf']);
 
+Route::resource('/backend/carousel', 'CarouselController');
+
 // Site Routes
 Route::get('/', ['as' => 'site.index', 'uses' => 'SiteController@index']);
 Route::get('/{slug}', ['as' => 'site.page', 'uses' => 'SiteController@singlePage']);
