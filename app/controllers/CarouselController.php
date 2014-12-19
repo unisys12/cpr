@@ -32,7 +32,7 @@ class CarouselController extends \BaseController {
 	 */
 	public function store()
 	{
-		$image_path = 'public/imgs/uploads/carousel';
+		$image_path = 'imgs/uploads/carousel';
 
 		$data = [
 			'title' 		=> 	Input::get('title'),
