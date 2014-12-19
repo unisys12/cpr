@@ -31,7 +31,8 @@ class SiteController extends \BaseController {
 	// Grab and display all site pages
 	public function index()
 	{
-		return View::make('site.index')->with('data', $this->getAllPages());
+		return View::make('site.index')->with('data', $this->getAllPages())
+										->with('carousel', Carousel::all());
 	}
 
 	//Grab only one page

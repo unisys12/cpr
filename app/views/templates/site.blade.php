@@ -11,7 +11,6 @@
   </head>
 <body class="background">
   	<header class="row">
-  		@include('partials.carousel')
       <section class="large-6 columns">
         <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
       </section>
