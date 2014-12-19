@@ -1,7 +1,7 @@
-/** Animation Specfic stuff related to carousel
-  * All of the following mixins were built by me
-  * so... blame me if they don't work
-  **/
+// Animation Specfic stuff related to carousel
+// All of the following mixins were built by me
+// so... blame me if they don't work
+
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
     @content;
