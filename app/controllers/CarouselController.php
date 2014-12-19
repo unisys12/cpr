@@ -32,7 +32,7 @@ class CarouselController extends \BaseController {
 	 */
 	public function store()
 	{
-		$image_path = '../imgs/uploads/carousel';
+		$image_path = 'public/imgs/uploads/carousel';
 
 		$data = [
 			'title' 		=> 	Input::get('title'),
@@ -43,6 +43,10 @@ class CarouselController extends \BaseController {
 			'image_3'		=>	$image_path . Input::file('image_3')
 		];
 
+		Input::file('image_1')->move($image_path, Input::file('image_1')->getClientOriginalName());
+		Input::file('image_2')->move($image_path, Input::file('image_2')->getClientOriginalName());
+		Input::file('image_3')->move($image_path, Input::file('image_3')->getClientOriginalName());
+
 		Carousel::create($data);
 		return Redirect::route('backend.carousel.index');
 	}
@@ -51,7 +55,7 @@ class CarouselController extends \BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $slug
+	 * @param  string  $slug
 	 * @return Response
 	 */
 	public function show($slug)
@@ -64,7 +68,7 @@ class CarouselController extends \BaseController {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $slug
+	 * @param  string  $slug
 	 * @return Response
 	 */
 	public function edit($carousel)
@@ -77,7 +81,7 @@ class CarouselController extends \BaseController {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $slug
+	 * @param  string  $slug
 	 * @return Response
 	 */
 	public function update($slug)
@@ -101,7 +105,7 @@ class CarouselController extends \BaseController {
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  int  $slug
+	 * @param  string  $slug
 	 * @return Response
 	 */
 	public function destroy($slug)
