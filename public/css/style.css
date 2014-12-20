@@ -618,13 +618,13 @@ aside {
   padding: .5em 0em .25em 1em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: .5em;
-  background-image: linear-gradient(bottom, #59A761, #62995A, #367C2B);
-  background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
-  background-image: -ms-linear-gradient(bottom, #59A761, #62995A, #367C2B); }
+  background-image: linear-gradient(to top, #59A761, #62995A, #367C2B);
+  background-image: -webkit-linear-gradient(to top, #59A761, #62995A, #367C2B);
+  background-image: -ms-linear-gradient(to top, #59A761, #62995A, #367C2B); }
   .green-button:hover {
-    background-image: linear-gradient(bottom, #59A761, #367C2B);
-    background-image: -webkit-linear-gradient(bottom, #59A761, #367C2B);
-    background-image: -ms-linear-gradient(bottom, #59A761, #367C2B); }
+    background-image: linear-gradient(to top, #59A761, #367C2B);
+    background-image: -webkit-linear-gradient(to top, #59A761, #367C2B);
+    background-image: -ms-linear-gradient(to top, #59A761, #367C2B); }
   .green-button a {
     color: #FFF;
     font-family: PT Sans, san-serif;
@@ -638,13 +638,13 @@ aside {
   padding: .5em 0em .25em 1em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: .5em;
-  background-image: linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
-  background-image: -webkit-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00);
-  background-image: -ms-linear-gradient(bottom, #CD4E38, #AE4E38, #971C00); }
+  background-image: linear-gradient(to top, #CD4E38, #AE4E38, #971C00);
+  background-image: -webkit-linear-gradient(to top, #CD4E38, #AE4E38, #971C00);
+  background-image: -ms-linear-gradient(to top, #CD4E38, #AE4E38, #971C00); }
   .brown-button:hover {
-    background-image: linear-gradient(bottom, #CD4E38, #971C00);
-    background-image: -webkit-linear-gradient(bottom, #CD4E38, #971C00);
-    background-image: -ms-linear-gradient(bottom, #CD4E38, #971C00); }
+    background-image: linear-gradient(to top, #CD4E38, #971C00);
+    background-image: -webkit-linear-gradient(to top, #CD4E38, #971C00);
+    background-image: -ms-linear-gradient(to top, #CD4E38, #971C00); }
   .brown-button a {
     color: #FFF;
     font-family: PT Sans, san-serif;

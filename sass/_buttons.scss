@@ -21,14 +21,14 @@
 	padding: .5em 0em .25em 1em;
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: .5em;
-    background-image: linear-gradient(bottom, $light-green, $medium-green, $dark-green);
-    background-image: -webkit-linear-gradient(bottom, $light-green, $medium-green, $dark-green);
-    background-image: -ms-linear-gradient(bottom, $light-green, $medium-green, $dark-green);
+    background-image: linear-gradient(to top, $light-green, $medium-green, $dark-green);
+    background-image: -webkit-linear-gradient(to top, $light-green, $medium-green, $dark-green);
+    background-image: -ms-linear-gradient(to top, $light-green, $medium-green, $dark-green);
     
 	&:hover {
-		background-image: linear-gradient(bottom, $light-green, $dark-green);
-		background-image: -webkit-linear-gradient(bottom, $light-green, $dark-green);
-		background-image: -ms-linear-gradient(bottom, $light-green, $dark-green);
+		background-image: linear-gradient(to top, $light-green, $dark-green);
+		background-image: -webkit-linear-gradient(to top, $light-green, $dark-green);
+		background-image: -ms-linear-gradient(to top, $light-green, $dark-green);
 	}
 
 	@include links(#FFF);
@@ -39,14 +39,14 @@
 	padding: .5em 0em .25em 1em;
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: .5em;
-    background-image: linear-gradient(bottom, $light-brown, $medium-brown, $dark-brown);
-    background-image: -webkit-linear-gradient(bottom, $light-brown, $medium-brown, $dark-brown);
-    background-image: -ms-linear-gradient(bottom, $light-brown, $medium-brown, $dark-brown);
+    background-image: linear-gradient(to top, $light-brown, $medium-brown, $dark-brown);
+    background-image: -webkit-linear-gradient(to top, $light-brown, $medium-brown, $dark-brown);
+    background-image: -ms-linear-gradient(to top, $light-brown, $medium-brown, $dark-brown);
     
 	&:hover {
-		background-image: linear-gradient(bottom, $light-brown, $dark-brown);
-		background-image: -webkit-linear-gradient(bottom, $light-brown, $dark-brown);
-		background-image: -ms-linear-gradient(bottom, $light-brown, $dark-brown);
+		background-image: linear-gradient(to top, $light-brown, $dark-brown);
+		background-image: -webkit-linear-gradient(to top, $light-brown, $dark-brown);
+		background-image: -ms-linear-gradient(to top, $light-brown, $dark-brown);
 	}
 
 	@include links(#FFF);
