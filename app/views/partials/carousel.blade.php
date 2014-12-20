@@ -1,5 +1,3 @@
-<section class="large-8 small-centered large-uncentered columns">
-	
 	<article class="carousel">
 	@foreach($carousel as $image)
 		<figure class="image img-one">
@@ -16,5 +14,3 @@
 		</figure>
 	@endforeach
 	</article>
-
-</section>
