@@ -18,28 +18,28 @@
 }
 
 @mixin animation-name($name){
-  $name: unquote($name);
-  @include experimental(animation-name, $name, -moz, -webkit, -o, not -ms, not -khtml, official);
+  animation-name: $name;
+  -webkit-animation-name: $name;
 }
 
 @mixin animation-duration($duration){
-  $duration: unquote($duration);
-  @include experimental(animation-duration, $duration, -moz, -webkit, -o, not -ms, not -khtml, official);
+  animation-duration: $duration;
+  -webkit-animation-duration: $duration;
 }
 
 @mixin animation-delay($delay){
-  $delay: unquote($delay);
-  @include experimental(animation-delay, $delay, -moz, -webkit, -o, not -ms, not -khtml, official);
+  animation-delay: $delay;
+  -webit-animation-delay: $delay;
 }
 
 @mixin animation-timing-function($function){
-  $function: unquote($function);
-  @include experimental(animation-timing-function, $function, -moz, -webkit, -o, not -ms, not -khtml, official);
+  animation-timing-function: $function;
+  -webkit-animation-timing-function: $function;
 }
 
 @mixin animation-iteration-count($count){
-  $count: unquote($count);
-  @include experimental(animation-iteration-count, $count, -moz, -webkit, -o, not -ms, not -khtml, official);
+  animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
 }
 
 // Declare the animation within a mixin, since I have to apply it to multiple classes.
