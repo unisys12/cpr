@@ -42,6 +42,12 @@
   -webkit-animation-iteration-count: $count;
 }
 
+@mixin translateY($amount){
+	transform: translateY($amount);
+	-webkit-transform: translateY($amount);
+	-moz-transform: translateY($amount);
+}
+
 // Declare the animation within a mixin, since I have to apply it to multiple classes.
 @mixin carousel {
 	@include animation-name(cycle-images);
@@ -54,17 +60,17 @@
 {
 	//Starting at 10% allows for pause for last image and to first displayed image
 	10%, 35% {
-		@include transform2d(translateY(-0)); // start on first image
+		@include translateY(-0); // start on first image
 	}
 
 	// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
 	40%, 65% {
-		@include transform2d(translateY(-330px)); // move second image into place
+		@include translateY(-353px); // move second image into place
 	}
 
 	// Stopping the animation at 100% allows for clean transition to first image at end
 	70%, 100% {
-		@include transform2d(translateY(-630px)); // move third image up into place
+		@include translateY(-705px); // move third image up into place
 	}
 }
 
@@ -74,7 +80,7 @@
 	overflow: hidden;
 }
 
-.image >img {
+.image > img {
 	@include carousel;
 	padding-bottom: .5em;
 }
