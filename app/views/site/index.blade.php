@@ -1,7 +1,7 @@
 @extends('templates.site')
 
 @section('content')
-<section class="carosale large-9 columns">
+<section class="large-9 columns">
 	@include('partials.carousel')
 </section>
 <article class="large-9 columns">
