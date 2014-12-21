@@ -46,13 +46,9 @@ class CarouselController extends \BaseController {
 			'image_3_description'	=>	Input::get('image_3_description')
 		];
 
-		//Input::file('image_1')->move($image_path, Input::file('image_1')->getClientOriginalName());
-		//Input::file('image_2')->move($image_path, Input::file('image_2')->getClientOriginalName());
-		//Input::file('image_3')->move($image_path, Input::file('image_3')->getClientOriginalName());
-
-		Image::make(Input::file('image_1'))->resize(1200,400)->save('imgs/uploads/carousel/' . Input::file('image_1')->getClientOriginalName());
-		Image::make(Input::file('image_2'))->resize(1200,400)->save('imgs/uploads/carousel/' . Input::file('image_2')->getClientOriginalName());
-		Image::make(Input::file('image_3'))->resize(1200,400)->save('imgs/uploads/carousel/' . Input::file('image_3')->getClientOriginalName());
+		Image::make(Input::file('image_1'))->resize(1200,400)->save($data['image_1']);
+		Image::make(Input::file('image_2'))->resize(1200,400)->save($data['image_2']);
+		Image::make(Input::file('image_3'))->resize(1200,400)->save($data['image_3']);
 
 		Carousel::create($data);
 		return Redirect::route('backend.carousel.index');
