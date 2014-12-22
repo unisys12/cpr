@@ -56,24 +56,6 @@
 	@include animation-iteration-count(infinite);
 }
 
-@include keyframes(cycle-images)
-{
-	//Starting at 10% allows for pause for last image and to first displayed image
-	10%, 35% {
-		@include translateY(-0); // start on first image
-	}
-
-	// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
-	40%, 65% {
-		@include translateY(-360px); // move second image into place
-	}
-
-	// Stopping the animation at 100% allows for clean transition to first image at end
-	70%, 100% {
-		@include translateY(-718px); // move third image up into place
-	}
-}
-
 .carousel {
 	//border: 1px solid rgba(0,0,0,0.5); //used to display image box
 	height: 17em;
@@ -103,4 +85,66 @@ figure {
 .img-three > figcaption {
 	padding-bottom: 7.75em;
 	@include carousel;
+}
+
+// Desktop Viewport
+@include keyframes(cycle-images)
+{
+	//Starting at 10% allows for pause for last image and to first displayed image
+	10%, 35% {
+		@include translateY(-0); // start on first image
+	}
+
+	// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
+	40%, 65% {
+		@include translateY(-360px); // move second image into place
+	}
+
+	// Stopping the animation at 100% allows for clean transition to first image at end
+	70%, 100% {
+		@include translateY(-718px); // move third image up into place
+	}
+}
+
+// Phone / Handheld Vieworts
+@media screen and (max-width: 360pc){
+	.carousel {
+		height: 8.5em;
+	}
+	@include keyframes(cycle-images)
+		{
+			//Starting at 10% allows for pause for last image and to first displayed image
+		10%, 35% {
+			@include translateY(-0); // start on first image
+		}
+
+		// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
+		40%, 65% {
+			@include translateY(-200px); // move second image into place
+		}
+
+		// Stopping the animation at 100% allows for clean transition to first image at end
+		70%, 100% {
+			@include translateY(-400px); // move third image up into place
+		}
+	}
+
+	.image > img {
+	@include carousel;
+	}
+
+	.img-one > figcaption {
+		padding-bottom: 3.75em;
+		@include carousel;
+	}
+
+	.img-two > figcaption {
+		padding-bottom: 1.75em;
+		@include carousel;
+	}
+
+	.img-three > figcaption {
+		padding-bottom: 7.75em;
+		@include carousel;
+	}
 }
