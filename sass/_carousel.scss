@@ -106,8 +106,8 @@ figure {
 	}
 }
 
-// Phone / Handheld Vieworts
-@media screen and (max-width: 360pc){
+// Android Vieworts
+@media screen and (min-width: 360px){
 	.carousel {
 		height: 8.5em;
 	}
@@ -145,6 +145,38 @@ figure {
 
 	.img-three > figcaption {
 		padding-bottom: 7.75em;
+		@include carousel;
+	}
+}
+
+@media screen and (max-width: 320px){
+	.carousel {
+		height: 7.5em;
+	}
+	@include keyframes(cycle-images)
+		{
+			//Starting at 10% allows for pause for last image and to first displayed image
+		10%, 35% {
+			@include translateY(-0); // start on first image
+		}
+
+		// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
+		40%, 65% {
+			@include translateY(-155px); // move second image into place
+		}
+
+		// Stopping the animation at 100% allows for clean transition to first image at end
+		70%, 100% {
+			@include translateY(-345px); // move third image up into place
+		}
+	}
+	.img-one > figcaption {
+		padding-bottom: 2em;
+		@include carousel;
+	}
+
+	.img-two > figcaption {
+		padding-bottom: 1.75em;
 		@include carousel;
 	}
 }
