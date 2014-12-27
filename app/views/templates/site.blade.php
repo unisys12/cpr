@@ -11,10 +11,10 @@
   </head>
 <body class="background">
   	<header class="row">
-      <section class="large-10 columns">
+      <section class="large-10 medium-10 columns">
         <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
       </section>
-  		  <figure class="large-2 columns right">
+  		  <figure class="large-2 medium-2 columns right">
           <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
         </figure>
   	</header>
