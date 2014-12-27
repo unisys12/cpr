@@ -60,6 +60,7 @@
 	//border: 1px solid rgba(0,0,0,0.5); //used to display image box
 	height: 17em;
 	overflow: hidden;
+	margin-left: 1.5em;
 }
 
 .image > img {
@@ -107,7 +108,7 @@ figure {
 }
 
 // Android Vieworts
-@media screen and (min-width: 360px){
+/* @media screen and (min-width: 360px){
 	.carousel {
 		height: 8.5em;
 	}
@@ -147,7 +148,7 @@ figure {
 		padding-bottom: 7.75em;
 		@include carousel;
 	}
-}
+} */
 
 @media screen and (max-width: 320px){
 	.carousel {
