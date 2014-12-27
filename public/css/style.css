@@ -427,8 +427,11 @@ footer {
       margin: auto;
       padding-right: 5em; } }
 
+header h1 {
+  font-family: Oswald; }
+
 .top-menu {
-  background-color: #59A761;
+  background-color: #7ab981;
   box-shadow: 5px 5px #9da5e6; }
   .top-menu:hover {
     box-shadow: 5px 5px rgba(0, 100, 0, 0.3); }
@@ -698,7 +701,7 @@ aside {
       margin: 0;
       padding: .5em;
       list-style-type: none;
-      background-color: #1C74BB; }
+      background-color: #2b8fdf; }
     aside .side-menu li {
       padding: .5em 0; }
       aside .side-menu li:first-child {

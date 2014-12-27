@@ -12,7 +12,7 @@
 <body class="background">
   	<header class="row">
       <section class="large-10 columns">
-        <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
+        <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
       </section>
   		  <figure class="large-2 columns right">
           <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">

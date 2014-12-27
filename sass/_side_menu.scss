@@ -11,7 +11,7 @@ aside {
 			margin: 0;
 			padding: .5em;
 			list-style-type: none;
-			background-color: $light-blue;
+			background-color: lighten($light-blue, 10%);
 		}
 
 		li { 

@@ -1,5 +1,11 @@
+header {
+	h1 {
+		font-family: Oswald;
+	}
+}
+
 .top-menu {
-	background-color: $light-green;
+	background-color: lighten($light-green, 10%);
 	@include box-shadow(#9da5e6);
 	&:hover {
 		@include box-shadow(rgba(0,100,0, .3));
