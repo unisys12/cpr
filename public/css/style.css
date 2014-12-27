@@ -465,7 +465,8 @@ footer {
 
 .carousel {
   height: 17em;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-left: 1.5em; }
 
 .image > img {
   padding: 0;
@@ -567,104 +568,47 @@ figure {
     transform: translateY(-718px);
     -webkit-transform: translateY(-718px);
     -moz-transform: translateY(-718px); } }
-@media screen and (min-width: 360px) {
-  .carousel {
-    height: 8.5em; }
+/* @media screen and (min-width: 360px){
+	.carousel {
+		height: 8.5em;
+	}
+	@include keyframes(cycle-images)
+		{
+			//Starting at 10% allows for pause for last image and to first displayed image
+		10%, 35% {
+			@include translateY(-0); // start on first image
+		}
 
-  @-webkit-keyframes cycle-images {
-    10%, 35% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0); }
-    40%, 65% {
-      transform: translateY(-200px);
-      -webkit-transform: translateY(-200px);
-      -moz-transform: translateY(-200px); }
-    70%, 100% {
-      transform: translateY(-400px);
-      -webkit-transform: translateY(-400px);
-      -moz-transform: translateY(-400px); } }
-  @-moz-keyframes cycle-images {
-    10%, 35% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0); }
-    40%, 65% {
-      transform: translateY(-200px);
-      -webkit-transform: translateY(-200px);
-      -moz-transform: translateY(-200px); }
-    70%, 100% {
-      transform: translateY(-400px);
-      -webkit-transform: translateY(-400px);
-      -moz-transform: translateY(-400px); } }
-  @-ms-keyframes cycle-images {
-    10%, 35% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0); }
-    40%, 65% {
-      transform: translateY(-200px);
-      -webkit-transform: translateY(-200px);
-      -moz-transform: translateY(-200px); }
-    70%, 100% {
-      transform: translateY(-400px);
-      -webkit-transform: translateY(-400px);
-      -moz-transform: translateY(-400px); } }
-  @keyframes cycle-images {
-    10%, 35% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0); }
-    40%, 65% {
-      transform: translateY(-200px);
-      -webkit-transform: translateY(-200px);
-      -moz-transform: translateY(-200px); }
-    70%, 100% {
-      transform: translateY(-400px);
-      -webkit-transform: translateY(-400px);
-      -moz-transform: translateY(-400px); } }
-  .image > img {
-    animation-name: cycle-images;
-    -webkit-animation-name: cycle-images;
-    animation-duration: 15s;
-    -webkit-animation-duration: 15s;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite; }
+		// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
+		40%, 65% {
+			@include translateY(-200px); // move second image into place
+		}
 
-  .img-one > figcaption {
-    padding-bottom: 3.75em;
-    animation-name: cycle-images;
-    -webkit-animation-name: cycle-images;
-    animation-duration: 15s;
-    -webkit-animation-duration: 15s;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite; }
+		// Stopping the animation at 100% allows for clean transition to first image at end
+		70%, 100% {
+			@include translateY(-400px); // move third image up into place
+		}
+	}
 
-  .img-two > figcaption {
-    padding-bottom: 1.75em;
-    animation-name: cycle-images;
-    -webkit-animation-name: cycle-images;
-    animation-duration: 15s;
-    -webkit-animation-duration: 15s;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite; }
+	.image > img {
+	@include carousel;
+	}
 
-  .img-three > figcaption {
-    padding-bottom: 7.75em;
-    animation-name: cycle-images;
-    -webkit-animation-name: cycle-images;
-    animation-duration: 15s;
-    -webkit-animation-duration: 15s;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite; } }
+	.img-one > figcaption {
+		padding-bottom: 3.75em;
+		@include carousel;
+	}
+
+	.img-two > figcaption {
+		padding-bottom: 1.75em;
+		@include carousel;
+	}
+
+	.img-three > figcaption {
+		padding-bottom: 7.75em;
+		@include carousel;
+	}
+} */
 @media screen and (max-width: 320px) {
   .carousel {
     height: 7.5em; }
@@ -746,7 +690,7 @@ aside {
   margin-left: -.89em;
   margin-bottom: 1.5em; }
   aside .side-menu {
-    font-size: 75%;
+    font-size: 95%;
     box-shadow: 5px 5px #9da5e6; }
     aside .side-menu:hover {
       box-shadow: 5px 5px rgba(0, 0, 100, 0.3); }
