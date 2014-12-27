@@ -428,13 +428,13 @@ footer {
       padding-right: 5em; } }
 
 header h1 {
-  font-family: Oswald; }
+  font-family: Oswald, Sans-Serif; }
 
 .top-menu {
   background-color: #7ab981;
-  box-shadow: 5px 5px #9da5e6; }
+  box-shadow: 5px 5px rgba(0, 100, 0, 0.3); }
   .top-menu:hover {
-    box-shadow: 5px 5px rgba(0, 100, 0, 0.3); }
+    box-shadow: 5px 5px #b1b8eb; }
   .top-menu li {
     float: left;
     padding: 1em;
@@ -694,9 +694,9 @@ aside {
   margin-bottom: 1.5em; }
   aside .side-menu {
     font-size: 95%;
-    box-shadow: 5px 5px #9da5e6; }
+    box-shadow: 5px 5px rgba(0, 0, 255, 0.4); }
     aside .side-menu:hover {
-      box-shadow: 5px 5px rgba(0, 0, 100, 0.3); }
+      box-shadow: 5px 5px #b1b8eb; }
     aside .side-menu ul {
       margin: 0;
       padding: .5em;
