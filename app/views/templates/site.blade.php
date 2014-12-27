@@ -11,10 +11,13 @@
   </head>
 <body class="background">
   	<header class="row">
-      <section class="large-6 columns">
+      <section class="large-10 columns">
         <h4>Corinth/Alcorn Parks &amp; Recreation Department</h4>
       </section>
-  		  @include('partials.conditions')
+  		  <figure class="large-2 columns right">
+          <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
+          <figcaption></figcaption>
+        </figure>
   	</header>
     <nav class="row top-menu">
       <ul class="large-12 large-offset-3 small-centered">
