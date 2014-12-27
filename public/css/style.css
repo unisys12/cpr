@@ -364,6 +364,9 @@ th {
   background-image: -o-linear-gradient(bottom, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4));
   background-image: linear-gradient(to top, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4)); }
 
+p {
+  font-family: Open Sans, Helvetica, Sans Serif; }
+
 article {
   padding-bottom: 3em;
   line-height: 1.75; }
