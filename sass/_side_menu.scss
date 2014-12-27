@@ -2,6 +2,7 @@ aside {
 	margin-left: -.89em;
 	margin-bottom: 1.5em;
 	.side-menu {
+		font-size: 75%;
 		@include box-shadow(#9da5e6);
 		&:hover {
 			@include box-shadow(rgba(0,0,100, .3));
@@ -14,7 +15,7 @@ aside {
 		}
 
 		li { 
-			padding: 1em 0;
+			padding: .5em 0;
 		    &:first-child {
 		      padding-top: .25em;
 		    }

@@ -6,7 +6,7 @@
 	}
 	li {
 		float: left;
-		padding: 2em;
+		padding: 1em;
 		list-style: none;
 		display: inline;
 
@@ -18,7 +18,7 @@
 	    }
 
 		@media screen and (max-width: 515px){
-			padding: .75em;
+			padding: .5em;
 			&:first-child {
 		      padding-left: 0;
 		    }
@@ -27,7 +27,7 @@
 		    }
 		}
 		@media screen and (max-width: 418px){
-			padding: .5em;
+			padding: .25em;
 			&:first-child {
 		      padding-left: 0;
 		    }
