@@ -358,11 +358,11 @@ th {
   padding: 0; }
 
 .background {
-  /* background: #fff no-repeat center center fixed;
-  background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
-  background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
-  background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.1), rgba(0,0,100,0.1));
-  background-image: linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,100,0.1)); */ }
+  background: #fff no-repeat center center fixed;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 100, 0.1));
+  background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 100, 0.1));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 100, 0.1));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 100, 0.1)); }
 
 article {
   padding-bottom: 3em;
