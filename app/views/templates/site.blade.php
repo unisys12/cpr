@@ -26,7 +26,7 @@
     </nav>
     <br>
   	<main class="row">
-  		<aside class="large-3 columns">
+  		<aside class="large-3 medium-3 columns">
   			<nav class="side-menu">
           <ul>
             <li><a href="#">Home</a></li>
