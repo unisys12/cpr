@@ -16,7 +16,6 @@
       </section>
   		  <figure class="large-2 columns right">
           <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
-          <figcaption></figcaption>
         </figure>
   	</header>
     <nav class="row top-menu">
