@@ -89,16 +89,23 @@ class CarouselController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$image_path = '../imgs/uploads/carousel';
+		$image_path = 'imgs/uploads/carousel';
 
 		$data = [
-			'title' 		=> 	Input::get('title'),
-			'slug'			=>	Str::slug(Input::get('title')), 
-			'description'	=>	Input::get('description'),
-			'image_1'		=>	$image_path . Input::file('image_1'),
-			'image_2'		=>	$image_path . Input::file('image_2'),
-			'image_3'		=>	$image_path . Input::file('image_3')
+			'title' 				=> 	Input::get('title'),
+			'slug'					=>	Str::slug(Input::get('title')), 
+			'description'			=>	Input::get('description'),
+			'image_1'				=>	$image_path . Input::file('image_1')->getClientOriginalName(),
+			'image_1_description'	=>	Input::get('image_1_description'),
+			'image_2'				=>	$image_path . Input::file('image_2')->getClientOriginalName(),
+			'image_2_description'	=>	Input::get('image_2_description'),
+			'image_3'				=>	$image_path . Input::file('image_3')->getClientOriginalName(),
+			'image_3_description'	=>	Input::get('image_3_description')
 		];
+
+		Image::make(Input::file('image_1'))->resize(720,240)->save($data['image_1']);
+		Image::make(Input::file('image_2'))->resize(720,240)->save($data['image_2']);
+		Image::make(Input::file('image_3'))->resize(720,240)->save($data['image_3']);
 
 		Carousel::save($data);
 		return Redirect::route('backend.carousel.index');
