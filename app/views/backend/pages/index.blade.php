@@ -22,7 +22,7 @@
 	<ul>
 	@foreach ($pages as $page)
 		<li>
-			<a href="/backend/pages/{{ $page->slug }}">{{ $page->title }}</a>
+			<a href="/backend/pages/{{ $page->slug }}">{{ $page->title }}</a> - <a href="/backend/pages/{{ $page->slug }}/edit">Edit</a>
 		</li>
 	@endforeach
 	</ul>

@@ -20,7 +20,8 @@
 	<ul>
 	@foreach ($carousel as $example)
 		<li>
-			<a href="/backend/carousel/{{ $example->slug }}">{{ $example->title }}</a> - {{ $example->description }}
+			<a href="/backend/carousel/{{ $example->slug }}">{{ $example->title }}</a> - <a href="/backend/carousel/{{ $example->slug }}/edit">Edit</a>
+			<p>{{ $example->description }}</p>
 		</li>
 	@endforeach
 	</ul>
