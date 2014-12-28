@@ -74,7 +74,7 @@ class CarouselController extends \BaseController {
 	 * @param  string  $slug
 	 * @return Response
 	 */
-	public function edit($carousel)
+	public function edit($slug)
 	{
 		$carousel = Carousel::where('slug', $slug)->get();
 		return View::make('backend.carousel.edit')->with('carousel', $carousel);
