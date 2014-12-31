@@ -46,7 +46,7 @@ class PagesController extends \BaseController {
 			'content'	=> Input::get('content')
 		];
 
-		$this->page->create($data);
+		$this->page->store($data);
 		return Redirect::route('page.index');
 	}
 
