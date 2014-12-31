@@ -59,7 +59,7 @@ class PagesController extends \BaseController {
 	 */
 	public function show($slug)
 	{ 
-		$page = $this->page->where('slug', $slug)->get();
+		$page = $this->page->find($slug);
 		return View::make('backend.pages.show')->with('page', $page);
 	}
 
@@ -72,7 +72,7 @@ class PagesController extends \BaseController {
 	 */
 	public function edit($slug)
 	{
-		$page = $this->page->where('slug', $slug)->get();
+		$page = $this->page->find($slug);
 		return View::make('backend.pages.edit')->with('page', $page);
 	}
 
@@ -92,7 +92,7 @@ class PagesController extends \BaseController {
 			'content'	=> Input::get('content')
 		];
 
-		$this->page->save($data);
+		$this->page->update($data);
 		return Redirect::route('page.index');
 	}
 
@@ -105,7 +105,7 @@ class PagesController extends \BaseController {
 	 */
 	public function destroy($slug)
 	{
-		$page = $this->page->where('slug', $slug)->get();
+		$page = $this->page->find($slug);
 		$page->delete();
 		return Redirect::route('page.index');
 	}
