@@ -1,5 +1,7 @@
 <?php
 
+use Cpr\Storage\Page\PageRepository as Page;
+
 class PagesController extends \BaseController {
 
 	public function __construct(Page $pages)

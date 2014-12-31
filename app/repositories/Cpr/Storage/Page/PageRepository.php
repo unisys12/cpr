@@ -6,7 +6,7 @@ interface PageRepository {
 
 	public function find($slug);
 
-	public function create($slug);
+	public function store($slug);
 
 	public function update($slug);	
 
