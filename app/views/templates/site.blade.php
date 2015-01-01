@@ -36,8 +36,8 @@
             <li><a href="{{ route('site.index') }}">Home</a></li>
             <li><a href="/announcements">Park Announcements</a></li>
             <li><a href="/schedules">Athletic Schedules</a></li>
-            <li><a href="/youth/sports">Youth Sports</a></li>
-            <li><a href="/adult/sports">Adult Sports</a></li>
+            <li><a href="/sports/youth">Youth Sports</a></li>
+            <li><a href="/sports/adult">Adult Sports</a></li>
             <li><a href="/facilities">Facilities</a></li>
             @yield('side-nav')
           </ul>
