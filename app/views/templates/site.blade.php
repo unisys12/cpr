@@ -11,8 +11,10 @@
   </head>
 <body class="background">
   	<header class="row">
-      <section class="large-10 medium-10 columns">
-        <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
+      <section class="large-10 medium-10 columns home">
+        <a href="{{ route('site.index') }}">
+          <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
+        </a>
       </section>
   		  <figure class="large-2 medium-2 columns right">
           <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
@@ -20,10 +22,10 @@
   	</header>
     <nav class="row top-menu">
       <ul class="large-12 large-offset-3 small-centered">
-          <li><a href="#">Facilities</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Staff</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="/facilities">Facilities</a></li>
+          <li><a href="/sports">Sports</a></li>
+          <li><a href="/staff">Staff</a></li>
+          <li><a href="/contact">Contact Us</a></li>
       </ul>
     </nav>
     <br>
@@ -31,12 +33,12 @@
   		<aside class="large-3 medium-3 columns">
   			<nav class="side-menu">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Park Announcements</a></li>
-            <li><a href="#">Athletic Schedules</a></li>
-            <li><a href="#">Youth Sports</a></li>
-            <li><a href="#">Adult Sports</a></li>
-            <li><a href="#">Facilities &amp; Locations</a></li>
+            <li><a href="{{ route('site.index') }}">Home</a></li>
+            <li><a href="/announcements">Park Announcements</a></li>
+            <li><a href="/schedules">Athletic Schedules</a></li>
+            <li><a href="/youth/sports">Youth Sports</a></li>
+            <li><a href="/adult/sports">Adult Sports</a></li>
+            <li><a href="/facilities">Facilities</a></li>
             @yield('side-nav')
           </ul>
         </nav>
