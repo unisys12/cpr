@@ -497,6 +497,8 @@ figure {
 
 .img-one > figcaption {
   padding-bottom: 5.75em;
+  font-family: Open Sans, Sans Serif, Arial;
+  font-weight: 300;
   animation-name: cycle-images;
   -webkit-animation-name: cycle-images;
   animation-duration: 15s;
@@ -508,6 +510,8 @@ figure {
 
 .img-two > figcaption {
   padding-bottom: 5.75em;
+  font-family: Open Sans, Sans Serif, Arial;
+  font-weight: 300;
   animation-name: cycle-images;
   -webkit-animation-name: cycle-images;
   animation-duration: 15s;
@@ -519,6 +523,8 @@ figure {
 
 .img-three > figcaption {
   padding-bottom: 7.75em;
+  font-family: Open Sans, Sans Serif, Arial;
+  font-weight: 300;
   animation-name: cycle-images;
   -webkit-animation-name: cycle-images;
   animation-duration: 15s;

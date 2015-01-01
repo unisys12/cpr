@@ -75,16 +75,19 @@ figure {
 
 .img-one > figcaption {
 	padding-bottom: 5.75em;
+	@include Sans(300);
 	@include carousel;
 }
 
 .img-two > figcaption {
 	padding-bottom: 5.75em;
+	@include Sans(300);
 	@include carousel;
 }
 
 .img-three > figcaption {
 	padding-bottom: 7.75em;
+	@include Sans(300);
 	@include carousel;
 }
 
