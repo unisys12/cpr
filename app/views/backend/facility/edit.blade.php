@@ -28,17 +28,17 @@ Edit a Existing Facility
 			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 		</p>
 		{{ Form::open(['route' => 'backend.facility.update', 'method' => 'put']) }}
-		@foreach ($facilities as $item)
+		@foreach ($facilities as $facility)
 		
 		{{ Form::label('title', 'Give a Title to Your Page') }}
-		{{ Form::text('title', $item->title) }}
+		{{ Form::text('title', $facility->title) }}
 
 		{{ Form::label('description', 'Describe this Facility') }}
-		{{ Form::text('description', $item->description) }}
+		{{ Form::text('description', $facility->description) }}
 
 		{{ Form::label('image_1', 'Choose the First Image to Display') }}
 		{{ Form::file('image_1', ['required' => true]) }}
-		{{ Form::text('image_1_description', $item->image_1_description) }}
+		{{ Form::text('image_1_description', $facility->image_1_description) }}
 
 		{{ Form::label('image_2', 'Choose the Second Image to Display') }}
 		{{ Form::file('image_2', ['required' => true]) }}
