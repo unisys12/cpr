@@ -14,7 +14,7 @@
 }
 
 p{
-	font-family: Helvetica, Sans Serif;
+	@include helvetica(300);
 	color: #111;
 }
 
