@@ -364,6 +364,10 @@ th {
   background-image: -o-linear-gradient(bottom, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4));
   background-image: linear-gradient(to top, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4)); }
 
+.home a {
+  text-decoration: none;
+  color: #111; }
+
 p {
   font-family: Open Sans, Helvetica, Sans Serif; }
 
