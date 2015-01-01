@@ -26,7 +26,8 @@
 				<a href=" {{ route('site.index') }} ">Site Home</a> -
 				<a href="/backend">Backend Home</a> -
 				<a href="/backend/pages">Pages</a> -
-				<a href="{{ route('backend.carousel.index') }}">Carousel</a>
+				<a href="{{ route('backend.carousel.index') }}">Carousel</a> -
+				<a href="{{ route('backend.facility.index') }}">Facilities</a> -
 			</nav>
 		</header>
 		<hr>
