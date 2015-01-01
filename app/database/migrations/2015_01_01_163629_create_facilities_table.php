@@ -34,7 +34,7 @@ class CreateFacilitiesTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('facilities');
 	}
 
 }
