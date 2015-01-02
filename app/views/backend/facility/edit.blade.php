@@ -30,8 +30,8 @@ Edit a Existing Facility
 		{{ Form::open(['route' => 'backend.facility.update', 'method' => 'put']) }}
 		@foreach ($facilities as $facility)
 		
-		{{ Form::label('title', 'Give a Title to Your Page') }}
-		{{ Form::text('title', $facility->title) }}
+		{{ Form::label('name', 'Facility Name') }}
+		{{ Form::text('name', $facility->name) }}
 
 		{{ Form::label('description', 'Describe this Facility') }}
 		{{ Form::text('description', $facility->description) }}
