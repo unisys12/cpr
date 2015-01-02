@@ -1,6 +1,6 @@
 <?php
 
-use Cpr\Storage\Facility\FacilityRepository as Facility;
+//use Cpr\Storage\Facility\FacilityRepository as Facility;
 
 class FacilityController extends \BaseController {
 
@@ -54,7 +54,7 @@ class FacilityController extends \BaseController {
 		Image::make(Input::file('image_1'))->save($data['image_1']);
 		Image::make(Input::file('image_2'))->save($data['image_2']);
 
-		$this->facility->store($data);
+		$this->facility->create($data);
 		return Redirect::route('backend.facility.index');
 	}
 
@@ -67,7 +67,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function show($slug)
 	{
-		$facilites = $this->facility->find($slug);
+		$facilites = Facility::where('slug', $slug)->get();
 		return View::make('backend.facility.show')->with('facilites', $facilites);
 	}
 
@@ -80,7 +80,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function edit($slug)
 	{
-		$facilites = $this->facility->find($slug);
+		$facilites = Facility::where('slug', $slug)->get();
 		return View::make('backend.facility.edit')->with('facilites', $facilites);
 	}
 
@@ -108,7 +108,7 @@ class FacilityController extends \BaseController {
 		Image::make(Input::file('image_1'))->save($data['image_1']);
 		Image::make(Input::file('image_2'))->save($data['image_2']);
 
-		$this->facility->update($data);
+		$this->facility->save($data);
 		return Redirect::route('backend.facility.index');
 	}
 
