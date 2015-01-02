@@ -30,7 +30,7 @@ Existing Facilities
 	<ul>
 	@foreach ($facilites as $facility)
 		<li>
-			<a href="/backend/facilities/{{ $facility->slug }}">{{ $facility->title }}</a> - <a href="/backend/facilities/{{ $facility->slug }}/edit">Edit</a>
+			<a href="/backend/facility/{{ $facility->slug }}">{{ $facility->name }}</a> - <a href="/backend/facility/{{ $facility->slug }}/edit">Edit</a>
 		</li>
 	@endforeach
 	</ul>
