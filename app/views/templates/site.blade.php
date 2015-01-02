@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title', 'Corinth Alcorn Parks and Recreation')</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style.css.map" />
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css">
     <script src=""></script>
   </head>
 <body class="background">
