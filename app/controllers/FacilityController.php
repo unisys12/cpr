@@ -1,6 +1,6 @@
 <?php
 
-use Cpr\Storage\Facility\EloquentFacilityRespository as Facility;
+use Cpr\Storage\Facility\FacilityRepository as Facility;
 
 class FacilityController extends \BaseController {
 
@@ -17,7 +17,8 @@ class FacilityController extends \BaseController {
 	public function index()
 	{
 		$facilites = $this->facility->all();
-		return View::make('backend.facilites.index')->with('facilites', $facilites);
+		dd($facilites);
+		//return View::make('backend.facility.index')->with('facilites', $facilites);
 	}
 
 
@@ -28,7 +29,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('backend.facilites.new');
+		return View::make('backend.facility.new');
 	}
 
 
@@ -55,7 +56,7 @@ class FacilityController extends \BaseController {
 		Image::make(Input::file('image_2'))->save($data['image_2']);
 
 		$this->facility->store($data);
-		return Redirect::route('backend.facilites.index');
+		return Redirect::route('backend.facility.index');
 	}
 
 
@@ -68,7 +69,7 @@ class FacilityController extends \BaseController {
 	public function show($slug)
 	{
 		$facilites = $this->facility->find($slug);
-		return View::make('backend.facilites.show')->with('facilites', $facilites);
+		return View::make('backend.facility.show')->with('facilites', $facilites);
 	}
 
 
@@ -81,7 +82,7 @@ class FacilityController extends \BaseController {
 	public function edit($slug)
 	{
 		$facilites = $this->facility->find($slug);
-		return View::make('backend.facilites.edit')->with('facilites', $facilites);
+		return View::make('backend.facility.edit')->with('facilites', $facilites);
 	}
 
 
@@ -109,7 +110,7 @@ class FacilityController extends \BaseController {
 		Image::make(Input::file('image_2'))->save($data['image_2']);
 
 		$this->facility->update($data);
-		return Redirect::route('backend.facilites.index');
+		return Redirect::route('backend.facility.index');
 	}
 
 
@@ -123,7 +124,7 @@ class FacilityController extends \BaseController {
 	{
 		$facilites = Facility::where('slug', $slug)->get();
 		$facilites->delete();
-		return Redirect::route('backend.facilites.index');
+		return Redirect::route('backend.facility.index');
 	}
 
 
