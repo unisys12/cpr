@@ -22,12 +22,12 @@ Existing Facilities
 	</nav>
 @stop
 @section('content')
-	@if(!$facilities->count())
+	@if(!$facilites->count())
 		<h5>There have been no facilities created for your site yet</h5>
 	@endif
 
 	<ul>
-	@foreach ($facilities as $facility)
+	@foreach ($facilites as $facility)
 		<li>
 			<a href="/backend/facilities/{{ $facility->slug }}">{{ $facility->title }}</a> - <a href="/backend/facilities/{{ $facility->slug }}/edit">Edit</a>
 		</li>
