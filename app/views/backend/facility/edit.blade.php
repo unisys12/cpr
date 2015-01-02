@@ -42,7 +42,7 @@ Edit a Existing Facility
 
 		{{ Form::label('image_2', 'Choose the Second Image to Display') }}
 		{{ Form::file('image_2', ['required' => true]) }}
-		{{ Form::text('image_2_description', $item->image_2_description) }}
+		{{ Form::text('image_2_description', $facility->image_2_description) }}
 
 		@endforeach
 		{{ Form::submit('Save Edits') }}
