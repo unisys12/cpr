@@ -39,11 +39,11 @@ class FacilityController extends \BaseController {
 	 */
 	public function store()
 	{
-		$image_path = 'imgs/uploads/facilites/';
+		$image_path = 'imgs/uploads/facilities/';
 
 		$data = [
-			'title' 				=> 	Input::get('title'),
-			'slug'					=>	Str::slug(Input::get('title')), 
+			'name' 					=> 	Input::get('name'),
+			'slug'					=>	Str::slug(Input::get('name')), 
 			'description'			=>	Input::get('description'),
 			'image_1'				=>	$image_path . Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
