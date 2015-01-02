@@ -9,7 +9,7 @@ class Facility extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'facilites';
+	protected $table = 'facilities';
 
 	/**
 	 * Columns used for dates
