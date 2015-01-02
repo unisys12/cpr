@@ -17,8 +17,7 @@ class FacilityController extends \BaseController {
 	public function index()
 	{
 		$facilites = $this->facility->all();
-		dd($facilites);
-		//return View::make('backend.facility.index')->with('facilites', $facilites);
+		return View::make('backend.facility.index')->with('facilites', $facilites);
 	}
 
 
