@@ -15,7 +15,7 @@ class CreateFacilitiesTable extends Migration {
 		Schema::create('facilities', function($table)
 		{
 			$table->increments('id');
-			$table->string('title');
+			$table->string('name');
 			$table->string('slug');
 			$table->text('description');
 			$table->string('image_1');
