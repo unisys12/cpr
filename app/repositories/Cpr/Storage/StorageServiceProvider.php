@@ -8,7 +8,9 @@ class StorageServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind(
 			'Cpr\Storage\Page\PageRepository',
-			'Cpr\Storage\Page\EloquentPageRepository'
+			'Cpr\Storage\Page\EloquentPageRepository',
+			'Cpr\Storage\Facility\FacilityRepository',
+			'Cpr\Storage\Facility\EloquentFacilityRespository'
 		);
 	}
 
