@@ -1,6 +1,6 @@
 <?php
 
-use Cpr\Storage\Facility\FacilityRepository as Facility;
+use Cpr\Storage\Facility\EloquentFacilityRespository as Facility;
 
 class FacilityController extends \BaseController {
 
