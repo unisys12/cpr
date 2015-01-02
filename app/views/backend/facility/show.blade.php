@@ -24,7 +24,7 @@ Preview Facility
 
 @section('content')
 	<div class="small-12 large-8 columns">
-		@foreach($facilites as $facility)
+		@foreach($facilities as $facility)
 		<h2>{{ $facility->name }}</h2>
 		<p>{{ $facility->description }}</p>
 		<figure>

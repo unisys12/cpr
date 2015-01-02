@@ -16,8 +16,8 @@ class FacilityController extends \BaseController {
 	 */
 	public function index()
 	{
-		$facilites = $this->facility->all();
-		return View::make('backend.facility.index')->with('facilites', $facilites);
+		$facilities = $this->facility->all();
+		return View::make('backend.facility.index')->with('facilities', $facilities);
 	}
 
 
@@ -67,8 +67,8 @@ class FacilityController extends \BaseController {
 	 */
 	public function show($slug)
 	{
-		$facilites = Facility::where('slug', $slug)->get();
-		return View::make('backend.facility.show')->with('facilites', $facilites);
+		$facilities = Facility::where('slug', $slug)->get();
+		return View::make('backend.facility.show')->with('facilities', $facilities);
 	}
 
 
@@ -80,8 +80,8 @@ class FacilityController extends \BaseController {
 	 */
 	public function edit($slug)
 	{
-		$facilites = Facility::where('slug', $slug)->get();
-		return View::make('backend.facility.edit')->with('facilites', $facilites);
+		$facilities = Facility::where('slug', $slug)->get();
+		return View::make('backend.facility.edit')->with('facilities', $facilities);
 	}
 
 
@@ -93,7 +93,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$image_path = 'imgs/uploads/facilites/';
+		$image_path = 'imgs/uploads/facilities/';
 
 		$data = [
 			'title' 				=> 	Input::get('title'),
@@ -121,8 +121,8 @@ class FacilityController extends \BaseController {
 	 */
 	public function destroy($slug)
 	{
-		$facilites = Facility::where('slug', $slug)->get();
-		$facilites->delete();
+		$facilities = Facility::where('slug', $slug)->get();
+		$facilities->delete();
 		return Redirect::route('backend.facility.index');
 	}
 
