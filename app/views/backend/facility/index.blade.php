@@ -21,6 +21,7 @@ Existing Facilities
 		</ul>
 	</nav>
 @stop
+
 @section('content')
 	@if(!$facilites->count())
 		<h5>There have been no facilities created for your site yet</h5>
