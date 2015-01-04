@@ -28,6 +28,13 @@ Route::put('backend/pages/update', ['as' => 'page.update', 'uses' => 'PagesContr
 Route::resource('/backend/carousel', 'CarouselController');
 Route::resource('/backend/facility', 'FacilityController');
 
+Route::get('/facilities', function()
+{
+	return View::make('facilities.index')->with('data', Facility::all());
+});
+
 // Site Routes
 Route::get('/', ['as' => 'site.index', 'uses' => 'SiteController@index']);
 Route::get('/{slug}', ['as' => 'site.page', 'uses' => 'SiteController@singlePage']);
+
+/*Route::get('/{section}/{slug}', ['as' => 'site.section'])*/
