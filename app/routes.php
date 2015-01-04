@@ -33,8 +33,12 @@ Route::get('/facilities', function()
 	return View::make('facilities.index')->with('data', Facility::all());
 });
 
+Route::get('/facilities/{slug}', ['as' => 'facilities.page', function($slug)
+{
+	$data = Facility::where('slug', $slug)->get();
+	return View::make('facilities.page')->with('data', $data);
+}]);
+
 // Site Routes
 Route::get('/', ['as' => 'site.index', 'uses' => 'SiteController@index']);
 Route::get('/{slug}', ['as' => 'site.page', 'uses' => 'SiteController@singlePage']);
-
-/*Route::get('/{section}/{slug}', ['as' => 'site.section'])*/
