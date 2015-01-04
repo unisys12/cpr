@@ -13,7 +13,9 @@
 				<h2>{{ $element->name }}</h2>
 			</header>
 			<figure>
-				<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
+				<a href="/facilities/{{ $element->slug }}">
+					<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
+				</a>
 				<figcaptions>
 					<small>
 						{{ $element->description }}
