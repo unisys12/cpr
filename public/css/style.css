@@ -795,6 +795,13 @@ aside {
   .brown-button a:hover {
     color: #cccccc; }
 
+.facility_img {
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.3); }
+  .facility_img img {
+    margin-top: -.5em; }
+  .facility_img figcaption {
+    margin-top: .25em; }
+
 meta.foundation-version {
   font-family: "/5.5.0/"; }
 
