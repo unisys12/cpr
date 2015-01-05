@@ -7,22 +7,26 @@
 @stop
 
 @section('content')
-	<div class="large-8 columns">		
-		@foreach ($data as $element)
-			<header>
-				<h2>{{ $element->name }}</h2>
-			</header>
-			<figure>
-				<a href="/facilities/{{ $element->slug }}">
-					<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
-				</a>
-				<figcaptions>
-					<small>
-						{{ $element->description }}
-					</small>
-				</figcaption>
-			</figure>
+	<div class="large-8 columns">
+		<div class="row">		
+		@foreach ($data as $element)			
+			<section class="large-6 medium-4 columns">
+				<header>
+					<h3>{{ $element->name }}</h3>
+				</header>
+				<figure class="facility_img panel radius">
+					<a href="/facilities/{{ $element->slug }}">
+						<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
+					</a>
+					<figcaption>
+						<small>
+							{{ $element->description }}
+						</small>
+					</figcaption>
+				</figure>
+			</section>
 		@endforeach
+		</div>
 	</div>
 @stop
 
