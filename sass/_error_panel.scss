@@ -1,0 +1,6 @@
+.error-panel {
+	@include panel(
+		$bg: red,
+		$adjust: true
+	);
+}
