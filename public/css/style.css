@@ -2740,7 +2740,8 @@ aside {
   margin-bottom: 1.25rem;
   padding: 1.25rem;
   background: red;
-  color: #333333; }
+  color: #333333;
+  border-radius: .25em; }
   .error-panel > :first-child {
     margin-top: 0; }
   .error-panel > :last-child {
