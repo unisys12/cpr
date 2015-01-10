@@ -25,4 +25,26 @@ class Facility extends Eloquent {
 	 */
 	protected $guarded = ['_token'];
 
+	/**
+	 * Method used for validation of form related to Facities
+	 * 
+	 * @var array
+	 */
+	public function validate($input)
+	{
+		$rules = [
+			'name'					=>	'required|min:5|unique:facilities',
+			'description'			=>	'required|min:10|max:255',
+			'image_1'				=>	'required|image:jpeg,bmp,png',
+			'image_1_description'	=> 	'required|min:5|max:25',
+			'image_2'				=>	'required|image:jpeg,bmp,png',
+			'image_2_description'	=> 	'required|min:5|max:25'
+		];
+
+		$attempt = Validator::make($input, $rules);
+
+		return $attempt;
+	}
+
+
 }
