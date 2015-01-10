@@ -7,6 +7,8 @@ class FacilityController extends \BaseController {
 	public function __construct(Facility $facility)
 	{
 		$this->facility = $facility;
+
+		$this->beforeFilter('csrf', ['on' => 'post, put']);
 	}
 
 	/**
