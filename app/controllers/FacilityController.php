@@ -47,9 +47,9 @@ class FacilityController extends \BaseController {
 			'name' 					=> 	Input::get('name'),
 			'slug'					=>	Str::slug(Input::get('name')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	$image_path . Input::file('image_1')->getClientOriginalName(),
+			'image_1'				=>	Input::file('image_1'),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	$image_path . Input::file('image_2')->getClientOriginalName(),
+			'image_2'				=>	Input::file('image_2'),
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
@@ -58,8 +58,8 @@ class FacilityController extends \BaseController {
 			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages());
 		}
 
-		Image::make(Input::file('image_1'))->save($data['image_1']);
-		Image::make(Input::file('image_2'))->save($data['image_2']);
+		Image::make(Input::file('image_1'))->save($image_path . $data['image_1']->getClientOriginalName());
+		Image::make(Input::file('image_2'))->save($image_path . $data['image_2']->getClientOriginalName());
 
 		$this->facility->create($data);
 		return Redirect::route('backend.facility.index');
