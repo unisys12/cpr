@@ -51,6 +51,11 @@ class FacilityController extends \BaseController {
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
+		$attempt = $this->facility->validate($data);
+		if( $attempt->fails() ){
+			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages());
+		}
+
 		Image::make(Input::file('image_1'))->save($data['image_1']);
 		Image::make(Input::file('image_2'))->save($data['image_2']);
 
