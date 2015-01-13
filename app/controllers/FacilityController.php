@@ -41,25 +41,34 @@ class FacilityController extends \BaseController {
 	 */
 	public function store()
 	{
-		$image_path = 'imgs/uploads/facilities/';
+		$imagePath = 'imgs/uploads/facilities/';
 
 		$data = [
 			'name' 					=> 	Input::get('name'),
 			'slug'					=>	Str::slug(Input::get('name')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	Input::file('image_1'),
+			'image_1'				=>	$imagePath . Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	Input::file('image_2'),
+			'image_2'				=>	$imagePath . Input::file('image_2')->getClientOriginalName(),
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
 		$attempt = $this->facility->validate($data);
+		
 		if( $attempt->fails() ){
-			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages());
+			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		Image::make(Input::file('image_1'))->save($image_path . $data['image_1']->getClientOriginalName());
-		Image::make(Input::file('image_2'))->save($image_path . $data['image_2']->getClientOriginalName());
+		$imageOne = Input::file('image_1');			
+		$imageTwo = Input::file('image_2');
+
+		if($imageOne->isValid()){
+			$imageOne->move($imagePath, $data['image_1']);
+		}
+
+		if($imageTwo->isValid()){
+			$imageTwo->move($imagePath, $data['image_2']);
+		}
 
 		$this->facility->create($data);
 		return Redirect::route('backend.facility.index');

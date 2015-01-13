@@ -35,9 +35,9 @@ class Facility extends Eloquent {
 		$rules = [
 			'name'					=>	'required|min:5|unique:facilities',
 			'description'			=>	'required|min:10|max:255',
-			'image_1'				=>	'required|image:jpeg,jpg,bmp,png',
+			//'image_1'				=>	'required|mimes:jpeg,jpg,bmp,png',
 			'image_1_description'	=> 	'required|min:5|max:25',
-			'image_2'				=>	'required|image:jpeg,jpg,bmp,png',
+			//'image_2'				=>	'required|mimes:jpeg,jpg,bmp,png',
 			'image_2_description'	=> 	'required|min:5|max:25'
 		];
 
