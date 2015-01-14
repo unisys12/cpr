@@ -121,8 +121,22 @@ class FacilityController extends \BaseController {
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
-		Image::make(Input::file('image_1'))->save($data['image_1']);
-		Image::make(Input::file('image_2'))->save($data['image_2']);
+		$attempt = $this->facility->validate($data);
+		
+		if( $attempt->fails() ){
+			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages())->withInput();
+		}
+
+		$imageOne = Input::file('image_1');
+		$imageTwo = Input::file('image_2');
+
+		if($imageOne->isValid()){
+			$imageOne->move($imagePath, $data['image_1']);
+		}
+
+		if($imageTwo->isValid()){
+			$imageTwo->move($imagePath, $data['image_2']);
+		}
 
 		$this->facility->save($data);
 		return Redirect::route('backend.facility.index');
