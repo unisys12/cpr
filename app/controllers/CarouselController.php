@@ -2,6 +2,11 @@
 
 class CarouselController extends \BaseController {
 
+	public function __construct(Carousel $carousel)
+	{
+		$this->carousel = $carousel;
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -46,9 +51,27 @@ class CarouselController extends \BaseController {
 			'image_3_description'	=>	Input::get('image_3_description')
 		];
 
-		Image::make(Input::file('image_1'))->resize(720,240)->save($data['image_1']);
-		Image::make(Input::file('image_2'))->resize(720,240)->save($data['image_2']);
-		Image::make(Input::file('image_3'))->resize(720,240)->save($data['image_3']);
+		$attempt = $this->carousel->validate($data);
+
+		if( $attempt->fails() ){
+			return Redirect::route('backend.carousel.create')->with('errors', $attempt->messages())->withInput();
+		}
+
+		$imageOne = Input::file('image_1');
+		$imageTwo = Input::file('image_2');
+		$imageThree = Input::file('image_3');
+
+		if($imageOne->isValid()){
+			$imageOne->move($imagePath, $data['image_1']);
+		}
+
+		if($imageTwo->isValid()){
+			$imageTwo->move($imagePath, $data['image_2']);
+		}
+
+		if($imageThree->isValid()){
+			$imageThree->move($imagePath, $data['image_3']);
+		};
 
 		Carousel::create($data);
 		return Redirect::route('backend.carousel.index');
@@ -103,9 +126,27 @@ class CarouselController extends \BaseController {
 			'image_3_description'	=>	Input::get('image_3_description')
 		];
 
-		Image::make(Input::file('image_1'))->resize(720,240)->save($data['image_1']);
-		Image::make(Input::file('image_2'))->resize(720,240)->save($data['image_2']);
-		Image::make(Input::file('image_3'))->resize(720,240)->save($data['image_3']);
+		$attempt = $this->carousel->validate($data);
+
+		if( $attempt->fails() ){
+			return Redirect::route('backend.carousel.create')->with('errors', $attempt->messages())->withInput();
+		}
+
+		$imageOne = Input::file('image_1');
+		$imageTwo = Input::file('image_2');
+		$imageThree = Input::file('image_3');
+
+		if($imageOne->isValid()){
+			$imageOne->move($imagePath, $data['image_1']);
+		}
+
+		if($imageTwo->isValid()){
+			$imageTwo->move($imagePath, $data['image_2']);
+		}
+
+		if($imageThree->isValid()){
+			$imageThree->move($imagePath, $data['image_3']);
+		};
 
 		Carousel::save($data);
 		return Redirect::route('backend.carousel.index');
