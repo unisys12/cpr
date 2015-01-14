@@ -9,5 +9,7 @@ interface PageRepository {
 	public function store($slug);
 
 	public function update($slug);	
+	
+	public function validate($input);	
 
 }
