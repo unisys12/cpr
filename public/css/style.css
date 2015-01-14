@@ -2414,6 +2414,8 @@ header h1 {
 .image > img {
   padding: 0;
   margin: 0;
+  height: 245px;
+  width: 720px;
   animation-name: cycle-images;
   -webkit-animation-name: cycle-images;
   animation-duration: 15s;
@@ -2471,52 +2473,52 @@ figure {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0); }
   40%, 65% {
-    transform: translateY(-360px);
-    -webkit-transform: translateY(-360px);
-    -moz-transform: translateY(-360px); }
+    transform: translateY(-363px);
+    -webkit-transform: translateY(-363px);
+    -moz-transform: translateY(-363px); }
   70%, 100% {
-    transform: translateY(-718px);
-    -webkit-transform: translateY(-718px);
-    -moz-transform: translateY(-718px); } }
+    transform: translateY(-727px);
+    -webkit-transform: translateY(-727px);
+    -moz-transform: translateY(-727px); } }
 @-moz-keyframes cycle-images {
   10%, 35% {
     transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0); }
   40%, 65% {
-    transform: translateY(-360px);
-    -webkit-transform: translateY(-360px);
-    -moz-transform: translateY(-360px); }
+    transform: translateY(-363px);
+    -webkit-transform: translateY(-363px);
+    -moz-transform: translateY(-363px); }
   70%, 100% {
-    transform: translateY(-718px);
-    -webkit-transform: translateY(-718px);
-    -moz-transform: translateY(-718px); } }
+    transform: translateY(-727px);
+    -webkit-transform: translateY(-727px);
+    -moz-transform: translateY(-727px); } }
 @-ms-keyframes cycle-images {
   10%, 35% {
     transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0); }
   40%, 65% {
-    transform: translateY(-360px);
-    -webkit-transform: translateY(-360px);
-    -moz-transform: translateY(-360px); }
+    transform: translateY(-363px);
+    -webkit-transform: translateY(-363px);
+    -moz-transform: translateY(-363px); }
   70%, 100% {
-    transform: translateY(-718px);
-    -webkit-transform: translateY(-718px);
-    -moz-transform: translateY(-718px); } }
+    transform: translateY(-727px);
+    -webkit-transform: translateY(-727px);
+    -moz-transform: translateY(-727px); } }
 @keyframes cycle-images {
   10%, 35% {
     transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0); }
   40%, 65% {
-    transform: translateY(-360px);
-    -webkit-transform: translateY(-360px);
-    -moz-transform: translateY(-360px); }
+    transform: translateY(-363px);
+    -webkit-transform: translateY(-363px);
+    -moz-transform: translateY(-363px); }
   70%, 100% {
-    transform: translateY(-718px);
-    -webkit-transform: translateY(-718px);
-    -moz-transform: translateY(-718px); } }
+    transform: translateY(-727px);
+    -webkit-transform: translateY(-727px);
+    -moz-transform: translateY(-727px); } }
 /* @media screen and (min-width: 360px){
 	.carousel {
 		height: 8.5em;

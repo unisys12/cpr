@@ -66,6 +66,8 @@
 .image > img {
 	padding: 0;
 	margin: 0;
+	height: 245px;
+	width: 720px;
 	@include carousel;
 }
 
@@ -101,12 +103,12 @@ figure {
 
 	// 5% gap(from 35% to 40%) sets speed to move first image out and second up into place
 	40%, 65% {
-		@include translateY(-360px); // move second image into place
+		@include translateY(-363px); // move second image into place
 	}
 
 	// Stopping the animation at 100% allows for clean transition to first image at end
 	70%, 100% {
-		@include translateY(-718px); // move third image up into place
+		@include translateY(-727px); // move third image up into place
 	}
 }
 
