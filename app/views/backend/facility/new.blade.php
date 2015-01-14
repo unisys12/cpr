@@ -27,13 +27,7 @@ Set-Up a New Facility
 		<p class="panel radius">
 			Use this form to add a new facility to the site. Images will not be resized. Be as in-depth as possible with the description of the facility being added. Remeber, this information will appear on the website. 
 		</p>
-		@if($errors->count()) 
-		<section class="error-panel">
-			@foreach($errors->all() as $error)
-				<li>{{ $error }}</li>
-			@endforeach
-		</section>
-		@endif
+		@include('partials.errors')
 		{{ Form::open(['route' => 'backend.facility.store', 'files' => true]) }}
 
 		{{ Form::label('name', 'Facility Name') }}
