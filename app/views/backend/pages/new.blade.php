@@ -26,6 +26,7 @@ Add New Page
 
 @section('content')
 	<div class="small-12 large-8 columns">
+	@include('partials.errors')
 		{{ Form::open(['route' => 'page.store']) }}
 		
 		{{ Form::label('title', 'Give a Title to Your Page') }}

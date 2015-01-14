@@ -27,6 +27,7 @@ Edit Your Image Carousel
 		<p class="message">
 			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 		</p>
+		@include('partials.errors')
 		{{ Form::open(['route' => 'backend.carousel.update', 'method' => 'put', 'files' => true]) }}
 
 		@foreach($carousel as $item)

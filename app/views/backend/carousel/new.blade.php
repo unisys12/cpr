@@ -25,6 +25,7 @@ Create a New Carousel
 @section('content')
 	<div class="small-12 large-8 columns">
 		<p class="panel radius">For the carosel to work properly, the images will be limited to a size of <i>640x426</i>. This form will not allow you to upload any images who's width and/or height does not meet these requirements.</p>
+		@include('partials.errors')
 		{{ Form::open(['route' => 'backend.carousel.store', 'files' => true]) }}
 
 		{{ Form::label('title', 'Give your carousel a title. This will allow you to reuse it in the future.') }}
