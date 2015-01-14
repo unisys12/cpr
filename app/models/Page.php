@@ -37,10 +37,10 @@ class Page extends Eloquent {
 
 		$rules = [
 
-		'title'		=>	'required|min:5|unique:facilities',
-		'slug'		=>	'required|min:10|max:255',
+		'title'		=>	'required|min:5',
+		'slug'		=>	'required|min:10|max:25',
 		'header'	=> 	'required|min:5|max:25',
-		'content'	=> 	'required|min:5|max:25',
+		'content'	=> 	'required|min:5',
 
 		];
 
