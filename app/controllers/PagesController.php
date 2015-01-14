@@ -1,6 +1,6 @@
 <?php
 
-use Cpr\Storage\Page\PageRepository as Page;
+//use Cpr\Storage\Page\PageRepository as Page;
 
 class PagesController extends \BaseController {
 
@@ -49,10 +49,10 @@ class PagesController extends \BaseController {
 		$attempt = $this->page->validate($data);
 
 		if( $attempt->fails() ){
-			return Redirect::route('backend.pages.create')->with('errors', $attempt->messages())->withInput();
+			return Redirect::route('page.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		$this->page->store($data);
+		$this->page->create($data);
 		return Redirect::route('page.index');
 	}
 
@@ -104,7 +104,7 @@ class PagesController extends \BaseController {
 			return Redirect::route('backend.pages.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		$this->page->update($data);
+		$this->page->save($data);
 		return Redirect::route('page.index');
 	}
 
