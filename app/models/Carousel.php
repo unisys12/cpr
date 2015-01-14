@@ -37,11 +37,11 @@ class Carousel extends Eloquent {
 
 		$rules = [
 
-		'name'					=>	'required|min:5|unique:facilities',
+		'title'					=>	'required|min:5',
 		'description'			=>	'required|min:10|max:255',
-		'image_1_description'	=> 	'required|min:5|max:25',
-		'image_2_description'	=> 	'required|min:5|max:25',
-		'image_3_description'	=> 	'required|min:5|max:25',
+		'image_1_description'	=> 	'required|min:5|max:45',
+		'image_2_description'	=> 	'required|min:5|max:45',
+		'image_3_description'	=> 	'required|min:5|max:45',
 
 		];
 
