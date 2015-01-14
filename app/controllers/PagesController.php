@@ -46,6 +46,12 @@ class PagesController extends \BaseController {
 			'content'	=> Input::get('content')
 		];
 
+		$attempt = $this->page->validate($data);
+
+		if( $attempt->fails() ){
+			return Redirect::route('backend.pages.create')->with('errors', $attempt->messages())->withInput();
+		}
+
 		$this->page->store($data);
 		return Redirect::route('page.index');
 	}
@@ -91,6 +97,12 @@ class PagesController extends \BaseController {
 			'header'	=> Input::get('header'),
 			'content'	=> Input::get('content')
 		];
+
+		$attempt = $this->page->validate($data);
+
+		if( $attempt->fails() ){
+			return Redirect::route('backend.pages.create')->with('errors', $attempt->messages())->withInput();
+		}
 
 		$this->page->update($data);
 		return Redirect::route('page.index');
