@@ -22,18 +22,20 @@
 			<div class="small-6 columns">
 				<h5>Backend/Administration Area</h5>
 			</div>
-			<nav class="small-6 columns">
-				<a href=" {{ route('site.index') }} ">Site Home</a> -
-				<a href="/backend">Backend Home</a> -
-				<a href="/backend/pages">Pages</a> -
-				<a href="{{ route('backend.carousel.index') }}">Carousel</a> -
-				<a href="{{ route('backend.facility.index') }}">Facilities</a> -
-			</nav>
+			<section class="small-6 columns">
+				@yield('sub-menu')
+			</section>
 		</header>
 		<hr>
 		<main class="row">
 			<aside class="large-4 columns">
-				@yield('sub-menu')
+				<nav class="small-6 columns">
+					<a href=" {{ route('site.index') }} ">Site Home</a> -
+					<a href="/backend">Backend Home</a> -
+					<a href="/backend/pages">Pages</a> -
+					<a href="{{ route('backend.carousel.index') }}">Carousel</a> -
+					<a href="{{ route('backend.facility.index') }}">Facilities</a>
+				</nav>
 			</aside>
 			@yield('content')
 		</main>		
