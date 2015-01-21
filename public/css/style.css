@@ -2775,4 +2775,13 @@ aside {
   .admin_menu li {
     list-style-type: none; }
 
+.sports_list li {
+  list-style-type: none; }
+.sports_list a {
+  text-decoration: none;
+  color: #111; }
+  .sports_list a:hover {
+    text-decoration: underline;
+    color: #222; }
+
 /*# sourceMappingURL=style.css.map */
