@@ -40,6 +40,21 @@ Route::get('/facilities/{slug}', ['as' => 'facilities.page', function($slug)
 	return View::make('facilities.page')->with('data', $data);
 }]);
 
+Route::get('/sports', ['as' => 'sports.index', function()
+{
+	return View::make('sports.index');
+}]);
+
+Route::get('/sports/youth', ['as' => 'sports.youth', function()
+{
+	return View::make('sports.youth');
+}]);
+
+Route::get('/sports/adult', ['as' => 'sports.adult', function()
+{
+	return View::make('sports.adult');
+}]);
+
 // Site Routes
 Route::get('/', ['as' => 'site.index', 'uses' => 'SiteController@index']);
 Route::get('/{slug}', ['as' => 'site.page', 'uses' => 'SiteController@singlePage']);
