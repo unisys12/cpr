@@ -149,7 +149,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function destroy($slug)
 	{
-		$facilities = Facility::where('slug', $slug)->get();
+		$facilities = Facility::where('slug', $slug);
 		$facilities->delete();
 		return Redirect::route('backend.facility.index');
 	}

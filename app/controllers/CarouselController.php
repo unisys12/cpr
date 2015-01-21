@@ -161,7 +161,7 @@ class CarouselController extends \BaseController {
 	 */
 	public function destroy($slug)
 	{
-		$carousel = Carousel::where('slug', $slug)->get();
+		$carousel = Carousel::where('slug', $slug);
 		$carousel->delete();
 		return Redirect::route('backend.carousel.index');
 	}
