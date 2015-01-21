@@ -19,25 +19,37 @@
 	</head>
 	<body>
 		<header class="row">
-			<div class="small-6 columns">
+			<div class="large-6 columns">
 				<h5>Backend/Administration Area</h5>
 			</div>
-			<section class="small-6 columns">
+			<section class="large-6 columns">
 				@yield('sub-menu')
 			</section>
 		</header>
 		<hr>
-		<main class="row">
-			<aside class="large-4 columns">
-				<nav class="small-6 columns">
-					<a href=" {{ route('site.index') }} ">Site Home</a> -
-					<a href="/backend">Backend Home</a> -
-					<a href="/backend/pages">Pages</a> -
-					<a href="{{ route('backend.carousel.index') }}">Carousel</a> -
-					<a href="{{ route('backend.facility.index') }}">Facilities</a>
-				</nav>
-			</aside>
-			@yield('content')
-		</main>		
+		<section class="row">
+			<nav class="large-4 columns">
+				<ul class="admin_menu">
+					<li class="panel">
+						<a href=" {{ route('site.index') }} ">Site Home</a>
+					</li>
+					<li class="panel">
+						<a href="/backend">Backend Home</a>
+					</li>
+					<li class="panel">
+						<a href="/backend/pages">Pages</a>
+					</li>
+					<li class="panel">
+						<a href="{{ route('backend.carousel.index') }}">Carousel</a>
+					</li>
+					<li class="panel">
+						<a href="{{ route('backend.facility.index') }}">Facilities</a>
+					</li>
+				</ul>
+			</nav>
+			<main class="large-8 columns">
+				@yield('content')
+			</main>	
+		</section>	
 	</body>
 </html>
