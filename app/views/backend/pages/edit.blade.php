@@ -22,26 +22,26 @@ Edit a Page
 @stop
 
 @section('content')
-	<div class="small-12 large-8 columns">
-		<p class="message">
-			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
-		</p>
-		@include('partials.errors')
-		{{ Form::open(['route' => 'page.update', 'method' => 'put']) }}
-		@foreach ($page as $item)
-		
-		{{ Form::label('title', 'Give a Title to Your Page') }}
-		{{ Form::text('title', $item->title) }}
 
-		{{ Form::label('header', 'Give the New Page a Header') }}
-		{{ Form::text('header', $item->header) }}
+	<p class="message">
+		Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
+	</p>
+	@include('partials.errors')
+	{{ Form::open(['route' => 'page.update', 'method' => 'put']) }}
+	@foreach ($page as $item)
+	
+	{{ Form::label('title', 'Give a Title to Your Page') }}
+	{{ Form::text('title', $item->title) }}
 
-		{{ Form::label('content', 'Insert the Content of Your New Page') }}
-		{{ Form::textarea('content', $item->content) }}
+	{{ Form::label('header', 'Give the New Page a Header') }}
+	{{ Form::text('header', $item->header) }}
 
-		@endforeach
-		{{ Form::submit('Save Edits') }}
+	{{ Form::label('content', 'Insert the Content of Your New Page') }}
+	{{ Form::textarea('content', $item->content) }}
 
-		{{ Form::close() }}
-	</div>
+	@endforeach
+	{{ Form::submit('Save Edits') }}
+
+	{{ Form::close() }}
+
 @stop
