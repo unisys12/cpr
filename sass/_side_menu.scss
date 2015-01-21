@@ -3,9 +3,9 @@ aside {
 	margin-bottom: 1.5em;
 	.side-menu {
 		font-size: 95%;
-		@include box-shadow(rgba(0,0,255,.4));
+		@include box-shadow(rgba(0,0,255,.1));
 		&:hover {
-			@include box-shadow(lighten(#9da5e6, 5%));
+			@include box-shadow(rgba(0,0,255,.2));
 		}
 		ul {
 			margin: 0;

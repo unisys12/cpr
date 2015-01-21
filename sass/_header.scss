@@ -6,9 +6,9 @@ header {
 
 .top-menu {
 	background-color: lighten($light-green, 10%);
-	@include box-shadow(rgba(0,100,0, .3));
+	@include box-shadow(rgba(0,100,0, .1));
 	&:hover {
-		@include box-shadow(lighten(#9da5e6, 5%));
+		@include box-shadow(rgba(0,85,0, .2));
 	}
 	li {
 		float: left;

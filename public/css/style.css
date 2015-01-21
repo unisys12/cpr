@@ -2372,9 +2372,9 @@ header h1 {
 
 .top-menu {
   background-color: #7ab981;
-  box-shadow: 5px 5px rgba(0, 100, 0, 0.3); }
+  box-shadow: 5px 5px rgba(0, 100, 0, 0.1); }
   .top-menu:hover {
-    box-shadow: 5px 5px #b1b8eb; }
+    box-shadow: 5px 5px rgba(0, 85, 0, 0.2); }
   .top-menu li {
     float: left;
     padding: 1em;
@@ -2642,9 +2642,9 @@ aside {
   margin-bottom: 1.5em; }
   aside .side-menu {
     font-size: 95%;
-    box-shadow: 5px 5px rgba(0, 0, 255, 0.4); }
+    box-shadow: 5px 5px rgba(0, 0, 255, 0.1); }
     aside .side-menu:hover {
-      box-shadow: 5px 5px #b1b8eb; }
+      box-shadow: 5px 5px rgba(0, 0, 255, 0.2); }
     aside .side-menu ul {
       margin: 0;
       padding: .5em;
