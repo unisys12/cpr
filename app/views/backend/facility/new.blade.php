@@ -14,7 +14,7 @@ Set-Up a New Facility
 	<header>
 		<h4>Faclities</h4>
 	</header>
-	<nav>
+	<nav class="submenu">
 		<ul>
 			<li><a href=" {{ route('backend.facility.index') }} ">Facilities Home</a></li>
 			<li><a href="{{ route('backend.facility.create') }}">Add a New Facility</a></li>
