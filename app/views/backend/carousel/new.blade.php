@@ -14,7 +14,7 @@ Create a New Carousel
 	<header>
 		<h4>Carousel</h4>
 	</header>
-	<nav>
+	<nav class="submenu">
 		<ul>
 			<li><a href="{{ route('backend.carousel.index') }}">Carousel Home</a></li>
 			<li><a href="/backend/carousel/create">New Carousel</a></li>

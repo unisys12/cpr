@@ -14,7 +14,7 @@ Edit Your Image Carousel
 	<header>
 		<h4>Carousel</h4>
 	</header>
-	<nav>
+	<nav class="submenu">
 		<ul>
 			<li><a href="/backend/carousel/create">New Page</a></li>
 		</ul>
