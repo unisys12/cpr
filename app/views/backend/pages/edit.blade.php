@@ -17,9 +17,6 @@ Edit a Page
 	<nav>
 		<ul>
 			<li><a href="/backend/pages/create">New Page</a></li>
-			<li><a href="#">Test Link</a></li>
-			<li><a href="#">Test Link</a></li>
-			<li><a href="#">Test Link</a></li>
 		</ul>
 	</nav>
 @stop
