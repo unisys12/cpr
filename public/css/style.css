@@ -2764,6 +2764,10 @@ aside {
     padding-left: 0; }
   .submenu li:last-child {
     padding-right: 0; }
+  .submenu li a {
+    text-decoration: none; }
+    .submenu li a:active {
+      text-dectoration: underline; }
 
 .admin_menu {
   padding-left: 0;

@@ -14,6 +14,14 @@
 			padding-right: 0;
 		}
 
+		a {
+			text-decoration: none;
+
+			&:active {
+				text-dectoration: underline;
+			}
+		}
+
 	}
 	
 }
