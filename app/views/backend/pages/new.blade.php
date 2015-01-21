@@ -14,12 +14,9 @@ Add New Page
 	<header>
 		<h4>Pages</h4>
 	</header>
-	<nav>
+	<nav class="submenu">
 		<ul>
 			<li><a href="/backend/pages/create">New Page</a></li>
-			<li><a href="#">Test Link</a></li>
-			<li><a href="#">Test Link</a></li>
-			<li><a href="#">Test Link</a></li>
 		</ul>
 	</nav>
 @stop
