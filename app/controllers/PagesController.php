@@ -112,12 +112,12 @@ class PagesController extends \BaseController {
 	/**
 	 * Remove the specified page from storage.
 	 *
-	 * @param  int  $title
+	 * @param  string  $slug
 	 * @return Response
 	 */
 	public function destroy($slug)
 	{
-		$page = $this->page->find($slug);
+		$page = $this->page->where('slug', $slug);
 		$page->delete();
 		return Redirect::route('page.index');
 	}
