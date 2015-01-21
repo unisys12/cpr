@@ -89,7 +89,7 @@ class PagesController extends \BaseController {
 	 * @param  string $slug
 	 * @return Response
 	 */
-	public function update($slug)
+	public function update()
 	{
 		$data = [
 			'title' 	=> Input::get('title'),
