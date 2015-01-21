@@ -2756,4 +2756,19 @@ aside {
     .error-panel h1.subheader, .error-panel h2.subheader, .error-panel h3.subheader, .error-panel h4.subheader, .error-panel h5.subheader, .error-panel h6.subheader {
       line-height: 1.4; }
 
+.submenu li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 .25em; }
+  .submenu li:first-child {
+    padding-left: 0; }
+  .submenu li:last-child {
+    padding-right: 0; }
+
+.admin_menu {
+  padding-left: 0;
+  marign-left: 0; }
+  .admin_menu li {
+    list-style-type: none; }
+
 /*# sourceMappingURL=style.css.map */
