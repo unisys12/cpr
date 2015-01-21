@@ -65,7 +65,7 @@ class PagesController extends \BaseController {
 	 */
 	public function show($slug)
 	{ 
-		$page = $this->page->find($slug);
+		$page = $this->page->where($slug, 'slug');
 		return View::make('backend.pages.show')->with('page', $page);
 	}
 
