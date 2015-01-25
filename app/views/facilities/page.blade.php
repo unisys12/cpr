@@ -7,7 +7,9 @@
 @stop
 
 @section('content')
-	<div class="large-8 columns">		
+	@foreach ($data as $element)
+		<h1>{{ $element->name }}</h1>
+	@endforeach		
 		@foreach ($data as $element)
 			<header>
 				<h2>{{ $element->name }}</h2>
@@ -16,23 +18,23 @@
 				<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
 				<figcaptions>
 					<small>
-						{{ $element->image_1_description }}
-					</small>\
+						<p><b>{{ $element->image_1_description }}</b></p>
+					</small>
 				</figcaption>
 			</figure>
+			<br>
 			<figure>
 				<img src="{{ asset($element->image_2) }}" alt="{{ $element->image_2_description }}">
 				<figcaptions>
 					<small>
-						{{ $element->image_2_description }}
-					</small>\
+						<p><b>{{ $element->image_2_description }}</b></p>
+					</small>
 				</figcaption>
 			</figure>
 			<article>
-				{{ $element->description }}
+				<p>{{ $element->description }}</p>
 			</article>
 		@endforeach
-	</div>
 @stop
 
 @section('side-nav')

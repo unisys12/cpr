@@ -6,9 +6,8 @@
 	@endforeach
 @stop
 
-@section('content')
-	<div class="large-8 columns">
-		<div class="row">		
+@section('content')		
+	<div class="row">		
 		@foreach ($data as $element)			
 			<section class="large-6 medium-4 columns">
 				<header>
@@ -26,7 +25,6 @@
 				</figure>
 			</section>
 		@endforeach
-		</div>
 	</div>
 @stop
 

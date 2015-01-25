@@ -23,7 +23,7 @@ Set-Up a New Facility
 @stop
 
 @section('content')
-	<div class="small-12 large-8 columns">
+	
 		<p class="panel radius">
 			Use this form to add a new facility to the site. Images will not be resized. Be as in-depth as possible with the description of the facility being added. Remeber, this information will appear on the website. 
 		</p>
@@ -47,5 +47,5 @@ Set-Up a New Facility
 		{{ Form::submit('Add a New Facility') }}
 
 		{{ Form::close() }}
-	</div>
+	
 @stop
