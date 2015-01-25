@@ -136,7 +136,9 @@ class FacilityController extends \BaseController {
 			$imageTwo->move($imagePath, $data['image_2']);
 		}
 
-		$this->facility->save($data);
+		$existing = $this->facility->where('slug', $slug);
+
+		$this->existing->update($data);
 		return Redirect::route('backend.facility.index');
 	}
 

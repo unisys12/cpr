@@ -28,9 +28,10 @@ Edit Your Image Carousel
 			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 		</p>
 		@include('partials.errors')
-		{{ Form::open(['route' => 'backend.carousel.update', 'method' => 'put', 'files' => true]) }}
 
 		@foreach($carousel as $item)
+		{{ Form::open(['url' => 'backend/carousel/' . $item->slug, 'method' => 'put', 'files' => true]) }}
+
 		{{ Form::label('title', 'Give your carousel a title. This will allow you to reuse it in the future.') }}
 		{{ Form::text('title', $item->title) }}
 

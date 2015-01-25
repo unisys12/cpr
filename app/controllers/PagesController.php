@@ -89,7 +89,7 @@ class PagesController extends \BaseController {
 	 * @param  string $slug
 	 * @return Response
 	 */
-	public function update()
+	public function update($slug)
 	{
 		$data = [
 			'title' 	=> Input::get('title'),
@@ -104,7 +104,10 @@ class PagesController extends \BaseController {
 			return Redirect::route('backend.pages.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		$this->page->save($data);
+		$existing = $this->page->where('slug', $slug);
+
+		$existing->update($data);
+
 		return Redirect::route('page.index');
 	}
 

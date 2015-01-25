@@ -24,7 +24,7 @@ Route::post('backend/pages/store', ['as' => 'page.store', 'uses' => 'PagesContro
 Route::get('backend/pages/{page}', ['as' => 'page.preview', 'uses' => 'PagesController@show']);
 Route::get('backend/pages/{page}/edit', ['as' => 'page.edit', 'uses' => 'PagesController@edit']);
 Route::get('backend/pages/{page}/delete', ['as' => 'page.delete', 'uses' => 'PagesController@destroy']);
-Route::put('backend/pages/update', ['as' => 'page.update', 'uses' => 'PagesController@update', 'before' => 'csrf']);
+Route::put('backend/pages/{page}', ['as' => 'page.update', 'uses' => 'PagesController@update', 'before' => 'csrf']);
 
 Route::resource('/backend/carousel', 'CarouselController');
 Route::resource('/backend/facility', 'FacilityController');

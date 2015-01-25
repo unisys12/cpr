@@ -27,9 +27,9 @@ Edit a Page
 		Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 	</p>
 	@include('partials.errors')
-
-	{{ Form::open(['route' => 'page.update', 'method' => 'put']) }}
+	
 	@foreach ($page as $item)
+	{{ Form::open(['url' => 'backend/pages/' . $item->slug, 'method' => 'put']) }}
 	
 	{{ Form::label('title', 'Give a Title to Your Page') }}
 	{{ Form::text('title', $item->title) }}

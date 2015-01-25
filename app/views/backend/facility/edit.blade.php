@@ -27,8 +27,8 @@ Edit a Existing Facility
 		<p class="message">
 			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 		</p>
-		{{ Form::open(['route' => 'backend.facility.update', 'method' => 'put']) }}
 		@foreach ($facilities as $facility)
+		{{ Form::open(['url' => 'backend/facility/' . $facility->slug, 'method' => 'put']) }}
 		
 		{{ Form::label('name', 'Facility Name') }}
 		{{ Form::text('name', $facility->name) }}

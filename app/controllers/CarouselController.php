@@ -148,7 +148,9 @@ class CarouselController extends \BaseController {
 			$imageThree->move($imagePath, $data['image_3']);
 		};
 
-		Carousel::save($data);
+		$existing = $this->carousel->where('slug', $slug);
+		$existing->update($data);
+		
 		return Redirect::route('backend.carousel.index');
 	}
 
