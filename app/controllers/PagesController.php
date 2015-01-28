@@ -105,7 +105,6 @@ class PagesController extends \BaseController {
 		}
 
 		$existing = $this->page->where('slug', $slug);
-
 		$existing->update($data);
 
 		return Redirect::route('page.index');
