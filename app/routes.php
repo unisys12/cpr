@@ -17,6 +17,8 @@ Route::get('/backend', function()
 	return View::make('backend.index');
 });
 
+Route::get('/backend/login', ['as' => 'login', 'uses' => 'UserController@index']);
+
 //Route::resource('/backend/pages', 'PagesController');
 Route::get('backend/pages', ['as' => 'page.index', 'uses' => 'PagesController@index']);
 Route::get('backend/pages/create', ['as' => 'page.create', 'uses' => 'PagesController@create']);
