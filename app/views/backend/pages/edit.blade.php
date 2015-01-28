@@ -29,7 +29,7 @@ Edit a Page
 	@include('partials.errors')
 	
 	@foreach ($page as $item)
-	{{ Form::open(['url' => 'backend/pages/' . $item->slug, 'method' => 'put']) }}
+	{{ Form::open(['route' => ['page.update', $item->slug], 'method' => 'put']) }}
 	
 	{{ Form::label('title', 'Give a Title to Your Page') }}
 	{{ Form::text('title', $item->title) }}
