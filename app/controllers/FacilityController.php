@@ -6,6 +6,7 @@ class FacilityController extends \BaseController {
 
 	public function __construct(Facility $facility)
 	{
+		$this->beforeFilter('auth');
 		$this->facility = $facility;
 	}
 

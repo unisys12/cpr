@@ -4,6 +4,7 @@ class CarouselController extends \BaseController {
 
 	public function __construct(Carousel $carousel)
 	{
+		$this->beforeFilter('auth');
 		$this->carousel = $carousel;
 	}
 
