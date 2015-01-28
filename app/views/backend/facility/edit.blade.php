@@ -28,7 +28,7 @@ Edit a Existing Facility
 			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 		</p>
 		@foreach ($facilities as $facility)
-		{{ Form::open(['url' => 'backend/facility/' . $facility->slug, 'method' => 'put']) }}
+		{{ Form::open(['url' => 'backend/facility/' . $facility->slug, 'method' => 'put', 'files' => true]) }}
 		
 		{{ Form::label('name', 'Facility Name') }}
 		{{ Form::text('name', $facility->name) }}
