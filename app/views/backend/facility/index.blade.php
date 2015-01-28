@@ -31,6 +31,9 @@ Existing Facilities
 	@foreach ($facilities as $facility)
 		<li>
 			<a href="/backend/facility/{{ $facility->slug }}">{{ $facility->name }}</a> - <a href="/backend/facility/{{ $facility->slug }}/edit">Edit</a>
+			{{ Form::open(['route' => ['backend.facility.destroy', $facility->slug], 'method' => 'DELETE']) }}
+			{{ Form::submit('Delete') }}
+			{{ Form::close() }}
 		</li>
 	@endforeach
 	</ul>
