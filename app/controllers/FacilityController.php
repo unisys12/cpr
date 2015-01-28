@@ -107,15 +107,15 @@ class FacilityController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$image_path = 'imgs/uploads/facilities/';
+		$imagePath = 'imgs/uploads/facilities/';
 
 		$data = [
 			'name' 					=> 	Input::get('name'),
 			'slug'					=>	Str::slug(Input::get('name')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	$image_path . Input::file('image_1')->getClientOriginalName(),
+			'image_1'				=>	$imagePath . Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	$image_path . Input::file('image_2')->getClientOriginalName(),
+			'image_2'				=>	$imagePath . Input::file('image_2')->getClientOriginalName(),
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
