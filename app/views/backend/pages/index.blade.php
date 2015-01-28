@@ -20,7 +20,10 @@
 	<ul>
 	@foreach ($pages as $page)
 		<li>
-			<a href="/backend/pages/{{ $page->slug }}">{{ $page->title }}</a> - <a href="/backend/pages/{{ $page->slug }}/edit">Edit</a> - <a href="/backend/pages/{{ $page->slug }}delete">Delete</a>
+			<a href="/backend/pages/{{ $page->slug }}">{{ $page->title }}</a> - <a href="/backend/pages/{{ $page->slug }}/edit">Edit</a>
+			{{ Form::open(['route' => ['page.delete', $page->slug], 'method' => 'DELETE']) }}
+			{{ Form::submit('Delete') }}
+			{{ Form::close() }}
 		</li>
 	@endforeach
 	</ul>
