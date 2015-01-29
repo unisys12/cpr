@@ -6,6 +6,7 @@ class PagesController extends \BaseController {
 
 	public function __construct(Page $pages)
 	{
+		$this->beforeFilter('auth');
 		$this->page = $pages;
 	}
 
