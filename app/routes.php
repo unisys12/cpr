@@ -12,12 +12,41 @@
 */
 
 // Backend Routes
-Route::get('/backend', function()
+Route::get('/backend', ['before' => 'auth', function()
 {
 	return View::make('backend.index');
-});
+}]);
 
 Route::get('/backend/login', ['as' => 'login', 'uses' => 'UserController@index']);
+
+Route::post('/backend/login', ['as' => 'attempt', function()
+{
+	$data = Input::except('_token', '_url');
+
+	$rules = array(
+		'email' => 'required',
+		'password' => 'required'
+	);
+
+	$validate = Validator::make($data, $rules);
+
+	if($validate->fails())
+	{
+
+		$errors = $validate->messages();
+
+		return Redirect::to('/backend/login')
+			->withErrors($errors)
+			->withInput();
+	}
+
+	if(Auth::attempt($data))
+	{
+		return Redirect::intended('/backend');
+	}
+
+	return Redirect::to('/backend/login')->with('message', 'Username and Password do not match');
+}]);
 
 //Route::resource('/backend/pages', 'PagesController');
 Route::get('backend/pages', ['as' => 'page.index', 'uses' => 'PagesController@index']);
