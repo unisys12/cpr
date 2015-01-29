@@ -7,6 +7,9 @@
 @stop
 
 @section('content')
+
+@include('partials.errors')
+
 	{{ Form::open() }}
 	{{ Form::label("email", "Email") }}
 	{{ Form::text("email") }}
@@ -14,4 +17,5 @@
 	{{ Form::password("password") }}
 	{{ Form::submit("login") }}
 	{{ Form::close() }}
+	
 @stop
