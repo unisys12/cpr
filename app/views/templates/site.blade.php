@@ -8,18 +8,18 @@
         <script src=""></script>
     </head>
     <body class="background">
-    	<header class="row">
-            <section class="large-10 columns home">
+    	<header class="header-main">
+            <section class="header-name">
                 <a href="{{ route('site.index') }}">
                   <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
                 </a>
             </section>
-            <section class="large-2 small-centered large-uncentered columns">
+            <section class="header-logo">
                 <figure class="logo">
                     <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
                 </figure>
             </section>
-    	</header>
+        </header>
     <nav class="row top-menu">
         <ul class="large-12 large-offset-3 small-centered">
             <li><a href="/facilities">Facilities</a></li>

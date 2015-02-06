@@ -1,8 +1,26 @@
-header {
-	h1 {
-		font-family: Oswald, Sans-Serif;
-		text-align: center;
+.header-main {
+	@extend .row;
+}
+
+.header-name {
+	width: 70%;
+	float: left;
+	font-family: Oswald, Helvetica;
+	a {
+		text-decoration: none;
+		color: #111;
 	}
+}
+
+.header-logo{
+	width: 30%;
+	text-align: right;
+	float: right;
+
+	@media screen and (max-width: 480px), (max-width: 667px){
+		margin-top: 1.5em;
+	}
+
 }
 
 .top-menu {

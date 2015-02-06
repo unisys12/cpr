@@ -477,45 +477,46 @@ textarea {
 select {
   width: 100%; }
 
-.row {
+.row, .header-main {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 62.5rem; }
-  .row:before, .row:after {
+  .row:before, .header-main:before, .row:after, .header-main:after {
     content: " ";
     display: table; }
-  .row:after {
+  .row:after, .header-main:after {
     clear: both; }
-  .row.collapse > .column,
-  .row.collapse > .columns {
+  .row.collapse > .column, .collapse.header-main > .column,
+  .row.collapse > .columns,
+  .collapse.header-main > .columns {
     padding-left: 0;
     padding-right: 0; }
-  .row.collapse .row {
+  .row.collapse .row, .collapse.header-main .row, .row.collapse .header-main, .collapse.header-main .header-main {
     margin-left: 0;
     margin-right: 0; }
-  .row .row {
+  .row .row, .header-main .row, .row .header-main, .header-main .header-main {
     width: auto;
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none; }
-    .row .row:before, .row .row:after {
+    .row .row:before, .header-main .row:before, .row .header-main:before, .header-main .header-main:before, .row .row:after, .header-main .row:after, .row .header-main:after, .header-main .header-main:after {
       content: " ";
       display: table; }
-    .row .row:after {
+    .row .row:after, .header-main .row:after, .row .header-main:after, .header-main .header-main:after {
       clear: both; }
-    .row .row.collapse {
+    .row .row.collapse, .header-main .row.collapse, .row .collapse.header-main, .header-main .collapse.header-main {
       width: auto;
       margin: 0;
       max-width: none; }
-      .row .row.collapse:before, .row .row.collapse:after {
+      .row .row.collapse:before, .header-main .row.collapse:before, .row .collapse.header-main:before, .header-main .collapse.header-main:before, .row .row.collapse:after, .header-main .row.collapse:after, .row .collapse.header-main:after, .header-main .collapse.header-main:after {
         content: " ";
         display: table; }
-      .row .row.collapse:after {
+      .row .row.collapse:after, .header-main .row.collapse:after, .row .collapse.header-main:after, .header-main .collapse.header-main:after {
         clear: both; }
 
 .column,
@@ -762,15 +763,17 @@ select {
   .columns.small-uncentered.opposite {
     float: right; }
 
-  .row.small-collapse > .column,
-  .row.small-collapse > .columns {
+  .row.small-collapse > .column, .small-collapse.header-main > .column,
+  .row.small-collapse > .columns,
+  .small-collapse.header-main > .columns {
     padding-left: 0;
     padding-right: 0; }
-  .row.small-collapse .row {
+  .row.small-collapse .row, .small-collapse.header-main .row, .row.small-collapse .header-main, .small-collapse.header-main .header-main {
     margin-left: 0;
     margin-right: 0; }
-  .row.small-uncollapse > .column,
-  .row.small-uncollapse > .columns {
+  .row.small-uncollapse > .column, .small-uncollapse.header-main > .column,
+  .row.small-uncollapse > .columns,
+  .small-uncollapse.header-main > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left; } }
@@ -1005,15 +1008,17 @@ select {
   .columns.medium-uncentered.opposite {
     float: right; }
 
-  .row.medium-collapse > .column,
-  .row.medium-collapse > .columns {
+  .row.medium-collapse > .column, .medium-collapse.header-main > .column,
+  .row.medium-collapse > .columns,
+  .medium-collapse.header-main > .columns {
     padding-left: 0;
     padding-right: 0; }
-  .row.medium-collapse .row {
+  .row.medium-collapse .row, .medium-collapse.header-main .row, .row.medium-collapse .header-main, .medium-collapse.header-main .header-main {
     margin-left: 0;
     margin-right: 0; }
-  .row.medium-uncollapse > .column,
-  .row.medium-uncollapse > .columns {
+  .row.medium-uncollapse > .column, .medium-uncollapse.header-main > .column,
+  .row.medium-uncollapse > .columns,
+  .medium-uncollapse.header-main > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left; }
@@ -1368,15 +1373,17 @@ select {
   .columns.large-uncentered.opposite {
     float: right; }
 
-  .row.large-collapse > .column,
-  .row.large-collapse > .columns {
+  .row.large-collapse > .column, .large-collapse.header-main > .column,
+  .row.large-collapse > .columns,
+  .large-collapse.header-main > .columns {
     padding-left: 0;
     padding-right: 0; }
-  .row.large-collapse .row {
+  .row.large-collapse .row, .large-collapse.header-main .row, .row.large-collapse .header-main, .large-collapse.header-main .header-main {
     margin-left: 0;
     margin-right: 0; }
-  .row.large-uncollapse > .column,
-  .row.large-uncollapse > .columns {
+  .row.large-uncollapse > .column, .large-uncollapse.header-main > .column,
+  .row.large-uncollapse > .columns,
+  .large-uncollapse.header-main > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left; }
@@ -1860,25 +1867,34 @@ form {
   margin: 0 0 1rem; }
 
 /* Using forms within rows, we need to set some defaults */
-form .row .row {
+form .row .row, form .header-main .row, form .row .header-main, form .header-main .header-main {
   margin: 0 -0.5rem; }
-  form .row .row .column,
-  form .row .row .columns {
+  form .row .row .column, form .header-main .row .column, form .row .header-main .column, form .header-main .header-main .column,
+  form .row .row .columns,
+  form .header-main .row .columns,
+  form .row .header-main .columns,
+  form .header-main .header-main .columns {
     padding: 0 0.5rem; }
-  form .row .row.collapse {
+  form .row .row.collapse, form .header-main .row.collapse, form .row .collapse.header-main, form .header-main .collapse.header-main {
     margin: 0; }
-    form .row .row.collapse .column,
-    form .row .row.collapse .columns {
+    form .row .row.collapse .column, form .header-main .row.collapse .column, form .row .collapse.header-main .column, form .header-main .collapse.header-main .column,
+    form .row .row.collapse .columns,
+    form .header-main .row.collapse .columns,
+    form .row .collapse.header-main .columns,
+    form .header-main .collapse.header-main .columns {
       padding: 0; }
-    form .row .row.collapse input {
+    form .row .row.collapse input, form .header-main .row.collapse input, form .row .collapse.header-main input, form .header-main .collapse.header-main input {
       -webkit-border-bottom-right-radius: 0;
       -webkit-border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0; }
-form .row input.column,
+form .row input.column, form .header-main input.column,
 form .row input.columns,
+form .header-main input.columns,
 form .row textarea.column,
-form .row textarea.columns {
+form .header-main textarea.column,
+form .row textarea.columns,
+form .header-main textarea.columns {
   padding-left: 0.5rem; }
 
 /* Label Styles */
@@ -2013,57 +2029,81 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   input[type="text"].radius, input[type="password"].radius, input[type="date"].radius, input[type="datetime"].radius, input[type="datetime-local"].radius, input[type="month"].radius, input[type="week"].radius, input[type="email"].radius, input[type="number"].radius, input[type="search"].radius, input[type="tel"].radius, input[type="time"].radius, input[type="url"].radius, input[type="color"].radius, textarea.radius {
     border-radius: 3px; }
 
-form .row .prefix-radius.row.collapse input,
+form .row .prefix-radius.row.collapse input, form .header-main .prefix-radius.row.collapse input, form .row .prefix-radius.collapse.header-main input, form .header-main .prefix-radius.collapse.header-main input,
 form .row .prefix-radius.row.collapse textarea,
-form .row .prefix-radius.row.collapse select {
+form .header-main .prefix-radius.row.collapse textarea,
+form .row .prefix-radius.collapse.header-main textarea,
+form .header-main .prefix-radius.collapse.header-main textarea,
+form .row .prefix-radius.row.collapse select,
+form .header-main .prefix-radius.row.collapse select,
+form .row .prefix-radius.collapse.header-main select,
+form .header-main .prefix-radius.collapse.header-main select {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
-form .row .prefix-radius.row.collapse .prefix {
+form .row .prefix-radius.row.collapse .prefix, form .header-main .prefix-radius.row.collapse .prefix, form .row .prefix-radius.collapse.header-main .prefix, form .header-main .prefix-radius.collapse.header-main .prefix {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px; }
-form .row .postfix-radius.row.collapse input,
+form .row .postfix-radius.row.collapse input, form .header-main .postfix-radius.row.collapse input, form .row .postfix-radius.collapse.header-main input, form .header-main .postfix-radius.collapse.header-main input,
 form .row .postfix-radius.row.collapse textarea,
-form .row .postfix-radius.row.collapse select {
+form .header-main .postfix-radius.row.collapse textarea,
+form .row .postfix-radius.collapse.header-main textarea,
+form .header-main .postfix-radius.collapse.header-main textarea,
+form .row .postfix-radius.row.collapse select,
+form .header-main .postfix-radius.row.collapse select,
+form .row .postfix-radius.collapse.header-main select,
+form .header-main .postfix-radius.collapse.header-main select {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px; }
-form .row .postfix-radius.row.collapse .postfix {
+form .row .postfix-radius.row.collapse .postfix, form .header-main .postfix-radius.row.collapse .postfix, form .row .postfix-radius.collapse.header-main .postfix, form .header-main .postfix-radius.collapse.header-main .postfix {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
-form .row .prefix-round.row.collapse input,
+form .row .prefix-round.row.collapse input, form .header-main .prefix-round.row.collapse input, form .row .prefix-round.collapse.header-main input, form .header-main .prefix-round.collapse.header-main input,
 form .row .prefix-round.row.collapse textarea,
-form .row .prefix-round.row.collapse select {
+form .header-main .prefix-round.row.collapse textarea,
+form .row .prefix-round.collapse.header-main textarea,
+form .header-main .prefix-round.collapse.header-main textarea,
+form .row .prefix-round.row.collapse select,
+form .header-main .prefix-round.row.collapse select,
+form .row .prefix-round.collapse.header-main select,
+form .header-main .prefix-round.collapse.header-main select {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 1000px;
   -webkit-border-top-right-radius: 1000px;
   border-bottom-right-radius: 1000px;
   border-top-right-radius: 1000px; }
-form .row .prefix-round.row.collapse .prefix {
+form .row .prefix-round.row.collapse .prefix, form .header-main .prefix-round.row.collapse .prefix, form .row .prefix-round.collapse.header-main .prefix, form .header-main .prefix-round.collapse.header-main .prefix {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px; }
-form .row .postfix-round.row.collapse input,
+form .row .postfix-round.row.collapse input, form .header-main .postfix-round.row.collapse input, form .row .postfix-round.collapse.header-main input, form .header-main .postfix-round.collapse.header-main input,
 form .row .postfix-round.row.collapse textarea,
-form .row .postfix-round.row.collapse select {
+form .header-main .postfix-round.row.collapse textarea,
+form .row .postfix-round.collapse.header-main textarea,
+form .header-main .postfix-round.collapse.header-main textarea,
+form .row .postfix-round.row.collapse select,
+form .header-main .postfix-round.row.collapse select,
+form .row .postfix-round.collapse.header-main select,
+form .header-main .postfix-round.collapse.header-main select {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px; }
-form .row .postfix-round.row.collapse .postfix {
+form .row .postfix-round.row.collapse .postfix, form .header-main .postfix-round.row.collapse .postfix, form .row .postfix-round.collapse.header-main .postfix, form .header-main .postfix-round.collapse.header-main .postfix {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -2367,9 +2407,21 @@ footer {
       margin: auto;
       padding-right: 5em; } }
 
-header h1 {
-  font-family: Oswald, Sans-Serif;
-  text-align: center; }
+.header-name {
+  width: 70%;
+  float: left;
+  font-family: Oswald, Helvetica; }
+  .header-name a {
+    text-decoration: none;
+    color: #111; }
+
+.header-logo {
+  width: 30%;
+  text-align: right;
+  float: right; }
+  @media screen and (max-width: 480px), (max-width: 667px) {
+    .header-logo {
+      margin-top: 1.5em; } }
 
 .top-menu {
   background-color: #7ab981;
