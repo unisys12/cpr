@@ -62,7 +62,7 @@
             </div>
             <div class="large-4 columns">
                 <header class="brown-button">
-                    <a href="#"><h5>Registration Forms</h5></a>
+                    <a href="/registration"><h5>Registration Information</h5></a>
                 </header>
                 <p>To access the forms nessecary to sign-up for any of our activities or rent any facility... Click Here</p>
             </div>

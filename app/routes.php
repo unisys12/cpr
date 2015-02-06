@@ -86,6 +86,12 @@ Route::get('/sports/adult', ['as' => 'sports.adult', function()
 	return View::make('sports.adult');
 }]);
 
+// Route to Registration Info
+Route::get('/registration', ['as' => 'registration', function()
+{
+	return View::make('site.registration');
+}]);
+
 // Site Routes
 Route::get('/', ['as' => 'site.index', 'uses' => 'SiteController@index']);
 Route::get('/{slug}', ['as' => 'site.page', 'uses' => 'SiteController@singlePage']);
