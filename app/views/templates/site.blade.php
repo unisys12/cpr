@@ -14,7 +14,7 @@
           <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
         </a>
       </section>
-  		  <figure class="large-2 medium-2 columns right">
+  		  <figure class="large-2 medium-2 columns logo">
           <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
         </figure>
   	</header>
