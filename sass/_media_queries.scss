@@ -1,0 +1,29 @@
+/* @media only screen and (min-width : 1224px) {
+	.home > a {
+		margin-left: -5em;
+	}
+} */
+
+@media screen and (max-device-width: 320px) {
+	/* .logo > img {
+		height: 5.5em;
+		padding-bottom: .25em;
+		margin-left: 6em;
+	} */
+
+	/* .top-menu > ul {
+		margin-left: 0;
+	} */
+}
+
+@media only screen and (min-width : 321px) {
+	/* .logo > img {
+			height: 5.5em;
+			padding-bottom: .25em;
+			margin-right: -11.5em;
+		} */	
+
+	/* .top-menu > ul {
+		margin-left: 3em;
+	} */
+}

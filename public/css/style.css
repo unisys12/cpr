@@ -2368,7 +2368,8 @@ footer {
       padding-right: 5em; } }
 
 header h1 {
-  font-family: Oswald, Sans-Serif; }
+  font-family: Oswald, Sans-Serif;
+  text-align: center; }
 
 .top-menu {
   background-color: #7ab981;
@@ -2378,6 +2379,7 @@ header h1 {
   .top-menu li {
     float: left;
     padding: 1em;
+    margin-bottom: 1em;
     list-style: none;
     display: inline; }
     .top-menu li:first-child {
@@ -2668,5 +2670,29 @@ aside {
   .sports_list a:hover {
     text-decoration: underline;
     color: #222; }
+
+/* @media only screen and (min-width : 1224px) {
+	.home > a {
+		margin-left: -5em;
+	}
+} */
+@media screen and (max-device-width: 320px) {
+  /* .logo > img {
+  	height: 5.5em;
+  	padding-bottom: .25em;
+  	margin-left: 6em;
+  } */
+  /* .top-menu > ul {
+  	margin-left: 0;
+  } */ }
+@media only screen and (min-width: 321px) {
+  /* .logo > img {
+  		height: 5.5em;
+  		padding-bottom: .25em;
+  		margin-right: -11.5em;
+  	} */
+  /* .top-menu > ul {
+  	margin-left: 3em;
+  } */ }
 
 /*# sourceMappingURL=style.css.map */
