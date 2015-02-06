@@ -9,14 +9,16 @@
     </head>
     <body class="background">
     	<header class="row">
-            <section class="large-10 medium-10 columns home">
+            <section class="large-10 columns home">
                 <a href="{{ route('site.index') }}">
                   <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
                 </a>
             </section>
-            <figure class="large-2 medium-2 columns logo">
-                <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
-            </figure>
+            <section class="large-2 small-centered large-uncentered columns">
+                <figure class="logo">
+                    <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
+                </figure>
+            </section>
     	</header>
     <nav class="row top-menu">
         <ul class="large-12 large-offset-3 small-centered">
