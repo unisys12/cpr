@@ -10,6 +10,7 @@
 
 @section('side-nav')
 @foreach (Page::all() as $page)
-<li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
+<li>{{ secure_url($page->slug, $page->title) }}</li>
+
 @endforeach
 @stop
