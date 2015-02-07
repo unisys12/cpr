@@ -44,6 +44,14 @@ return array(
 	|
 	*/
 
+	// Heroku specific set-up
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$host = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$database = substr($url["path"], 1)
+
 	'connections' => array(
 
 		'sqlite' => array(
@@ -54,11 +62,11 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'port'		=> '33060',
-			'host'      => 'localhost',
-			'database'  => 'cpr',
-			'username'  => 'homestead',
-			'password'  => 'secret',
+			'port'		=> '3306',
+			'host'      => $host,
+			'database'  => $database,
+			'username'  => $username,
+			'password'  => $password,
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
