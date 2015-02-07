@@ -15,7 +15,7 @@
 				<h2>{{ $element->name }}</h2>
 			</header>
 			<figure>
-				<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
+				<img src="{{ secure_asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
 				<figcaptions>
 					<small>
 						<p><b>{{ $element->image_1_description }}</b></p>
@@ -24,7 +24,7 @@
 			</figure>
 			<br>
 			<figure>
-				<img src="{{ asset($element->image_2) }}" alt="{{ $element->image_2_description }}">
+				<img src="{{ secure_asset($element->image_2) }}" alt="{{ $element->image_2_description }}">
 				<figcaptions>
 					<small>
 						<p><b>{{ $element->image_2_description }}</b></p>
