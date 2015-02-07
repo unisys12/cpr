@@ -20,7 +20,7 @@
 	<body>
 		<header class="row">
 			<div class="large-6 columns">
-				<h5>Backend/Administration Area</h5>
+				<h5>Corinth Alcorn Parks and Recreation Site Administration Area</h5>
 			</div>
 			<section class="large-6 columns">
 				@yield('sub-menu')
