@@ -15,7 +15,7 @@
 				</header>
 				<figure class="facility_img panel radius">
 					<a href="/facilities/{{ $element->slug }}">
-						<img src="{{ asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
+						<img src="{{ secure_asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
 					</a>
 					<figcaption>
 						<small>
