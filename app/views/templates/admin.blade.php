@@ -19,10 +19,12 @@
 	</head>
 	<body>
 		<header class="row">
-			<div class="large-6 columns">
-				<h5>Corinth Alcorn Parks and Recreation Site Administration Area</h5>
+			<div class="large-12 columns">
+				<h1>Corinth Alcorn Parks and Recreation Site Administration Area</h1>
 			</div>
-			<section class="large-6 columns">
+		</header>
+		<header class="row">
+			<section class="large-12 columns">
 				@yield('sub-menu')
 			</section>
 		</header>
