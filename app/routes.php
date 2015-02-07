@@ -11,6 +11,9 @@
 |
 */
 
+// Attempting secure routes
+Route::when('*', 'secure');
+
 // Backend Routes
 Route::get('/backend', ['before' => 'auth', function()
 {
