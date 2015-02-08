@@ -30,6 +30,7 @@ return array(
 
 		'mysql' => array(
 		'driver'    => 'mysql',
+		'port'		=> '3306',
 		'host'      => $host,
 		'database'  => $database,
 		'username'  => $username,
