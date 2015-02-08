@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@yield('title', 'Corinth Alcorn Parks and Recreation')</title>
-        <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('public/css/style.css') }}" />
         <script src=""></script>
     </head>
     <body class="background">
@@ -16,7 +16,7 @@
             </section>
             <section class="header-logo">
                 <figure class="logo">
-                    <img src="{{ secure_asset('imgs/park-logo-svg.svg') }}" alt="park logo">
+                    <img src="{{ asset('public/imgs/park-logo-svg.svg') }}" alt="park logo">
                 </figure>
             </section>
         </header>
@@ -39,7 +39,9 @@
                     <li><a href="/sports/youth">Youth Sports</a></li>
                     <li><a href="/sports/adult">Adult Sports</a></li>
                     <li><a href="/facilities">Facilities</a></li>
-                    @yield('side-nav')
+                    @foreach (Page::all() as $page)
+                    <li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
+                    @endforeach
                 </ul>
             </nav>
         </aside>

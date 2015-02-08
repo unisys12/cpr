@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>@yield('title')</title>
-		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="{{asset('public/css/style.css')}}" />
 		<script src="/packages/tinymce/tinymce.min.js"></script>
 		<script>
 			tinymce.init(
