@@ -138,15 +138,15 @@ class CarouselController extends \BaseController {
 		$imageThree = Input::file('image_3');
 
 		if($imageOne->isValid()){
-			$imageOne->move($imagePath, $data['image_1']);
+			$imageOne->move($image_path, $data['image_1']);
 		}
 
 		if($imageTwo->isValid()){
-			$imageTwo->move($imagePath, $data['image_2']);
+			$imageTwo->move($image_path, $data['image_2']);
 		}
 
 		if($imageThree->isValid()){
-			$imageThree->move($imagePath, $data['image_3']);
+			$imageThree->move($image_path, $data['image_3']);
 		};
 
 		$existing = $this->carousel->where('slug', $slug);
