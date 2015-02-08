@@ -21,7 +21,9 @@ return array(
 	'connections' => array(
 
 		'mysql' => array(
+			'mysql' => array(
 			'driver'    => 'mysql',
+			'port'		=> '33060',
 			'host'      => 'localhost',
 			'database'  => 'cpr',
 			'username'  => 'homestead',
@@ -29,19 +31,7 @@ return array(
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
-		),
-
-		'pgsql' => array(
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'homestead',
-			'username' => 'homestead',
-			'password' => 'secret',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
-		),
-
-	),
-
+			)
+		)
+	)
 );
