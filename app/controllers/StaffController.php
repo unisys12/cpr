@@ -2,6 +2,12 @@
 
 class StaffController extends \BaseController {
 
+	public function __construct(Staff $staff)
+	{
+		$this->beforeFilter('auth');
+		$this->staff = $staff;
+	}
+
 	/**
 	 * Display a listing of the staff member.
 	 *
@@ -9,7 +15,7 @@ class StaffController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('backend.staff.index')->with('staff', Staff::all());
+		return View::make('backend.staff.index')->with('staff', $this->staff->all());
 	}
 
 
@@ -31,21 +37,33 @@ class StaffController extends \BaseController {
 	 */
 	public function store()
 	{
+		$imagePath = 'public/imgs/uploads/staff/';
+
 		$data = [
 			'name' 		=> Input::get('name'),
 			'slug'		=> Str::slug(Input::get('name')),
 			'title'		=> Input::get('title'),
 			'email'		=> Input::get('email'),
+			'image'		=> $imagePath . Input::file('image')->getClientOriginalName(),
 			'summary'	=> Input::get('summary')
 		];
 
-		$attempt = Staff::validate($data);
+		$image = Input::file('image');
+
+		/*if($image->isValid()){
+			$image->move($imagePath, $data['image']);
+		}*/
+
+		$attempt = $this->staff->validate($data);
 
 		if( $attempt->fails() ){
 			return Redirect::route('backend.staff.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		Staff::create($data);
+		$image->move($imagePath, $data['image']);
+
+		$this->staff->create($data);
+		
 		return Redirect::route('backend.staff.index');
 	}
 
@@ -53,50 +71,59 @@ class StaffController extends \BaseController {
 	/**
 	 * Display the specified staff member.
 	 *
-	 * @param  string  $name
+	 * @param  string  $slug
 	 * @return Response
 	 */
-	public function show($name)
+	public function show($slug)
 	{
-		return View::make('backend.staff.show')->with('name', Staff::where('name', $name)->get());
+		return View::make('backend.staff.show')->with('slug', $this->staff->where('slug', $slug)->get());
 	}
 
 
 	/**
 	 * Show the form for editing the specified staff member.
 	 *
-	 * @param  string  $name
+	 * @param  string  $slug
 	 * @return Response
 	 */
-	public function edit($name)
+	public function edit($slug)
 	{
-		return View::make('backend.staff.edit')->with('name', Staff::where('name', $name)->get());
+		return View::make('backend.staff.edit')->with('slug', $this->staff->where('slug', $slug)->get());
 	}
 
 
 	/**
 	 * Update the specified staff member in storage.
 	 *
-	 * @param  string  $name
+	 * @param  string  $slug
 	 * @return Response
 	 */
-	public function update($name)
+	public function update($slug)
 	{
+		$imagePath = 'public/imgs/uploads/staff/';
+
+		$image = Input::file('image');
+
 		$data = [
 			'name' 		=> Input::get('name'),
 			'slug'		=> Str::slug(Input::get('name')),
 			'title'		=> Input::get('title'),
 			'email'		=> Input::get('email'),
+			'image'		=> $imagePath . Input::file('image')->getClientOriginalName(),
 			'summary'	=> Input::get('summary')
 		];
 
-		$attempt = Staff::validate($data);
+		if($image->isValid()){
+			$image->move($imagePath, $data['image']);
+		}
+
+		$attempt = $this->staff->validate($data);
 
 		if( $attempt->fails() ){
 			return Redirect::route('backend.staff.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		$existing = Staff::where('name', $name);
+		$existing = $this->staff->where('slug', $slug);
 
 		$existing->update($data);
 
@@ -107,12 +134,12 @@ class StaffController extends \BaseController {
 	/**
 	 * Remove the specified staff member from storage.
 	 *
-	 * @param  string  $name
+	 * @param  string  $slug
 	 * @return Response
 	 */
-	public function destroy($name)
+	public function destroy($slug)
 	{
-		$staff = Staff::where('name', $name);
+		$staff = $this->staff->where('slug', $slug);
 
 		$staff->delete();
 
