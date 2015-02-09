@@ -60,6 +60,7 @@ Route::put('backend/pages/{page}', ['as' => 'page.update', 'uses' => 'PagesContr
 
 Route::resource('/backend/carousel', 'CarouselController');
 Route::resource('/backend/facility', 'FacilityController');
+Route::resource('/backend/news', 'NewsController');
 
 Route::get('/facilities', function()
 {
@@ -92,6 +93,14 @@ Route::get('/registration', ['as' => 'registration', function()
 {
 	return View::make('site.registration');
 }]);
+
+// Route to Announcements and News
+Route::get('/news', function()
+{
+	$data = News::all()->take(5);
+
+	return View::make('site.page')->with('data', $data);
+});
 
 // Site Routes
 Route::get('/', ['as' => 'site.index', 'uses' => 'SiteController@index']);
