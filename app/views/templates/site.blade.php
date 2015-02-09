@@ -85,7 +85,8 @@
     				<h3>Social Media</h3>
     			</header>
     			<section>
-    				FaceBook Icon - Twitter Icon
+    				<img src="{{ asset('public/imgs/iconfonts/svg/facebook.svg') }}" alt="facebook icon"> 
+                    <img src="{{ asset('public/imgs/iconfonts/svg/twitter.svg') }}" alt="twitter icon">
     			</section>
     		</section>
     	</footer>
