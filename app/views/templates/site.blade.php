@@ -34,7 +34,7 @@
             <nav class="side-menu">
                 <ul>
                     <li><a href="{{ route('site.index') }}">Home</a></li>
-                    <li><a href="/announcements">Park Announcements</a></li>
+                    <li><a href="/news">Park Announcements</a></li>
                     <li><a href="/schedules">Athletic Schedules</a></li>
                     <li><a href="/sports/youth">Youth Sports</a></li>
                     <li><a href="/sports/adult">Adult Sports</a></li>
@@ -52,13 +52,13 @@
     	<nav class="row">
             <div class="large-4 columns">
                 <header class="blue-button">
-                    <a href="#"><h5>News &amp; Events</h5></a>
+                    <a href="/news"><h5>News &amp; Events</h5></a>
                 </header>
                 <p>Get the latest news, game cancellations and event info ... Click here</p>
             </div>
             <div class="large-4 columns">
                 <header class="green-button">
-                    <a href="#"><h5>Parks &amp; Facilites</h5></a>
+                    <a href="/facilities"><h5>Parks &amp; Facilites</h5></a>
                 </header>
                 <p>To see more information on each of our facilities... Click Here</p>
             </div>

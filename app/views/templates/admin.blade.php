@@ -47,6 +47,9 @@
 					<li class="panel">
 						<a href="{{ route('backend.facility.index') }}">Facilities</a>
 					</li>
+					<li class="panel">
+						<a href="{{ route('backend.news.index') }}">Announcements</a>
+					</li>
 				</ul>
 			</nav>
 			<main class="large-8 columns">
