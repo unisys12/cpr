@@ -15,7 +15,7 @@ class CreateStaffTable extends Migration {
 		
 		Schema::create('staff', function($table)
 		{
-			$table->increaments('id');
+			$table->increments('id');
 			$table->string('name');
 			$table->string('title');
 			$table->string('email');
