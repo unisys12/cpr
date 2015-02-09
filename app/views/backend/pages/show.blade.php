@@ -8,7 +8,7 @@
 		<ul>
 			<li><a href="/backend/pages/create">New Page</a></li>
 			@foreach($page as $item)
-			<li><a href="http://cpr.app/backend/pages/{{ $item->slug }}/edit">Edit This Page</a></li>
+			<li><a href="/backend/pages/{{ $item->slug }}/edit">Edit This Page</a></li>
 			@endforeach
 		</ul>
 	</nav>
