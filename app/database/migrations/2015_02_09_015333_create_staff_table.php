@@ -17,8 +17,10 @@ class CreateStaffTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->string('slug');
 			$table->string('title');
 			$table->string('email');
+			$table->string('image');
 			$table->text('summary');
 			$table->timestamps();
 			$table->softDeletes();
