@@ -103,6 +103,11 @@ Route::get('/news', function()
 	return View::make('site.page')->with('data', $data);
 });
 
+Route::get('contact', function()
+{
+	return View::make('site.contact');
+});
+
 // Route to Staff view
 Route::get('/staff', function()
 {
