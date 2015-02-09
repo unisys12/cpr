@@ -61,6 +61,7 @@ Route::put('backend/pages/{page}', ['as' => 'page.update', 'uses' => 'PagesContr
 Route::resource('/backend/carousel', 'CarouselController');
 Route::resource('/backend/facility', 'FacilityController');
 Route::resource('/backend/news', 'NewsController');
+Route::resource('/backend/staff', 'StaffController');
 
 Route::get('/facilities', function()
 {
@@ -100,6 +101,12 @@ Route::get('/news', function()
 	$data = News::all()->take(5);
 
 	return View::make('site.page')->with('data', $data);
+});
+
+// Route to Staff view
+Route::get('/staff', function()
+{
+	return View::make('site.staff')->with('staff', Staff::all());
 });
 
 // Site Routes

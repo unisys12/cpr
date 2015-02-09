@@ -50,6 +50,9 @@
 					<li class="panel">
 						<a href="{{ route('backend.news.index') }}">Announcements</a>
 					</li>
+					<li class="panel">
+						<a href="{{ route('backend.staff.index') }}">Staff Members</a>
+					</li>
 				</ul>
 			</nav>
 			<main class="large-8 columns">
