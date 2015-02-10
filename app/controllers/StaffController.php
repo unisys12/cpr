@@ -37,7 +37,7 @@ class StaffController extends \BaseController {
 	 */
 	public function store()
 	{
-		$imagePath = 'public/imgs/uploads/staff/';
+		$imagePath = 'imgs/uploads/staff/';
 
 		$data = [
 			'name' 		=> Input::get('name'),
@@ -48,19 +48,17 @@ class StaffController extends \BaseController {
 			'summary'	=> Input::get('summary')
 		];
 
-		$image = Input::file('image');
-
-		/*if($image->isValid()){
-			$image->move($imagePath, $data['image']);
-		}*/
-
 		$attempt = $this->staff->validate($data);
 
 		if( $attempt->fails() ){
 			return Redirect::route('backend.staff.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		$image->move($imagePath, $data['image']);
+		$image = Input::file('image');
+
+		if($image->isValid()){
+			$image->move($imagePath, $data['image']);
+		}
 
 		$this->staff->create($data);
 		
@@ -100,9 +98,7 @@ class StaffController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$imagePath = 'public/imgs/uploads/staff/';
-
-		$image = Input::file('image');
+		$imagePath = 'imgs/uploads/staff/';
 
 		$data = [
 			'name' 		=> Input::get('name'),
@@ -113,14 +109,16 @@ class StaffController extends \BaseController {
 			'summary'	=> Input::get('summary')
 		];
 
-		if($image->isValid()){
-			$image->move($imagePath, $data['image']);
-		}
-
 		$attempt = $this->staff->validate($data);
 
 		if( $attempt->fails() ){
 			return Redirect::route('backend.staff.create')->with('errors', $attempt->messages())->withInput();
+		}
+
+		$image = Input::file('image');
+
+		if($image->isValid()){
+			$image->move($imagePath, $data['image']);
 		}
 
 		$existing = $this->staff->where('slug', $slug);
