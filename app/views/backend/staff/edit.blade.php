@@ -30,7 +30,7 @@ Edit A Staff Member
 	@include('partials.errors')
 
 	@foreach($slug as $member)
-		{{ Form::open(['route' => ['backend.staff.update', $member->slug], 'method' => 'put']) }}
+		{{ Form::open(['route' => ['backend.staff.update', $member->slug], 'method' => 'put', 'files' => true]) }}
 
 		{{ Form::label('name', 'Staff Member Name') }}
 		{{ Form::text('name', $member->name) }}
