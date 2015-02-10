@@ -26,7 +26,7 @@
 			</div>
 			<div class="large-6">
 				<figure>
-					<img src="{{ asset($member->image) }}" alt="{{ $member->name }}">
+					<img src="{{ asset('/public/' . $member->image) }}" alt="{{ $member->name }}">
 				</figure>
 				<figcaption>
 					{{ $member->name }}
