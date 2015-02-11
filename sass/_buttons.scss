@@ -11,6 +11,7 @@
 		background-image: linear-gradient(to top, $light-blue, $dark-blue);
 		background-image: -webkit-linear-gradient(bottom, $light-blue, $dark-blue);
 		background-image: -ms-linear-gradient(bottom, $light-blue, $dark-blue);
+		transition: background-image 0.3s;
 	}
 
 	@include links(#FFF);
@@ -29,6 +30,7 @@
 		background-image: linear-gradient(to top, $light-green, $dark-green);
 		background-image: -webkit-linear-gradient(to top, $light-green, $dark-green);
 		background-image: -ms-linear-gradient(to top, $light-green, $dark-green);
+		transition: background-image 0.3s;
 	}
 
 	@include links(#FFF);
@@ -47,6 +49,7 @@
 		background-image: linear-gradient(to top, $light-brown, $dark-brown);
 		background-image: -webkit-linear-gradient(to top, $light-brown, $dark-brown);
 		background-image: -ms-linear-gradient(to top, $light-brown, $dark-brown);
+		transition: background-image 0.3s;
 	}
 
 	@include links(#FFF);
