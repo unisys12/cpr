@@ -2599,7 +2599,8 @@ aside {
   .blue-button:hover {
     background-image: linear-gradient(to top, #1C74BB, #052A6B);
     background-image: -webkit-linear-gradient(bottom, #1C74BB, #052A6B);
-    background-image: -ms-linear-gradient(bottom, #1C74BB, #052A6B); }
+    background-image: -ms-linear-gradient(bottom, #1C74BB, #052A6B);
+    transition: background-image 0.3s; }
   .blue-button a {
     color: #FFF;
     font-family: PT Sans, san-serif;
@@ -2619,7 +2620,8 @@ aside {
   .green-button:hover {
     background-image: linear-gradient(to top, #59A761, #367C2B);
     background-image: -webkit-linear-gradient(to top, #59A761, #367C2B);
-    background-image: -ms-linear-gradient(to top, #59A761, #367C2B); }
+    background-image: -ms-linear-gradient(to top, #59A761, #367C2B);
+    transition: background-image 0.3s; }
   .green-button a {
     color: #FFF;
     font-family: PT Sans, san-serif;
@@ -2639,7 +2641,8 @@ aside {
   .brown-button:hover {
     background-image: linear-gradient(to top, #CD4E38, #971C00);
     background-image: -webkit-linear-gradient(to top, #CD4E38, #971C00);
-    background-image: -ms-linear-gradient(to top, #CD4E38, #971C00); }
+    background-image: -ms-linear-gradient(to top, #CD4E38, #971C00);
+    transition: background-image 0.3s; }
   .brown-button a {
     color: #FFF;
     font-family: PT Sans, san-serif;
