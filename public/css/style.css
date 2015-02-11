@@ -2406,7 +2406,8 @@ article {
   background-color: #7ab981;
   box-shadow: 5px 5px rgba(0, 100, 0, 0.1); }
   .top-menu:hover {
-    box-shadow: 5px 5px rgba(0, 85, 0, 0.2); }
+    box-shadow: 5px 5px rgba(0, 85, 0, 0.2);
+    transition: box-shadow 0.3s; }
   .top-menu li {
     float: left;
     padding: 1em;
@@ -2562,7 +2563,8 @@ aside {
     font-size: 95%;
     box-shadow: 5px 5px rgba(0, 0, 255, 0.1); }
     aside .side-menu:hover {
-      box-shadow: 5px 5px rgba(0, 0, 255, 0.2); }
+      box-shadow: 5px 5px rgba(0, 0, 255, 0.2);
+      transition: box-shadow 0.3s; }
     aside .side-menu ul {
       margin: 0;
       padding: .5em;

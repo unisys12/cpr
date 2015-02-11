@@ -28,6 +28,7 @@
 	@include box-shadow(rgba(0,100,0, .1));
 	&:hover {
 		@include box-shadow(rgba(0,85,0, .2));
+		transition: box-shadow 0.3s;
 	}
 	li {
 		float: left;
