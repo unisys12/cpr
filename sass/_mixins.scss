@@ -39,3 +39,7 @@
   font-family: Open Sans, Sans Serif, Arial;
   font-weight: $weight;
 }
+
+@mixin svg_colorize($red, $green, $blue, $alpha) {
+  fill: rgba($red, $green, $blue, $alpha);
+}
