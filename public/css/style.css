@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=PT+Sans|Open+Sans|Roboto|Oswald|Raleway);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans|Roboto|Oswald|Raleway);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2348,27 +2348,6 @@ article {
   padding-bottom: 3em;
   line-height: 1.75; }
 
-footer {
-  background: #333;
-  background-image: -webkit-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
-  background-image: -o-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
-  background-image: linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
-  color: #999;
-  border-top-left-radius: 1.25em;
-  border-top-right-radius: 1.25em;
-  border: 2px solid rgba(0, 0, 0, 0.3); }
-  footer h3 {
-    color: #FFF; }
-  footer li {
-    list-style: none; }
-  footer a {
-    color: #EEE;
-    font-family: PT Sans, san-serif;
-    font-size: 125%;
-    text-decoration: none; }
-  footer a:hover {
-    color: #bbbbbb; }
-
 .good {
   background-image: -webkit-linear-gradient(bottom, #59A761, #62995A, #367C2B);
   background-image: -ms-linear-gradient(bottom, #59A761, #62995A, #367C2B);
@@ -2666,6 +2645,39 @@ aside {
     text-decoration: none; }
   .brown-button a:hover {
     color: #cccccc; }
+
+footer {
+  background: #333;
+  background-image: -webkit-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
+  background-image: -o-linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
+  background-image: linear-gradient(rgba(0, 185, 0, 0.1), rgba(0, 145, 0, 0.5));
+  color: #999;
+  border-top-left-radius: 1.25em;
+  border-top-right-radius: 1.25em;
+  border: 2px solid rgba(0, 0, 0, 0.3); }
+  footer a {
+    color: #EEE;
+    font-family: PT Sans, san-serif;
+    font-size: 125%;
+    text-decoration: none; }
+  footer a:hover {
+    color: #bbbbbb; }
+  footer h3 {
+    color: #FFF; }
+  footer li {
+    list-style: none; }
+
+.twitter-icon {
+  fill: #4099FF; }
+  .twitter-icon:hover {
+    fill: #73b4ff;
+    transition: fill 0.3s; }
+
+.facebook-icon {
+  fill: #3b5998; }
+  .facebook-icon:hover {
+    fill: #4c70ba;
+    transition: fill 0.3s; }
 
 .facility_img {
   box-shadow: 1px 3px rgba(0, 0, 0, 0.3); }

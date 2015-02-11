@@ -1,0 +1,36 @@
+footer {
+	@include links(#EEE);
+	background: #333;
+	background-image: -webkit-linear-gradient(rgba(0,185,0,0.1), rgba(0,145,0,0.5));
+	background-image: -o-linear-gradient(rgba(0,185,0,0.1), rgba(0,145,0,0.5));
+	background-image: linear-gradient(rgba(0,185,0,0.1), rgba(0,145,0,0.5));
+	color: #999;
+	border-top-left-radius: 1.25em;
+	border-top-right-radius: 1.25em;
+	border: 2px solid rgba(0,0,0,0.3);
+
+	h3 {
+		color: #FFF;
+	}
+
+	li {
+		list-style: none;
+	}
+
+}
+
+.twitter-icon {
+	fill: #4099FF;
+	&:hover {
+		fill: lighten(#4099FF, 10%);
+		transition: fill 0.3s;
+	}
+}
+
+.facebook-icon {
+	fill: #3b5998; 
+	&:hover {
+		fill: lighten(#3b5998, 10%);
+		transition: fill 0.3s;
+	}
+}
