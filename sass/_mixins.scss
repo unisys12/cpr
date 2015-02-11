@@ -1,7 +1,7 @@
 @mixin links($color){
 	a {
       color: $color;
-      font-family: PT Sans, san-serif;
+      font-family: Arial, sans-serif;
       font-size: 125%;
       text-decoration: none;
     }

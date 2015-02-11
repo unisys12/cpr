@@ -2,7 +2,6 @@ aside {
 	margin-left: -.89em;
 	margin-bottom: 1.5em;
 	.side-menu {
-		font-size: 95%;
 		@include box-shadow(rgba(0,0,255,.1));
 		&:hover {
 			@include box-shadow(rgba(0,0,255,.2));
@@ -17,6 +16,9 @@ aside {
 
 		li { 
 			padding: .5em 0;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	   		font-weight: 300;
+	   		font-size: 95%;
 		    &:first-child {
 		      padding-top: .25em;
 		    }
