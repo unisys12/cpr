@@ -6,6 +6,7 @@ aside {
 		@include box-shadow(rgba(0,0,255,.1));
 		&:hover {
 			@include box-shadow(rgba(0,0,255,.2));
+			transition: box-shadow 0.3s;
 		}
 		ul {
 			margin: 0;
