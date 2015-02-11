@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans|Open+Sans|Roboto|Oswald|Raleway);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2389,7 +2389,8 @@ article {
 .header-name {
   width: 70%;
   float: left;
-  font-family: Oswald, Helvetica; }
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }
   .header-name a {
     text-decoration: none;
     color: #111; }
@@ -2434,7 +2435,7 @@ article {
           padding-right: 0; } }
     .top-menu li a {
       color: #111;
-      font-family: PT Sans, san-serif;
+      font-family: Arial, sans-serif;
       font-size: 125%;
       text-decoration: none; }
     .top-menu li a:hover {
@@ -2560,7 +2561,6 @@ aside {
   margin-left: -.89em;
   margin-bottom: 1.5em; }
   aside .side-menu {
-    font-size: 95%;
     box-shadow: 5px 5px rgba(0, 0, 255, 0.1); }
     aside .side-menu:hover {
       box-shadow: 5px 5px rgba(0, 0, 255, 0.2);
@@ -2571,14 +2571,17 @@ aside {
       list-style-type: none;
       background-color: #2b8fdf; }
     aside .side-menu li {
-      padding: .5em 0; }
+      padding: .5em 0;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 95%; }
       aside .side-menu li:first-child {
         padding-top: .25em; }
       aside .side-menu li:last-child {
         padding-bottom: .25em; }
       aside .side-menu li a {
         color: #111;
-        font-family: PT Sans, san-serif;
+        font-family: Arial, sans-serif;
         font-size: 125%;
         text-decoration: none; }
       aside .side-menu li a:hover {
@@ -2603,7 +2606,7 @@ aside {
     transition: background-image 0.3s; }
   .blue-button a {
     color: #FFF;
-    font-family: PT Sans, san-serif;
+    font-family: Arial, sans-serif;
     font-size: 125%;
     text-decoration: none; }
   .blue-button a:hover {
@@ -2624,7 +2627,7 @@ aside {
     transition: background-image 0.3s; }
   .green-button a {
     color: #FFF;
-    font-family: PT Sans, san-serif;
+    font-family: Arial, sans-serif;
     font-size: 125%;
     text-decoration: none; }
   .green-button a:hover {
@@ -2645,7 +2648,7 @@ aside {
     transition: background-image 0.3s; }
   .brown-button a {
     color: #FFF;
-    font-family: PT Sans, san-serif;
+    font-family: Arial, sans-serif;
     font-size: 125%;
     text-decoration: none; }
   .brown-button a:hover {
@@ -2662,7 +2665,7 @@ footer {
   border: 2px solid rgba(0, 0, 0, 0.3); }
   footer a {
     color: #EEE;
-    font-family: PT Sans, san-serif;
+    font-family: Arial, sans-serif;
     font-size: 125%;
     text-decoration: none; }
   footer a:hover {
