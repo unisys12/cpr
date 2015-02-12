@@ -20,11 +20,7 @@
                     <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
                 </figure>
             </section>
-            <section class="row">
-                <div class="large-12 small-centered columns message">
-                    <a href="/registration">Spring Registration Has Started!</a>
-                </div>
-            </section>
+            @include('partials.callout')
         </header>
     <nav class="row top-menu">
         <ul class="large-12 large-offset-3 small-centered">
