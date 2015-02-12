@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@yield('title', 'Corinth Alcorn Parks and Recreation')</title>
-        <link rel="stylesheet" href="{{ asset('public/css/style.css') }}" />
-        <link rel="stylesheet" href="{{ asset('public/css/style.css.map') }}" />
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/style.css.map') }}" />
         <script src=""></script>
     </head>
     <body class="background">
@@ -17,8 +17,13 @@
             </section>
             <section class="header-logo">
                 <figure class="logo">
-                    <img src="{{ asset('public/imgs/park-logo-svg.svg') }}" alt="park logo">
+                    <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
                 </figure>
+            </section>
+            <section class="row">
+                <div class="large-12 small-centered columns message">
+                    <a href="/registration">Spring Registration Has Started!</a>
+                </div>
             </section>
         </header>
     <nav class="row top-menu">
