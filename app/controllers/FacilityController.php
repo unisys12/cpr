@@ -40,7 +40,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function store()
 	{
-		$imagePath = 'public/imgs/uploads/facilities/';
+		$imagePath = 'imgs/uploads/facilities/';
 
 		$data = [
 			'name' 					=> 	Input::get('name'),
@@ -108,7 +108,7 @@ class FacilityController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$imagePath = 'public/imgs/uploads/facilities/';
+		$imagePath = 'imgs/uploads/facilities/';
 
 		$data = [
 			'name' 					=> 	Input::get('name'),

@@ -38,7 +38,7 @@ class CarouselController extends \BaseController {
 	 */
 	public function store()
 	{
-		$imagePath = 'public/imgs/uploads/carousel/';
+		$imagePath = 'imgs/uploads/carousel/';
 
 		$data = [
 			'title' 				=> 	Input::get('title'),
@@ -113,7 +113,7 @@ class CarouselController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$image_path = 'public/imgs/uploads/carousel/';
+		$image_path = 'imgs/uploads/carousel/';
 
 		$data = [
 			'title' 				=> 	Input::get('title'),
