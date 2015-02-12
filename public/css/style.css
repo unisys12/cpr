@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Arimo:700);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1318,7 +1319,7 @@ select {
   .large-offset-3 {
     margin-left: 25% !important; }
 
-  .large-offset-4 {
+  .large-offset-4, .message {
     margin-left: 33.33333% !important; }
 
   .large-offset-5 {
@@ -2388,10 +2389,10 @@ article {
 
 .header-name {
   width: 70%;
-  float: left;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  font-size: 12rem; }
+  float: left; }
+  .header-name h2 {
+    font-family: "Arimo", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 700; }
   .header-name a {
     text-decoration: none;
     color: #111; }
@@ -2403,6 +2404,16 @@ article {
   @media screen and (max-width: 480px), (max-width: 667px) {
     .header-logo {
       margin-top: 1.5em; } }
+
+.message a {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 125%;
+  text-decoration: none;
+  color: rgba(255, 150, 50, 0.9); }
+  .message a:hover {
+    color: rgba(255, 25, 150, 0.9);
+    transition: color 0.3s; }
 
 .top-menu {
   background-color: #7ab981;
