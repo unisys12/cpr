@@ -12,7 +12,7 @@
     	<header class="header-main">
             <section class="header-name">
                 <a href="{{ route('site.index') }}">
-                  <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
+                  <h2>Corinth/Alcorn Parks &amp; Recreation Department</h2>
                 </a>
             </section>
             <section class="header-logo">
@@ -87,7 +87,7 @@
     			</header>
     			<section>
                     <span>
-                        <a href="#">
+                        <a href="https://www.facebook.com/corinthalcornparks">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                             <g id="icomoon-ignore">
                             </g>
@@ -95,7 +95,7 @@
                             </svg>
                         </a>
                     </span>
-        				 <a href="#">
+        				 <a href="https://twitter.com/corinthparks">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
                             <g id="icomoon-ignore">
                             </g>
