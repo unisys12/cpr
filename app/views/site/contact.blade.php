@@ -15,9 +15,3 @@ Contact Information
 	<li>Shipping Address: 309 S. Parkway St, Corinth, MS 38834</li>
 </ul>
 @stop
-
-@section('side-nav')
-@foreach (Page::all() as $page)
-<li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
-@endforeach
-@stop
