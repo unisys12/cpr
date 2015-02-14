@@ -95,12 +95,20 @@ Route::get('/registration', ['as' => 'registration', function()
 	return View::make('site.registration');
 }]);
 
-// Route to Announcements and News
+// Route to Announcements and News Summary Page
 Route::get('/news', function()
 {
 	$data = News::all()->take(5);
 
-	return View::make('site.page')->with('data', $data);
+	return View::make('site.news')->with('data', $data);
+});
+
+// Route to individual Annoucement and News Articles
+Route::get('/news/{slug}', function($slug)
+{
+	$data = News::where('slug', $slug)->get();
+
+	return View::make('site.article')->with('data', $data);
 });
 
 Route::get('contact', function()
