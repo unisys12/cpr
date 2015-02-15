@@ -5,7 +5,6 @@ Contact Information
 @stop
 
 @section('content')
-
 <h3>Contact Us</h3>
 <ul>
 	<li>Office Hours: Monday - Friday 8am - 5pm</li>
@@ -14,10 +13,4 @@ Contact Information
 	<li>Mailing Address: P.O. Box 1372, Corinth, MS 38835</li>
 	<li>Shipping Address: 309 S. Parkway St, Corinth, MS 38834</li>
 </ul>
-@stop
-
-@section('side-nav')
-@foreach (Page::all() as $page)
-<li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
-@endforeach
 @stop

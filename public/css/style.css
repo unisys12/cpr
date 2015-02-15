@@ -2331,10 +2331,10 @@ label.error {
 
 .background {
   background: #fff no-repeat center center fixed;
-  background-image: -webkit-linear-gradient(bottom, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4));
-  background-image: -ms-linear-gradient(bottom, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4));
-  background-image: -o-linear-gradient(bottom, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4));
-  background-image: linear-gradient(to top, rgba(64, 224, 208, 0.2), rgba(64, 224, 208, 0.4)); }
+  background-image: -webkit-linear-gradient(bottom, rgba(64, 224, 208, 0.1), rgba(64, 224, 208, 0.2));
+  background-image: -ms-linear-gradient(bottom, rgba(64, 224, 208, 0.1), rgba(64, 224, 208, 0.2));
+  background-image: -o-linear-gradient(bottom, rgba(64, 224, 208, 0.1), rgba(64, 224, 208, 0.2));
+  background-image: linear-gradient(to top, rgba(64, 224, 208, 0.1), rgba(64, 224, 208, 0.2)); }
 
 .home a {
   text-decoration: none;

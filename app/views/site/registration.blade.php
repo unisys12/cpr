@@ -5,7 +5,7 @@ Sports Registration Information
 @stop
 
 @section('content')
-	<article class="reg-info">
+	<section class="reg-info">
 		<h2>2015 Youth Baseball &amp; Girls Fast Pitch Registration</h2>
 		<p><b>Registration will end February 20th</b></p>
 		<p>Cost: $45.00/child</p>
@@ -33,11 +33,5 @@ Sports Registration Information
 			<li>Draft Only for Girls 14U &amp; 16U, Boys 13-15</li>
 			<li>T-Ball: No Observations</li>
 		</ul>
-	</article>
-@stop
-
-@section('side-nav')
-@foreach (Page::all() as $page)
-<li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
-@endforeach
+	</section>
 @stop

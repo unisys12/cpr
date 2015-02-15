@@ -13,8 +13,8 @@
 			<h4>{{ $element->header }}</h4>
 		</header>
 		<article>
-			{{ $element->content }}
-			<p><small>Created: {{ $element->created_at }}</small></p>
+			{{ substr($element->content,0, 500) }}
+			<p><small><a href="/news/{{ $element->slug }}">Read More</a> - Created: {{ $element->created_at }}</small></p>
 		</article>
 	@endforeach
 @stop
