@@ -5,7 +5,6 @@ Contact Information
 @stop
 
 @section('content')
-
 <h3>Contact Us</h3>
 <ul>
 	<li>Office Hours: Monday - Friday 8am - 5pm</li>
