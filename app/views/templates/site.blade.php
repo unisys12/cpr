@@ -47,9 +47,9 @@
                 </ul>
             </nav>
         </aside>
-        <section class="large-9 medium-9 columns">
+        <article class="large-9 medium-9 columns">
             @yield('content')
-        </section>
+        </article>
     </main>
     	<nav class="row">
             <div class="large-4 columns">
