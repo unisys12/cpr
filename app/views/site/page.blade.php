@@ -6,17 +6,15 @@
 	@endforeach
 @stop
 
-@section('content')
-	<div class="large-8 columns">		
-		@foreach ($data as $element)
-			<header>
-				<h2>{{ $element->title }}</h2>
-				<h4>{{ $element->header }}</h4>
-			</header>
-			<article>
-				{{ $element->content }}
-				<p><small>Created: {{ $element->created_at }}</small></p>
-			</article>
-		@endforeach
-	</div>
+@section('content')		
+	@foreach ($data as $element)
+		<header>
+			<h2>{{ $element->title }}</h2>
+			<h4>{{ $element->header }}</h4>
+		</header>
+		<article>
+			{{ $element->content }}
+			<p><small>Created: {{ $element->created_at }}</small></p>
+		</article>
+	@endforeach
 @stop
