@@ -12,7 +12,7 @@
     	<header class="header-main">
             <section class="header-name">
                 <a href="{{ route('site.index') }}">
-                  <h2>Corinth/Alcorn Parks &amp; Recreation Department</h2>
+                  <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
                 </a>
             </section>
             <section class="header-logo">
@@ -20,7 +20,6 @@
                     <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
                 </figure>
             </section>
-            @include('partials.callout')
         </header>
     <nav class="row top-menu">
         <ul class="large-12 large-offset-3 small-centered">
