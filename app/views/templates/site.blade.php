@@ -69,7 +69,7 @@
             </div>
     	</nav>
     	<footer class="row">
-    		<section class="large-8 columns">
+    		<section class="large-6 columns">
     			<h3>Contact Us</h3>
     			<ul>
           			<li>Office Hours: Monday - Friday 8am - 5pm</li>
@@ -79,7 +79,7 @@
           			<li>Shipping Address: 309 S. Parkway St, Corinth, MS 38834</li>
           		</ul>
     		</section>
-    		<section class="large-4 columns">
+    		<section class="large-3 columns">
     			<header>
     				<h3>Social Media</h3>
     			</header>
@@ -103,6 +103,10 @@
                      </span>
     			</section>
     		</section>
+            <section class="large-3 columns">
+                    <h3>Weather Conditions</h3>
+                    <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:38834.1.99999&bannertypeclick=wu_blueglass" title="Corinth, Mississippi Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_blueglass&pwscode=KMSCORIN4&ForcedCity=Corinth&ForcedState=MS&zip=38834&language=EN" alt="Find more about Weather in Corinth, MS" width="160" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:38834.1.99999&bannertypeclick=wu_blueglass" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank">Click for weather forecast</a></span>
+                </section>
     	</footer>
     </body>
 </html>
