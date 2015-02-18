@@ -11,7 +11,7 @@
 				{
 					relative_urls: false,
 					plugins: "jbimages",
-					toolbar: "jbimages",
+					toolbar: "jbimages, visualblocks",
 					selector:'textarea'
 				}
 			);
