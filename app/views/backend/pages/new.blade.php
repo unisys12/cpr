@@ -22,7 +22,6 @@ Add New Page
 @stop
 
 @section('content')
-	<div class="small-12 large-8 columns">
 	@include('partials.errors')
 		{{ Form::open(['route' => 'page.store']) }}
 		
@@ -38,5 +37,4 @@ Add New Page
 		{{ Form::submit('Create New Page') }}
 
 		{{ Form::close() }}
-	</div>
 @stop
