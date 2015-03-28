@@ -2390,17 +2390,18 @@ article {
 .header-name {
   width: 80%;
   float: left; }
-  .header-name h2 {
+  .header-name h1 {
     font-family: "Arimo", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 700; }
   .header-name a {
     text-decoration: none;
-    color: #111; }
+    color: #0083cd; }
 
 .header-logo {
   width: 20%;
   text-align: right;
-  float: right; }
+  float: right;
+  margin: .5em 0; }
   @media screen and (max-width: 480px), (max-width: 667px) {
     .header-logo {
       margin-top: 1.5em; } }
@@ -2416,7 +2417,7 @@ article {
     transition: color 0.3s; }
 
 .top-menu {
-  background-color: #7ab981;
+  background-color: #7ece72;
   box-shadow: 5px 5px rgba(0, 100, 0, 0.1); }
   .top-menu:hover {
     box-shadow: 5px 5px rgba(0, 85, 0, 0.2);
@@ -2446,7 +2447,7 @@ article {
         .top-menu li:last-child {
           padding-right: 0; } }
     .top-menu li a {
-      color: #111;
+      color: #002134;
       font-family: Arial, sans-serif;
       font-size: 125%;
       text-decoration: none; }
