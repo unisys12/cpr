@@ -2576,29 +2576,20 @@ aside {
     margin: 0;
     padding: .5em;
     list-style-type: none; }
-  aside .side-menu li {
-    padding: .5em 0;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-size: 95%;
-    background-color: #01a3ff;
-    border-radius: .5em;
-    margin-bottom: 1em; }
-    aside .side-menu li:first-child {
-      padding-top: .25em; }
-    aside .side-menu li:last-child {
-      padding-bottom: .25em; }
-    aside .side-menu li:hover {
-      background-color: #67C8FF; }
-    aside .side-menu li a {
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      font-size: 125%;
-      text-decoration: none; }
-    aside .side-menu li a:hover {
-      color: #cccccc; }
-    aside .side-menu li a {
-      margin: 0 .5em; }
+  aside .side-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0; }
+    aside .side-menu a li {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      margin: 1em 0;
+      padding: .5em;
+      background-color: #01a3ff;
+      border-radius: .5em; }
+      aside .side-menu a li:hover {
+        background-color: #67C8FF;
+        transition: background-color, .3s; }
   @media screen and (max-width: 1025px) {
     aside {
       margin-left: 0;

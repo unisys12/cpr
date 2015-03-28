@@ -41,14 +41,14 @@
         <aside class="large-3 medium-3 columns">
             <nav class="side-menu">
                 <ul>
-                    <li><a href="{{ route('site.index') }}">Home</a></li>
-                    <li><a href="/news">Park Announcements</a></li>
-                    <li><a href="/schedules">Athletic Schedules</a></li>
-                    <li><a href="/sports/youth">Youth Sports</a></li>
-                    <li><a href="/sports/adult">Adult Sports</a></li>
-                    <li><a href="/facilities">Facilities</a></li>
+                    <a href="{{ route('site.index') }}"><li>Home</li></a>
+                    <a href="/news"><li>Park Announcements</li></a>
+                    <a href="/schedules"><li>Athletic Schedules</li></a>
+                    <a href="/sports/youth"><li>Youth Sports</li></a>
+                    <a href="/sports/adult"><li>Adult Sports</li></a>
+                    <a href="/facilities"><li>Facilities</li></a>
                     @foreach (Page::all() as $page)
-                    <li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
+                    <a href="/{{ $page->slug }}"><li>{{ $page->title }}</li></a>
                     @endforeach
                 </ul>
             </nav>
