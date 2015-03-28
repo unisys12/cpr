@@ -2,16 +2,11 @@ aside {
 	margin-left: -.89em;
 	margin-bottom: 1.5em;
 	.side-menu {
-		@include box-shadow(rgba(0,0,255,.1));
-		&:hover {
-			@include box-shadow(rgba(0,0,255,.2));
-			transition: box-shadow 0.3s;
-		}
+	
 		ul {
 			margin: 0;
 			padding: .5em;
 			list-style-type: none;
-			background-color: lighten($light-blue, 10%);
 		}
 
 		li { 
@@ -19,14 +14,25 @@ aside {
 			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	   		font-weight: 300;
 	   		font-size: 95%;
+	   		background-color: darken(#67C8FF, 20%);
+	   		border-radius: .5em;
+	   		margin-bottom: 1em;
 		    &:first-child {
 		      padding-top: .25em;
 		    }
 		    &:last-child {
 		      padding-bottom: .25em;
 		    }
+
+		    &:hover {
+		    	background-color: #67C8FF;
+		    }
 		    
-		    @include links(#111);
+		    @include links(#ffffff);
+
+		    a {
+		    	margin: 0 .5em;
+		    }
 		    
 		}
 	}
