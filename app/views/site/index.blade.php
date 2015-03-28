@@ -4,6 +4,15 @@
 
 @include('partials.carousel')
 <article>
-	<p>Crossroads Regional Park, southeast of downtown Corinth, Mississippi, offers 38 acres of opportunities for outdoor recreation. Facilities include a 1-mile paved walking or jogging trail, a soccer field, 10 tennis courts, 6 fields for baseball or softball, a 9 hole disc golf course and 3 picnic pavilions. A major attraction is the Crossroads Fun Station mega playground.</p>
+	<p>
+		The Corinth/Alcorn County Parks and Recreation Department continuously strives to improve the quality of life for the citizens of Alcorn County by providing professionally designed leisure programs and services.  In order for us to provide this mission we will continuously strive to:
+	</p>
+	<ul>
+		<li>Provide diversity in programming opportunities that meet the changing needs and interests of participants</li>
+		<li>Maintain safe and attractive facilities that ensure opportunities for all users</li>
+		<li>Assist in the development of knowledge, interest, and behaviors that promote a healthy lifestyle</li>
+		<li>Encourage the development of positive attitudes regarding participation and sportsmanship</li>
+		<li>Offer quality programs and services that are affordable to all</li>
+	</ul>
 </article>
 @stop
