@@ -23,7 +23,7 @@ Edit A Staff Member
 
 @section('content')
 
-	<p class="message">
+	<p class="">
 		Edit the following Staff Member, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 	</p>
 
