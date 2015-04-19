@@ -23,7 +23,7 @@ Edit a Announcement
 
 @section('content')
 
-	<p class="message">
+	<p>
 		Edit the following Announcement, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 	</p>
 	@include('partials.errors')

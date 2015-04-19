@@ -23,7 +23,7 @@ Edit a Page
 
 @section('content')
 
-	<p class="message">
+	<p>
 		Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 	</p>
 	@include('partials.errors')

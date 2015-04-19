@@ -24,7 +24,7 @@ Edit a Existing Facility
 
 @section('content')
 	
-	<p class="message">
+	<p>
 		Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 	</p>
 	@foreach ($facilities as $facility)

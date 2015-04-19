@@ -24,7 +24,7 @@ Edit Your Image Carousel
 @section('content')
 
 	<div class="small-12 large-8 columns">
-		<p class="message">
+		<p>
 			Edit the following page, then click the "Save Edits" button below. To cancel, just click your browsers back button.
 		</p>
 		@include('partials.errors')
