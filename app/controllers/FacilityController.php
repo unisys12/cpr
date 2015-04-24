@@ -1,12 +1,11 @@
 <?php
 
-//use Cpr\Storage\Facility\FacilityRepository as Facility;
-
 class FacilityController extends \BaseController {
 
-	public function __construct(Facility $facility)
+	public function __construct(Facility $facility, ImageUploader $imagestore)
 	{
 		$this->beforeFilter('auth');
+		$this->imagestore = $imagestore;
 		$this->facility = $facility;
 	}
 
@@ -53,6 +52,8 @@ class FacilityController extends \BaseController {
 		];
 
 		$attempt = $this->facility->validate($data);
+
+		//dd(Input::file('image_1'));
 		
 		if( $attempt->fails() ){
 			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages())->withInput();
@@ -62,14 +63,16 @@ class FacilityController extends \BaseController {
 		$imageTwo = Input::file('image_2');
 
 		if($imageOne->isValid()){
-			$imageOne->move($imagePath, $data['image_1']);
+			//$imageOne->move($imagePath, $data['image_1']);
+			$this->imagestore->upload($data['slug'], $_FILES['image_1']);
 		}
 
 		if($imageTwo->isValid()){
-			$imageTwo->move($imagePath, $data['image_2']);
+			//$imageTwo->move($imagePath, $data['image_2']);
+			$this->imagestore->upload($data['slug'], $_FILES['image_2']);
 		}
 
-		$this->facility->create($data);
+		//$this->facility->create($data);
 		return Redirect::route('backend.facility.index');
 	}
 
