@@ -9,7 +9,7 @@ Contact Information
 @foreach($staff as $member)	
 	<section class="row">
 		<figure class="large-8 columns right">
-			<img src="{{ asset('/public/' . $member->image) }}" alt="{{ $member->name }}">
+			<img src="http://corinthparks.s3.amazonaws.com/{{ $member->image }}" alt="{{ $member->name }}">
 		</figure>
 		<div class="large-4 columns">
 			<h4>{{ $member->name }}</h4>

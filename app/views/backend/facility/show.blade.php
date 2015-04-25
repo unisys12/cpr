@@ -28,11 +28,11 @@ Preview Facility
 		<h2>{{ $facility->name }}</h2>
 		<p>{{ $facility->description }}</p>
 		<figure>
-			<img src="{{ asset($facility->image_1) }}" alt="{{ $facility->image_1_description }}">
+			<img src="http://corinthparks.s3.amazonaws.com/{{ $facility->image_1 }}" alt="{{ $facility->image_1_description }}">
 			<figcaption>{{ $facility->image_1_description }}</figcaption>
 		</figure>
 		<figure>
-			<img src="{{ asset($facility->image_2) }}" alt="{{ $facility->image_2_description }}">
+			<img src="http://corinthparks.s3.amazonaws.com/{{ $facility->image_2 }}" alt="{{ $facility->image_2_description }}">
 			<figcaption>{{ $facility->image_2_description }}</figcaption>
 		</figure>
 		@endforeach

@@ -2,10 +2,11 @@
 
 class StaffController extends \BaseController {
 
-	public function __construct(Staff $staff)
+	public function __construct(Staff $staff, ImageUploader $imagestore)
 	{
 		$this->beforeFilter('auth');
 		$this->staff = $staff;
+		$this->imagestore = $imagestore;
 	}
 
 	/**
@@ -37,14 +38,12 @@ class StaffController extends \BaseController {
 	 */
 	public function store()
 	{
-		$imagePath = 'imgs/uploads/staff/';
-
 		$data = [
 			'name' 		=> Input::get('name'),
 			'slug'		=> Str::slug(Input::get('name')),
 			'title'		=> Input::get('title'),
 			'email'		=> Input::get('email'),
-			'image'		=> $imagePath . Input::file('image')->getClientOriginalName(),
+			'image'		=> Input::file('image')->getClientOriginalName(),
 			'summary'	=> Input::get('summary')
 		];
 
@@ -57,7 +56,7 @@ class StaffController extends \BaseController {
 		$image = Input::file('image');
 
 		if($image->isValid()){
-			$image->move($imagePath, $data['image']);
+			$this->imagestore->upload($data['image'], $image);
 		}
 
 		$this->staff->create($data);
@@ -98,14 +97,12 @@ class StaffController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$imagePath = 'imgs/uploads/staff/';
-
 		$data = [
 			'name' 		=> Input::get('name'),
 			'slug'		=> Str::slug(Input::get('name')),
 			'title'		=> Input::get('title'),
 			'email'		=> Input::get('email'),
-			'image'		=> $imagePath . Input::file('image')->getClientOriginalName(),
+			'image'		=> Input::file('image')->getClientOriginalName(),
 			'summary'	=> Input::get('summary')
 		];
 
@@ -118,7 +115,7 @@ class StaffController extends \BaseController {
 		$image = Input::file('image');
 
 		if($image->isValid()){
-			$image->move($imagePath, $data['image']);
+			$this->imagestore->upload($data['image'], $image);
 		}
 
 		$existing = $this->staff->where('slug', $slug);

@@ -8,9 +8,10 @@ class ImageUploader {
 		$s3 = AWS::get('s3');
 
 		$s3->putObject(array(
-	    'Bucket'     => 'corinthparks',
-	    'Key'        => $name,
-	    'Body' => $file,
+	    'Bucket'    => 'corinthparks',
+	    'Key'       => $name,
+	    'Body'		=> fopen($file, 'r'),
+	    'ACL'		=> 'public-read',
 		));
 
 	}

@@ -45,15 +45,13 @@ class FacilityController extends \BaseController {
 			'name' 					=> 	Input::get('name'),
 			'slug'					=>	Str::slug(Input::get('name')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	$imagePath . Input::file('image_1')->getClientOriginalName(),
+			'image_1'				=>	Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	$imagePath . Input::file('image_2')->getClientOriginalName(),
+			'image_2'				=>	Input::file('image_2')->getClientOriginalName(),
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
 		$attempt = $this->facility->validate($data);
-
-		//dd(Input::file('image_1'));
 		
 		if( $attempt->fails() ){
 			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages())->withInput();
@@ -63,16 +61,14 @@ class FacilityController extends \BaseController {
 		$imageTwo = Input::file('image_2');
 
 		if($imageOne->isValid()){
-			//$imageOne->move($imagePath, $data['image_1']);
-			$this->imagestore->upload($data['slug'], $_FILES['image_1']);
+			$this->imagestore->upload($data['image_1'], $imageOne);
 		}
 
 		if($imageTwo->isValid()){
-			//$imageTwo->move($imagePath, $data['image_2']);
-			$this->imagestore->upload($data['slug'], $_FILES['image_2']);
+			$this->imagestore->upload($data['image_2'], $imageTwo);
 		}
 
-		//$this->facility->create($data);
+		$this->facility->create($data);
 		return Redirect::route('backend.facility.index');
 	}
 
@@ -111,15 +107,14 @@ class FacilityController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$imagePath = 'imgs/uploads/facilities/';
 
 		$data = [
 			'name' 					=> 	Input::get('name'),
 			'slug'					=>	Str::slug(Input::get('name')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	$imagePath . Input::file('image_1')->getClientOriginalName(),
+			'image_1'				=>	Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	$imagePath . Input::file('image_2')->getClientOriginalName(),
+			'image_2'				=>	Input::file('image_2')->getClientOriginalName(),
 			'image_2_description'	=>	Input::get('image_2_description'),
 		];
 
@@ -129,15 +124,15 @@ class FacilityController extends \BaseController {
 			return Redirect::route('backend.facility.create')->with('errors', $attempt->messages())->withInput();
 		}
 
-		$imageOne = Input::file('image_1');
+		$imageOne = Input::file('image_1');		
 		$imageTwo = Input::file('image_2');
-
+		
 		if($imageOne->isValid()){
-			$imageOne->move($imagePath, $data['image_1']);
+			$this->imagestore->upload($data['image_1'], $imageOne);
 		}
 
 		if($imageTwo->isValid()){
-			$imageTwo->move($imagePath, $data['image_2']);
+			$this->imagestore->upload($data['image_2'], $imageTwo);
 		}
 
 		$existing = $this->facility->where('slug', $slug);

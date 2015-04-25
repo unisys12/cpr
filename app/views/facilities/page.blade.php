@@ -1,40 +1,37 @@
 @extends('templates.site')
 
 @section('title')
-	@foreach ($data as $element)
-		{{ $element->name }}
+	@foreach ($data as $facility)
+		{{ $facility->name }}
 	@endforeach
 @stop
 
-@section('content')
-	@foreach ($data as $element)
-		<h1>{{ $element->name }}</h1>
-	@endforeach		
-		@foreach ($data as $element)
-			<header>
-				<h2>{{ $element->name }}</h2>
-			</header>
-			<figure>
-				<img src="{{ secure_asset($element->image_1) }}" alt="{{ $element->image_1_description }}">
-				<figcaptions>
-					<small>
-						<p><b>{{ $element->image_1_description }}</b></p>
-					</small>
-				</figcaption>
-			</figure>
-			<br>
-			<figure>
-				<img src="{{ secure_asset($element->image_2) }}" alt="{{ $element->image_2_description }}">
-				<figcaptions>
-					<small>
-						<p><b>{{ $element->image_2_description }}</b></p>
-					</small>
-				</figcaption>
-			</figure>
-			<article>
-				<p>{{ $element->description }}</p>
-			</article>
-		@endforeach
+@section('content')			
+	@foreach ($data as $facility)
+		<header>
+			<h1>{{ $facility->name }}</h1>
+		</header>
+		<article>
+			<p>{{ $facility->description }}</p>
+		</article>
+		<figure>
+			<img src="http://corinthparks.s3.amazonaws.com/{{ $facility->image_1 }}" alt="{{ $facility->image_1_description }}">
+			<figcaptions>
+				<small>
+					<p><b>{{ $facility->image_1_description }}</b></p>
+				</small>
+			</figcaption>
+		</figure>
+		<br>
+		<figure>
+			<img src="http://corinthparks.s3.amazonaws.com/{{ $facility->image_1 }}" alt="{{ $facility->image_2_description }}">
+			<figcaptions>
+				<small>
+					<p><b>{{ $facility->image_2_description }}</b></p>
+				</small>
+			</figcaption>
+		</figure>
+	@endforeach
 @stop
 
 @section('side-nav')

@@ -2,10 +2,11 @@
 
 class CarouselController extends \BaseController {
 
-	public function __construct(Carousel $carousel)
+	public function __construct(Carousel $carousel, ImageUploader $imagestore)
 	{
 		$this->beforeFilter('auth');
 		$this->carousel = $carousel;
+		$this->imagestore = $imagestore;
 	}
 
 	/**
@@ -38,17 +39,15 @@ class CarouselController extends \BaseController {
 	 */
 	public function store()
 	{
-		$imagePath = 'imgs/uploads/carousel/';
-
 		$data = [
 			'title' 				=> 	Input::get('title'),
 			'slug'					=>	Str::slug(Input::get('title')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	$imagePath . Input::file('image_1')->getClientOriginalName(),
+			'image_1'				=>	Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	$imagePath . Input::file('image_2')->getClientOriginalName(),
+			'image_2'				=>	Input::file('image_2')->getClientOriginalName(),
 			'image_2_description'	=>	Input::get('image_2_description'),
-			'image_3'				=>	$imagePath . Input::file('image_3')->getClientOriginalName(),
+			'image_3'				=>	Input::file('image_3')->getClientOriginalName(),
 			'image_3_description'	=>	Input::get('image_3_description')
 		];
 
@@ -63,15 +62,15 @@ class CarouselController extends \BaseController {
 		$imageThree = Input::file('image_3');
 
 		if($imageOne->isValid()){
-			$imageOne->move($imagePath, $data['image_1']);
+			$this->imagestore->upload($data['image_1'], $imageOne);
 		}
 
 		if($imageTwo->isValid()){
-			$imageTwo->move($imagePath, $data['image_2']);
+			$this->imagestore->upload($data['image_2'], $imageTwo);
 		}
 
 		if($imageThree->isValid()){
-			$imageThree->move($imagePath, $data['image_3']);
+			$this->imagestore->upload($data['image_3'], $imageThree);
 		};
 
 		Carousel::create($data);
@@ -113,17 +112,16 @@ class CarouselController extends \BaseController {
 	 */
 	public function update($slug)
 	{
-		$image_path = 'imgs/uploads/carousel/';
 
 		$data = [
 			'title' 				=> 	Input::get('title'),
 			'slug'					=>	Str::slug(Input::get('title')), 
 			'description'			=>	Input::get('description'),
-			'image_1'				=>	$image_path . Input::file('image_1')->getClientOriginalName(),
+			'image_1'				=>	Input::file('image_1')->getClientOriginalName(),
 			'image_1_description'	=>	Input::get('image_1_description'),
-			'image_2'				=>	$image_path . Input::file('image_2')->getClientOriginalName(),
+			'image_2'				=>	Input::file('image_2')->getClientOriginalName(),
 			'image_2_description'	=>	Input::get('image_2_description'),
-			'image_3'				=>	$image_path . Input::file('image_3')->getClientOriginalName(),
+			'image_3'				=>	Input::file('image_3')->getClientOriginalName(),
 			'image_3_description'	=>	Input::get('image_3_description')
 		];
 
@@ -138,15 +136,15 @@ class CarouselController extends \BaseController {
 		$imageThree = Input::file('image_3');
 
 		if($imageOne->isValid()){
-			$imageOne->move($image_path, $data['image_1']);
+			$this->imagestore->upload($data['image_1'], $imageOne);
 		}
 
 		if($imageTwo->isValid()){
-			$imageTwo->move($image_path, $data['image_2']);
+			$this->imagestore->upload($data['image_2'], $imageTwo);
 		}
 
 		if($imageThree->isValid()){
-			$imageThree->move($image_path, $data['image_3']);
+			$this->imagestore->upload($data['image_3'], $imageThree);
 		};
 
 		$existing = $this->carousel->where('slug', $slug);
