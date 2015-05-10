@@ -28,8 +28,15 @@
 	</head>
 	<body>
 		<header class="row">
-			<div class="large-12 columns">
-				<h1>Corinth Alcorn Parks and Recreation Site Administration Area</h1>
+			<div class="large-8 columns">
+				<h3>Corinth Alcorn Parks and Recreation Site Administration Area</h3>
+			</div>
+			<div class="large-4 right columns">
+				@if( Auth::check() )
+
+				<p>Hello, {{{ Auth::user()->name }}}</p>
+
+				@endif
 			</div>
 		</header>
 		<header class="row">
@@ -44,9 +51,15 @@
 					<li class="panel">
 						<a href=" {{ route('site.index') }} ">Site Home</a>
 					</li>
+					
+					@if( Auth::check() )
+
 					<li class="panel">
 						<a href="/backend">Backend Home</a>
 					</li>
+
+					@endif
+
 					<li class="panel">
 						<a href="/backend/pages">Pages</a>
 					</li>
