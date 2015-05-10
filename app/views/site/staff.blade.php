@@ -14,7 +14,7 @@ Contact Information
 		<div class="large-4 columns">
 			<h4>{{ $member->name }}</h4>
 			<p>{{ $member->title }}</p>
-			<p>{{ $member->email }}</p>
+			<a href="mailto::{{ $member->email }}">{{ $member->email }}</a>
 		</div>
 	</section>
 	<section class="row">			
