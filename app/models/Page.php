@@ -38,8 +38,8 @@ class Page extends Eloquent {
 		$rules = [
 
 		'title'		=>	'required|min:5',
-		'slug'		=>	'required|min:10|max:25',
-		'header'	=> 	'required|min:5|max:25',
+		'slug'		=>	'required|min:5|max:50',
+		'header'	=> 	'min:5|max:100',
 		'content'	=> 	'required|min:5',
 
 		];
