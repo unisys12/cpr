@@ -10,17 +10,17 @@
 			tinymce.init(
 				{
 					relative_urls: false,
-					plugins: "jbimages",
+					plugins: 'image, jbimages, anchor, textcolor, media, link, hr, spellchecker, table',
 					menu : { // this is the complete default configuration
-				        file   : {title : 'File'  , items : 'newdocument'},
 				        edit   : {title : 'Edit'  , items : 'undo redo | cut copy paste pastetext | selectall'},
-				        insert : {title : 'Insert', items : 'link media | jbimages hr'},
+				        insert : {title : 'Insert', items : 'link media jbimages | hr'},
 				        view   : {title : 'View'  , items : 'visualaid'},
 				        format : {title : 'Format', items : 'bold italic underline strikethrough superscript subscript | formats | removeformat'},
 				        table  : {title : 'Table' , items : 'inserttable tableprops deletetable | cell row column'},
 				        tools  : {title : 'Tools' , items : 'spellchecker code'},
-				        images : {title : 'Images', items : 'jbimages'}
+				        images : {title : 'Images', items : 'jbimages image'}
 				    },
+				    toolbar: 'forecolor backcolor | bold italic underline',
 					selector:'textarea'
 				}
 			);
