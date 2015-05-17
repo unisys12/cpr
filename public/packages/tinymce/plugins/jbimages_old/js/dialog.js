@@ -1,6 +1,6 @@
 /**
  * Justboil.me - a TinyMCE image upload plugin
- * jbimages/js/dialog-v4.js
+ * jbimages/js/dialog.js
  *
  * Released under Creative Commons Attribution 3.0 Unported License
  *
@@ -10,12 +10,22 @@
  *
  * Version: 2.3 released 23/06/2013
  */
- 
+
+ tinyMCEPopup.requireLangPack();
+
 var jbImagesDialog = {
 	
 	resized : false,
 	iframeOpened : false,
 	timeoutStore : false,
+	
+	init : function() {
+		document.getElementById("upload_target").src += '/' + tinyMCEPopup.getLang('jbimages_dlg.lang_id', 'english');
+		if (navigator.userAgent.indexOf('Opera') > -1)
+		{
+			document.getElementById("close_link").style.display = 'block';
+		}
+	},
 	
 	inProgress : function() {
 		document.getElementById("upload_infobar").style.display = 'none';
@@ -23,8 +33,8 @@ var jbImagesDialog = {
 		document.getElementById("upload_form_container").style.display = 'none';
 		document.getElementById("upload_in_progress").style.display = 'block';
 		this.timeoutStore = window.setTimeout(function(){
-			document.getElementById("upload_additional_info").innerHTML = 'This is taking longer than usual.' + '<br />' + 'An error may have occurred.' + '<br /><a href="#" onClick="jbImagesDialog.showIframe()">' + 'View script\'s output' + '</a>';
-			// tinyMCEPopup.editor.windowManager.resizeBy(0, 30, tinyMCEPopup.id);
+			document.getElementById("upload_additional_info").innerHTML = tinyMCEPopup.getLang('jbimages_dlg.longer_than_usual', 0) + '<br />' + tinyMCEPopup.getLang('jbimages_dlg.maybe_an_error', 0) + '<br /><a href="#" onClick="jbImagesDialog.showIframe()">' + tinyMCEPopup.getLang('jbimages_dlg.view_output', 0) + '</a>';
+			tinyMCEPopup.editor.windowManager.resizeBy(0, 30, tinyMCEPopup.id);
 		}, 20000);
 	},
 	
@@ -32,7 +42,7 @@ var jbImagesDialog = {
 		if (this.iframeOpened == false)
 		{
 			document.getElementById("upload_target").className = 'upload_target_visible';
-			// tinyMCEPopup.editor.windowManager.resizeBy(0, 190, tinyMCEPopup.id);
+			tinyMCEPopup.editor.windowManager.resizeBy(0, 190, tinyMCEPopup.id);
 			this.iframeOpened = true;
 		}
 	},
@@ -48,7 +58,7 @@ var jbImagesDialog = {
 			
 			if (this.resized == false)
 			{
-				// tinyMCEPopup.editor.windowManager.resizeBy(0, 30, tinyMCEPopup.id);
+				tinyMCEPopup.editor.windowManager.resizeBy(0, 30, tinyMCEPopup.id);
 				this.resized = true;
 			}
 		}
@@ -56,35 +66,12 @@ var jbImagesDialog = {
 		{
 			document.getElementById("upload_in_progress").style.display = 'none';
 			document.getElementById("upload_infobar").style.display = 'block';
-			document.getElementById("upload_infobar").innerHTML = 'Upload Complete';
-			
-			var w = this.getWin();
-			tinymce = w.tinymce;
-			var mybaseurl = 'https://s3-us-west-2.amazonaws.com/corinthparks' //result.base_url;
-			
-			tinymce.EditorManager.activeEditor.insertContent('<img src="' + mybaseurl+result.filename +'">');
-			
-			this.close();
+			document.getElementById("upload_infobar").innerHTML = tinyMCEPopup.getLang('jbimages_dlg.upload_complete', 0);
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '<img src="' + result.filename +'" />');
+			tinyMCEPopup.close();
 		}
-	},
-	
-	getWin : function() {
-		return (!window.frameElement && window.dialogArguments) || opener || parent || top;
-	},
-	
-	close : function() {
-		var t = this;
-
-		// To avoid domain relaxing issue in Opera
-		function close() {
-			tinymce.EditorManager.activeEditor.windowManager.close(window);
-			tinymce = tinyMCE = t.editor = t.params = t.dom = t.dom.doc = null; // Cleanup
-		};
-
-		if (tinymce.isOpera)
-			this.getWin().setTimeout(close, 0);
-		else
-			close();
 	}
 
 };
+
+tinyMCEPopup.onInit.add(jbImagesDialog.init, jbImagesDialog);

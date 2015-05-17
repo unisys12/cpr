@@ -60,9 +60,8 @@ var jbImagesDialog = {
 			
 			var w = this.getWin();
 			tinymce = w.tinymce;
-			var mybaseurl = 'https://s3-us-west-2.amazonaws.com/corinthparks' //result.base_url;
-			
-			tinymce.EditorManager.activeEditor.insertContent('<img src="' + mybaseurl+result.filename +'">');
+		
+			tinymce.EditorManager.activeEditor.insertContent('<img src="' + result.filename +'">');
 			
 			this.close();
 		}

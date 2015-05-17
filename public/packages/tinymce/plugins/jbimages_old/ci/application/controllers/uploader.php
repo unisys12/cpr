@@ -7,7 +7,6 @@ class Uploader extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		
 		$this->load->helper(array('jbimages','language'));
 		
 		// is_allowed is a helper function which is supposed to return False if upload operation is forbidden
@@ -17,12 +16,10 @@ class Uploader extends CI_Controller {
 		{
 			exit;
 		}
+		
 		// User configured settings
 		$this->config->load('uploader_settings', TRUE);
-		$this->config->load('aws', TRUE);
-
 	}
-	
 	
 	/* Language set */
 	
@@ -96,30 +93,11 @@ class Uploader extends CI_Controller {
 				$this->image_lib->resize();
 			}
 			
+			// Add our stuff
 			$result['result']		= "file_uploaded";
 			$result['resultcode']	= 'ok';
 			$result['file_name']	= $conf['img_path'] . '/' . $result['file_name'];
-			$result['base_url'] 	= '';
 			
-			$s3Config = $this->config->item('s3', 'aws');
-			if($s3Config['enable'] === true){
-				$clientOptions = array(
-					'key' => $s3Config['key'],
-					'secret' => $s3Config['secret'],
-				);
-				$awsClient = Aws\S3\S3Client::factory($clientOptions);
-				$awsUploader = new Justboilme\Upload\AwsUpload($awsClient, $s3Config);
-				$result['base_url'] =   $s3Config['url'].'/'.$s3Config['bucket'];
-				try{
-					$awsUploader->uploadFile($result['full_path'],  $result['file_name']);
-				}
-				catch(Exception $e){
-					$result['result']	= 'S3 Upload failed with message: '.$e->getMessage();
-					$result['resultcode']	= 'failed';
-					$result['file_name']	= '';
-					$result['base_url'] 	=  '';   
-				}			
-			}
 			// Output to user
 			$this->load->view('ajax_upload_result', $result);
 		}
@@ -128,8 +106,7 @@ class Uploader extends CI_Controller {
 			// Compile data for output
 			$result['result']		= $this->upload->display_errors(' ', ' ');
 			$result['resultcode']	= 'failed';
-			$result['file_name']	 = '';
-			$result['base_url']		= '';   
+			
 			// Output to user
 			$this->load->view('ajax_upload_result', $result);
 		}
