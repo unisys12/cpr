@@ -1,6 +1,9 @@
 /bootstrap/compiled.php
 /vendor
 /public/imgs/uploads/
+public/packages/tinymce/plugins/jbimages/ci/application/config/local/
+public/*.jpg
+public/*.png
 composer.phar
 .env.*.php
 .env.php
