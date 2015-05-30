@@ -17,25 +17,16 @@
     </head>
     <body class="background">
     	<header class="header-main">
-            <section class="header-name">
-                <a href="{{ route('site.index') }}">
-                  <h1>Corinth/Alcorn Parks &amp; Recreation Department</h1>
-                </a>
-            </section>
-            <section class="header-logo">
-                <figure class="logo">
-                    <img src="{{ asset('imgs/park-logo-svg.svg') }}" alt="park logo">
-                </figure>
-            </section>
+            <figure class="large-6 columns">
+                <img src="{{ asset('imgs/park_logo.jpg') }}" alt="park logo">
+            </figure>
+            <nav class="large-6 columns items">
+                <a href="/facilities">Facilities</a>
+                <a href="/sports">Sports</a>
+                <a href="/staff">Staff</a>
+                <a href="/contact">Contact Us</a>
+            </nav>
         </header>
-    <nav class="row top-menu">
-        <ul class="large-12 large-offset-3 small-centered">
-            <li><a href="/facilities">Facilities</a></li>
-            <li><a href="/sports">Sports</a></li>
-            <li><a href="/staff">Staff</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-        </ul>
-    </nav>
     <br>
     <main class="row">
         <aside class="large-3 medium-3 columns">
