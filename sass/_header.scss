@@ -142,26 +142,23 @@
 
 }
 
-/* ----------- iPhone 6+ ----------- */
+/* ----------- iPad mini ----------- */
 
-/* Landscape */
+/* Portrait */
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) {
-
-  	.header-main > figure {
-  		margin: 0 .5em;
-  	}
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
 
   	.items {
-		top: 0;
+  		top: 4em;
+  		font-size: 125%;
 
-		a {
-			padding: .5em;
-		}
-	}
+  		a {
+  			padding: .25em;
+  		}
+  	}
 
 }
 

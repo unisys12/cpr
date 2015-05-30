@@ -17,10 +17,10 @@
     </head>
     <body class="background">
     	<header class="header-main">
-            <figure class="large-6 columns">
+            <figure class="large-6 medium-6 columns">
                 <img src="{{ asset('imgs/park_logo.jpg') }}" alt="park logo">
             </figure>
-            <nav class="large-6 columns items">
+            <nav class="large-6 medium-6 columns items">
                 <a href="/facilities">Facilities</a>
                 <a href="/sports">Sports</a>
                 <a href="/staff">Staff</a>
